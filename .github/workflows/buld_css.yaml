@@ -24,8 +24,6 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: src-pages
-        fetch-depth: 10
-        submodules: true
 
     - name: Make destination directory for compiled CSS
       run: mkdir -vp /tmp/tequendama/assets/css
@@ -40,7 +38,6 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: pr-pages
-        fetch-depth: 1
 
     - name: Add and Commit changes to pr-pages branch
       run: |
