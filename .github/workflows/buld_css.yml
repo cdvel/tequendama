@@ -39,6 +39,12 @@ jobs:
       with:
         ref: pr-pages
 
+    - name: Upload Complied CSS
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: Compiled-CSS
+        path: /tmp/assets/css
+        
     - name: Move compiled CSS to path within pr-pages branch
       run: mv /tmp/tequendama/assets/css/* assets/css/
 
@@ -55,13 +61,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: pr-pages
 
-    - name: Initialize Pull Request
-      uses: gha-utilities/init-pull-request@v0.0.4
-      with:
-          pull_request_token: ${{ secrets.GITHUB_TOKEN }}
-          head: pr-pages
-          base: gh-pages
-          title: 'Updates site files from latest Actions build'
-          body: >
-            Something similar to sass -t compressed assets/css/styles.scss 
-            assets/css/styles.css
