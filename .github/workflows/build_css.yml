@@ -24,6 +24,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: src-pages
+        fetch-depth: 10
 
     - name: Make destination directory for compiled CSS
       run: mkdir -vp /tmp/assets/css
@@ -49,7 +50,8 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: pr-pages
-
+        fetch-depth: 1
+  
     - name: Download Compiled CSS
       uses: actions/download-artifact@v1.0.0
       with:
