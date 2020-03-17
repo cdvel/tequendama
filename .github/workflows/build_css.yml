@@ -34,19 +34,20 @@ jobs:
         source: assets/css/styles.scss
         destination:  /tmp/tequendama/assets/css/styles.css
 
-    - name: Upload Complied CSS
-      uses: actions/upload-artifact@v1.0.0
-      with:
-        name: Compiled-CSS
-        path: /tmp/tequendama/assets/css/styles.css
-
-    - name: Move compiled CSS to path within pr-pages branch
-      run: mv /tmp/tequendama/assets/css/* assets/css/
+    # - name: Upload Complied CSS
+    #   uses: actions/upload-artifact@v1.0.0
+    #   with:
+    #     name: Compiled-CSS
+    #     path: /tmp/tequendama/assets/css/styles.css
 
     - name: Checkout destination Git branch
       uses: actions/checkout@v2
       with:
         ref: pr-pages
+        
+    - name: Move compiled CSS to path within pr-pages branch
+      run: mv /tmp/tequendama/assets/css/* assets/css/
+
 
     - name: Add and Commit changes to pr-pages branch
       run: |
