@@ -6,9 +6,9 @@ name: Sass Build
 # events but only for the master branch
 on:
   push:
-    branches: src-pages
+    branches: [src-pages]
   pull_request:
-    branches: src-pages
+    branches: [src-pages]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
