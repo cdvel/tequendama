@@ -20,7 +20,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - name: Checkout source Git branch
+      uses: actions/checkout@v2
+      with:
+        ref: src-pages
+        fetch-depth: 10
+        submodules: true
 
     - name: Make destination directory for compiled CSS
       run: mkdir -vp /tmp/tequendama/assets/css
@@ -31,18 +36,18 @@ jobs:
         source: assets/css/styles.scss
         destination:  /tmp/tequendama/assets/css/styles.css
 
-    - name: Compile CSS from SCSS files
-      uses: gha-utilities/sass-build@v0.2.2
+    - name: Checkout destination Git branch
+      uses: actions/checkout@v2
       with:
-        source: assets/css/styles.scss
-        destination: /tmp/tequendama/assets/css/styles.css
+        ref: pr-pages
+        fetch-depth: 1
 
     - name: Add and Commit changes to pr-pages branch
       run: |
-          git config --local user.email 'action@github.com'
-          git config --local user.name 'GitHub Action'
-          git add assets/css/*
-          git commit -m 'Updates compiled CSS files'
+        git config --local user.email 'action@github.com'
+        git config --local user.name 'GitHub Action'
+        git add assets/css/*
+        git commit -m 'Updates compiled CSS files'
 
     - name: Push changes
       uses: ad-m/github-push-action@master
