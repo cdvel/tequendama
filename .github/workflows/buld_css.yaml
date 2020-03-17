@@ -26,17 +26,17 @@ jobs:
     - name: Make destination directory for compiled CSS
       run: mkdir -vp /tmp/tequendama/assets/css
 
-      - name: Compile CSS from SCSS files
-        uses: gha-utilities/sass-build@v0.2.2
-        with:
-          source: _scss/main.scss
-          destination: /tmp/assets/css/main.css
-          
     - name: Compile CSS from SCSS files
       uses: gha-utilities/sass-build@v0.2.2
-        with:
-          source: assets/css/styles.scss
-          destination: /tmp/tequendama/assets/css/styles.css
+      with:
+        source: _scss/main.scss
+        destination:  /tmp/assets/css/main.css
+
+    - name: Compile CSS from SCSS files
+      uses: gha-utilities/sass-build@v0.2.2
+      with:
+        source: assets/css/styles.scss
+        destination: /tmp/tequendama/assets/css/styles.css
 
     - name: Add and Commit changes to pr-pages branch
       run: |
