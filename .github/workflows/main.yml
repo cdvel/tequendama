@@ -96,6 +96,6 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           source: "assets/css/styles.css"
-          target: "~/release"
+          target: "~/theme-target"
           tar_tmp_path: "/tmp"
           overwrite: true
