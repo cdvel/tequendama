@@ -59,7 +59,7 @@ jobs:
         path: /tmp/assets/css
 
     - name: Move compiled CSS to path within pr-pages branch
-      run: mv /tmp/assets/css assets/
+      run: mv /tmp/assets/css/* assets/css
 
     - name: Add and Commit changes to pr-pages branch
       run: |
