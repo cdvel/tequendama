@@ -1,0 +1,6 @@
+<div style="margin-top: 20px; margin-left: 5px; text-align: left;">
+<h1>aaaaa </h1>
+	{{#foreach navigation}}
+		<a style="display: block; margin-top: 10px;"  href="{{url absolute="true"}}">{{label}}</a>
+	{{/foreach}}
+</div>

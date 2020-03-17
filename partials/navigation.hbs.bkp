@@ -1,0 +1,5 @@
+<div style="height: 30px; border: 1px solid black; background:#333; ">
+	{{#foreach navigation}}
+	     <a  href="{{url absolute="true"}}">{{label}}</a>
+        {{/foreach}}
+</div>

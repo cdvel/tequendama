@@ -1,0 +1,11 @@
+	<div style="text-align:left;margin-left:35px; padding: 10px">
+	{{#posts}}
+		{{#if tags}}
+		{{#list tags}}{{name}}{{/list}}
+			{{#foreach tags}}
+	        		<a href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}} &nbsp;(1)</a><br/>
+			{{/foreach}}
+		{{/if}}
+	{{/posts}}
+	</div>
+

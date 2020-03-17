@@ -1,0 +1,21 @@
+<div id="author" class="author">
+
+    <a href="{{@blog.url}}">
+        <img class="profile-image" src="{{author.profile_image}}" alt="{{author.name}}" />
+    </a>
+
+    <p class="name">
+      <span>{{author.name}}</span>
+    </p>
+    
+    {{#if author.location}}
+      <p class="address">{{author.location}}</p>
+    {{/if}}
+    
+    <p class="link">
+      <a class="website" href="{{author.website}}" title="{{author.name}}">{{@blog.url}}</a>
+    </p>
+    <p class="description">
+        {{@blog.description}}
+    <p>
+</div>

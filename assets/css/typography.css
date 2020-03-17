@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Kaushan Script'), local('KaushanScript-Regular'), url(../font/kaushan-script.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(../font/Roboto-Light.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(../font/Roboto-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(../font/Roboto-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/OpenSans-Regular.woff2) format('woff2'),
+       url(../font/OpenSans-Regular.woff) format('woff');
+}
+
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?55664638');
+  src: url('../font/fontello.eot?55664638#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?55664638') format('woff'),
+       url('../font/fontello.ttf?55664638') format('truetype'),
+       url('../font/fontello.svg?55664638#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?55664638#fontello') format('svg');
+  }
+}
+
+-webkit-font-smoothing:antialiased;  /*new*/
+-moz-osx-font-smoothing:grayscale; /*new*/

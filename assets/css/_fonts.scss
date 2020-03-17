@@ -1,0 +1,171 @@
+/*@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?55664638');
+  src: url('../font/fontello.eot?55664638#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?55664638') format('woff'),
+       url('../font/fontello.ttf?55664638') format('truetype'),
+       url('../font/fontello.svg?55664638#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}*/
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?55664638#fontello') format('svg');
+  }
+}
+*/
+
+@font-face{font-family:'Kaushan Script';src:url("../font/kaushan-script.woff") format("woff");font-weight:normal;font-style:normal
+}
+
+/*[class^="icon-"],[class*=" icon-"]
+{
+  
+}
+*/ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'fontello';
+  speak:none; /*new*/
+
+  font-style: normal;
+  font-weight: normal;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+/*   font-size: 120%; 
+*/ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+-webkit-font-smoothing:antialiased;  /*new*/
+-moz-osx-font-smoothing:grayscale; /*new*/
+
+}
+ 
+/*.icon-menu:before { content: '\e804'; } /* '' */
+/*.icon-rss:before { content: '\e803'; } /* '' */
+/*.icon-twitter:before { content: '\e800'; } /* '' */
+/*.icon-facebook-squared:before { content: '\e806'; } /* '' */
+/*.icon-gplus:before { content: '\e807'; } /* '' */
+/*.icon-linkedin:before { content: '\e808'; } /* '' */
+/*.icon-dribbble:before { content: '\e801'; } /* '' */
+/*.icon-behance:before { content: '\e802'; } /* '' */
+/*.icon-cancel:before { content: '\e805'; } /* '' */
+/*.icon-mail-alt:before { content: '\e810'; } /* '' */
+
+/*new*/
+ /*.icon-hamburguer:before{content:"\e601"}
+  .icon-datetime:before{content:"\e602"}
+  .icon-flickr:before{content:"\e60b"}
+  .icon-facebook:before{content:"\e60c"}
+  .icon-tags:before{content:"\e604"}
+  .icon-shortlink:before{content:"\e603"}
+  .icon-blockquote:before,blockquote:before{content:"\e605"}
+  .icon-feed:before{content:"\e614"}
+  .icon-mail:before{content:"\e615"}
+  .icon-youtube:before{content:"\e613"}
+  .icon-vimeo:before{content:"\e606"}
+  .icon-twitter:before{content:"\e607"}
+  .icon-pinterest:before{content:"\e608"}
+  .icon-linkedin:before{content:"\e609"}
+  .icon-lastfm:before{content:"\e60a"}
+  .icon-code:before{content:"\e600"}
+  .icon-github:before{content:"\e60d"}
+  .icon-googleplus:before{content:"\e60e"}
+  .icon-dribbble:before{content:"\e60f"}
+  .icon-stumbleupon:before{content:"\e610"}
+  .icon-lastfm:before{content:"\e611"}
+  .icon-rdio:before{content:"\e612"}*/
+
+.icon-vimeo:before{content:"\e800"}
+.icon-facebook:before{content:"\e801"}
+.icon-github:before{content:"\e802"}
+.icon-evernote:before{content:"\e803"}
+.icon-gplus:before{content:"\e804"}
+.icon-instagram:before{content:"\e805"}
+.icon-pinterest:before{content:"\e806"}
+.icon-skype:before{content:"\e807"}
+.icon-tumblr:before{content:"\e808"}
+.icon-soundcloud:before{content:"\e809"}
+.icon-linkedin:before{content:"\e80a"}
+.icon-dribbble:before{content:"\e80c"}
+.icon-google-circles:before{content:"\e80d"}>
+.icon-stumbleupon:before{content:"\e80e"}
+.icon-github-circled-alt2:before{content:"\e80f"}
+.icon-lastfm:before{content:"\e810"}
+.icon-facebook-1:before{content:"\e811"}
+.icon-gplus-1:before{content:"\e812"}
+.icon-twitter:before{content:"\e813"}
+.icon-mail:before{content:"\e814"}
+.icon-gplus-2:before{content:"\e815"}
+.icon-evernote-1:before{content:"\e816"}
+.icon-stackoverflow:before{content:"\e817"}
+.icon-github-circled:before{content:"\e818"}>
+.icon-facebook-2:before{content:"\e819"}
+.icon-dropbox:before{content:"\e81a"}
+.icon-bitbucket:before{content:"\e81b"}
+.icon-pocket:before{content:"\e81c"}
+.icon-buffer:before{content:"\e81d"}
+.icon-rss:before{content:"\e81e"}
+.icon-skype-1:before{content:"\e81f"}
+.icon-twitter-1:before{content:"\e820"}
+.icon-vimeo-1:before{content:"\e821"}
+.icon-youtube:before{content:"\e822"}
+.icon-email:before{content:"\e823"}
+.icon-foursquare:before{content:"\e824"}
+.icon-mail-1:before{content:"\e825"}
+.icon-jsfiddle:before{content:"\e826"}
+.icon-stackexchange:before{content:"\e827"}
+.icon-android:before{content:"\e828"}
+.icon-apple:before{content:"\e829"}
+.icon-bitbucket-1:before{content:"\e82c"}
+.icon-comment-empty:before{content:"\e82d"}
+.icon-codeopen:before{content:"\e82e"}
+.icon-dribbble-1:before{content:"\e833"}
+.icon-dropbox-1:before{content:"\e834"}
+.icon-facebook-3:before{content:"\e836"}
+.icon-foursquare-1:before{content:"\e839"}
+.icon-git:before{content:"\e83b"}
+.icon-github-1:before{content:"\e83c"}
+.icon-github-circled-1:before{content:"\e83e"}
+.icon-google:before{content:"\e840"}
+.icon-gplus-3:before{content:"\e841"}
+.icon-instagramm:before{content:"\e845"}
+.icon-linkedin-squared:before{content:"\e848"}
+.icon-linkedin-1:before{content:"\e84a"}
+.icon-openid:before{content:"\e84c"}
+.icon-renren:before{content:"\e855"}
+.icon-skype-2:before{content:"\e856"}
+.icon-soundclowd:before{content:"\e858"}
+.icon-stackoverflow-1:before{content:"\e85b"}
+.icon-tencent-weibo:before{content:"\e860"}
+.icon-tumblr-1:before{content:"\e862"}
+.icon-twitter-2:before{content:"\e865"}
+.icon-vimeo-squared:before{content:"\e866"}
+.icon-vine:before{content:"\e867"}
+.icon-wechat:before{content:"\e869"}
+.icon-weibo:before{content:"\e86a"}
+.icon-xing-squared:before{content:"\e86e"}
+.icon-youtube-1:before{content:"\e86f"}
+.icon-youtube-play:before{content:"\e872"}
