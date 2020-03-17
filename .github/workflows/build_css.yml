@@ -43,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         name: Compiled-CSS
-        path: /tmp/assets/css
+        path: /tmp/tequendama/assets/css
         
     - name: Move compiled CSS to path within pr-pages branch
       run: mv /tmp/tequendama/assets/css/* assets/css/
