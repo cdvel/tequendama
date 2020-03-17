@@ -54,7 +54,10 @@ jobs:
       uses: actions/download-artifact@v1.0.0
       with:
         name: Compiled-CSS
-        path: assets
+        path: assets/css
+
+    - name: Move compiled CSS to path within pr-pages branch
+      run: mv /tmp/assets/css assets/
 
     - name: Add and Commit changes to pr-pages branch
       run: |
