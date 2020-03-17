@@ -40,7 +40,7 @@ jobs:
         ref: pr-pages
 
     - name: Move compiled CSS to path within pr-pages branch
-      run: mv /tmp/tequendama/assets/css assets/
+      run: mv /tmp/tequendama/assets/css/* assets/css/
 
     - name: Add and Commit changes to pr-pages branch
       run: |
