@@ -96,5 +96,5 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           source: "assets/css/styles.css"
-          target: "/home/ghost-mgr/theme-target"
+          target: "/var/www/ghost/content/themes/current-theme"
           overwrite: true
