@@ -12,8 +12,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  # This workflow contains a single job called "build_css"
+  build_css:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -40,4 +40,33 @@ jobs:
         name: Compiled-CSS
         path: /tmp/tequendama/assets/css/styles.css
 
+  release_css:
+    needs: [build_css]
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: Checkout destination Git branch
+      uses: actions/checkout@v2
+      with:
+        ref: pr-pages
+
+    - name: Download Compiled CSS
+      uses: actions/download-artifact@v1.0.0
+      with:
+        name: Compiled-CSS
+        path: assets/css
+
+    - name: Add and Commit changes to pr-pages branch
+      run: |
+        git config --local user.email 'action@github.com'
+        git config --local user.name 'GitHub Action'
+        git add assets/css/*
+        git commit -m 'Updates compiled CSS files'
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: pr-pages
 
