@@ -1,4 +1,6 @@
-# cesar.velandia.co theme
+![CI](https://github.com/cdvel/tequendama/workflows/CI/badge.svg)
+
+# Tequendama theme for Ghost
 
 Ghost theme for personal blog
 
