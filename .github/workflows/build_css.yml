@@ -60,8 +60,8 @@ jobs:
     
     - run: ls -lar assets/css
 
-    - name: Move compiled CSS to path within pr-pages branch
-      run: mv assets/css/* assets/css
+    # - name: Move compiled CSS to path within pr-pages branch
+    #   run: mv assets/css/* assets/css
 
     - run: git status
 
