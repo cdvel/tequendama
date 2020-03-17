@@ -26,19 +26,19 @@ jobs:
         ref: src-pages
 
     - name: Make destination directory for compiled CSS
-      run: mkdir -vp /tmp/tequendama/assets/css
+      run: mkdir -vp /tmp/assets/css
 
     - name: Compile CSS from SCSS files
       uses: gha-utilities/sass-build@v0.2.2
       with:
         source: assets/css/styles.scss
-        destination:  /tmp/tequendama/assets/css/styles.css
+        destination:  /tmp/assets/css/styles.css
 
     - name: Upload Complied CSS
       uses: actions/upload-artifact@v1.0.0
       with:
         name: Compiled-CSS
-        path: /tmp/tequendama/assets/css/styles.css
+        path: /tmp/assets/css/styles.css
 
   release_css:
     needs: [build_css]
@@ -55,7 +55,7 @@ jobs:
       uses: actions/download-artifact@v1.0.0
       with:
         name: Compiled-CSS
-        path: /assets/css
+        path: assets/css
 
     - name: Add and Commit changes to pr-pages branch
       run: |
