@@ -96,5 +96,6 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           source: "assets/css/styles.css"
-          target: "/var/www/ghost/content/themes/current-theme"
+          target: "/var/www/ghost/content/themes/release"
+          tar_tmp_path: "/tmp"
           overwrite: true
