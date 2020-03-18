@@ -86,7 +86,7 @@ a{
 	transition:all 0.3s ease;
 	&:hover{
 		color: $hl-colour;
-  	      transition:all 0.2s;
+  	    transition:all 0.2s;
 
 
 	}
@@ -95,11 +95,11 @@ a{
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 	color: $b-colour;
 	border-bottom-color: transparent;
-	border-bottom: 4px solid transparent;
+	// border-bottom: 4px solid transparent;
 
 	&:hover{
-		color: $b-colour;
-		box-shadow: inset 0 -4px 0 #cb3443d9
+		color: $s-colour;
+		// box-shadow: inset 0 -4px 0 #cb3443d9
 	}
 }
 
@@ -134,8 +134,8 @@ hr{
 }
 
 .content{
-	width: 80%;
-	margin-right: 10%;
+	width: 60%;
+	margin-right: 20%;
 	float: right;
 }
 
