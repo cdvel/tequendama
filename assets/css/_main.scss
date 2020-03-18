@@ -227,7 +227,7 @@ and (max-device-width: 720px)
 
 
 .post h2{
-	margin-top: 0;
+	margin: 20px;
 }
 
 .post p{
@@ -266,12 +266,13 @@ and (max-device-width: 720px)
 
 
 .post img{
-	max-width: 100%;
 	height: 100%;
 	max-width: 30%;
 	display: block; 
-	float: left;
-	margin: 0px 20px 0px 0px;
+	float: right;
+	margin: 20px;
+	position: relative;
+	box-shadow: 8px 8px 0 $ln-colour;
 }
 
 @media only screen
@@ -281,7 +282,7 @@ and (max-device-width: 720px)
 	        width: 50% !important;
         	display: block;
         	margin: 40px auto !important;
-		float: none !important;
+			float: none !important;
         }
 }
 
