@@ -93,7 +93,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          source: "package.json, *.hbs, partials/*, static/*, assets/*"
+          source: "package.json, *.hbs, partials, static, assets"
+          rm: true
           target: "~/latest/"
           tar_tmp_path: "/tmp"
           overwrite: true
