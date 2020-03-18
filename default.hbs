@@ -54,15 +54,11 @@
 
 
 <div>
-        {{#get "posts" id="1" include="authors"}}
-            {{> author}}
-        {{/get}}
-
-        {{!-- {{#foreach posts}}
-                {{#if @first}}
-                        {{> author}}
-                {{/if}}
-        {{/foreach}} --}}
+      {{#get "posts" limit="1" include="authors"}}
+        {{#foreach posts}}
+          {{> author}}
+        {{/foreach}}
+      {{/get}}
 </div>
 
 	{{navigation}}
