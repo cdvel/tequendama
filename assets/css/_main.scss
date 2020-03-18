@@ -253,14 +253,14 @@ and (max-device-width: 720px)
 }
 
 .post{
-	margin-bottom: 0px;
+	margin-bottom: 15px;
 	padding-bottom: 0px;
 	border-bottom: 1px solid transparent;
 	min-height: 200px;
 	background-size: contain;
     background-repeat: no-repeat;
 	background-position: 0%;
-	border: 1px solid $b-colour;
+	border: 1px dashed $b-colour;
 	box-shadow: 8px 8px 0 $ln-colour;
 }
 
