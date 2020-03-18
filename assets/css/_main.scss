@@ -23,6 +23,7 @@
 	$h-colour: #fff; // Heading Colour
 	$b-colour: #222222; // Body Colour
 	$s-colour: #cb3443; // Secondary Colour
+	$ln-colour: #ececec;
 
 	$l-colour: #3dbbd2; //link
 	$hl-colour: #cb3443; //link	
@@ -255,10 +256,12 @@ and (max-device-width: 720px)
 	margin-bottom: 0px;
 	padding-bottom: 0px;
 	border-bottom: 1px solid transparent;
-	min-height: 230px;
+	min-height: 200px;
 	background-size: contain;
     background-repeat: no-repeat;
-    background-position: 0%;
+	background-position: 0%;
+	border: 1px solid $b-colour;
+	box-shadow: 8px 8px 0 $ln-colour;
 }
 
 
