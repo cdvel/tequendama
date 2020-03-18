@@ -96,6 +96,6 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           source: "assets/css/*"
-          target: "~/releases/${{ github.committed_at }}"
+          target: "~/releases/${{ github.run_number }}"
           tar_tmp_path: "/tmp"
           overwrite: true
