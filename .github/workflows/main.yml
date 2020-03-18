@@ -119,7 +119,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           source: "assets/css/*"
-          target: "~/releases/"
+          target: "~/latest/"
           tar_tmp_path: "/tmp"
           overwrite: true
   
