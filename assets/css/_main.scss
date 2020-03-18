@@ -24,6 +24,7 @@
 	$b-colour: #222222; // Body Colour
 	$s-colour: #cb3443; // Secondary Colour
 	$ln-colour: #ececec;
+	$bg-colour: #f5f5f5;
 
 	$l-colour: #3dbbd2; //link
 	$hl-colour: #cb3443; //link	
@@ -69,6 +70,7 @@ body{
 	font-family: $b-font;
 	font-weight: $normal;
 	transition: all 0.3s ease;
+	background-color: $bg-colour;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -235,8 +237,8 @@ and (max-device-width: 720px)
 }
 
 .post h2 a{
-	font-size: 25px;
-	margin-bottom: 10px;
+	font-size: 20px;
+	margin-bottom: 5px;
 }
 .post-template h1{
 	font-size: 25px;
@@ -256,12 +258,15 @@ and (max-device-width: 720px)
 	margin-bottom: 15px;
 	padding-bottom: 0px;
 	border-bottom: 1px solid transparent;
-	min-height: 200px;
+	min-height: 150px;
 	background-size: contain;
     background-repeat: no-repeat;
 	background-position: 0%;
 	border: 1px dashed $b-colour;
 	box-shadow: 8px 8px 0 $ln-colour;
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	border-radius: 3px;   
 }
 
 
@@ -293,9 +298,8 @@ and (max-device-width: 720px)
 	font-weight: $light;
 	font-size: 14px;
 	font-variant: small-caps;
-	margin-top: -18px;
 	line-height: 30px;
-
+	margin: 0px 20px;
 }
 
 
