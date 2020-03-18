@@ -262,17 +262,16 @@ and (max-device-width: 720px)
 	background-size: contain;
     background-repeat: no-repeat;
 	background-position: 0%;
-	border: 1px dashed $b-colour;
-	box-shadow: 8px 8px 0 $ln-colour;
-	-webkit-border-radius: 3px; 
+	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px; 
-	border-radius: 3px;   
+	border-radius: 3px;
+	background-color: white;
+	box-shadow: inset 0 -1px 0 0 #ececec;
 }
 
 
 .post img{
-	height: 100%;
-	max-width: 30%;
+	height: 100px;
 	display: block; 
 	float: right;
 	margin: 20px;
