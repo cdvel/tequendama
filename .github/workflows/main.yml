@@ -84,7 +84,7 @@ jobs:
       - name: Checkout release Git branch
         uses: actions/checkout@v2
         with:
-          ref: pr-pages
+          ref: src-pages
       
       - name: copy file via ssh password
         uses: appleboy/scp-action@master
@@ -95,9 +95,11 @@ jobs:
           port: ${{ secrets.PORT }}
           source: "package.json, *.hbs, partials, static, assets"
           rm: true
-          target: "~/latest/"
+          target: "/home/ghost-mgr/latest"
           tar_tmp_path: "/tmp"
           overwrite: true
+
+  # todo: make pull request
 
   scp_css:
     # The type of runner that the job will run on
