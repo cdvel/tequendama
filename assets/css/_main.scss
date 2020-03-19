@@ -482,17 +482,11 @@ ul.social li{
 }
 
 .floating{
-	position: fixed;
+	// position: fixed;
 	top: 10vw;
 	right: 1vw;
-	background: #fff;
-	padding: 16px 8px 16px 8px;
-	opacity: 0.8;
+	background: transparent;
 	font-size: x-large;
-	-moz-box-shadow: 1px 1px 2px 3px #edecec;
-	-webkit-box-shadow: 1px 1px 2px 3px #edecec;
-	box-shadow: 1px 1px 2px 3px #edecec;
-	border-radius: 3px;
 }
 
 @media only screen 
@@ -521,7 +515,6 @@ and (max-device-width: 720px)
 .author ul.social li a{
 	padding: 5px;
 	font-size: medium;
-	color: #2e2e2e !important;
 }
 
 .website {
@@ -615,6 +608,7 @@ author-description, .author-name {
 .author-description{
 	font-size: small !important;
 	margin-bottom: 15px ;
+	color: lighten($color: $b-colour, $amount: 50%);
 }
 
 // -----------------------------------------------------------------------------
