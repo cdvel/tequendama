@@ -196,13 +196,6 @@ img.emoji {
   position: relative;
   float: none;
 
-  &:hover{
-	filter: brightness(0.8)
- }
-
-
-
-
 }
 
 .profile-social {
@@ -300,12 +293,14 @@ and (max-device-width: 720px)
 
 .post-info{
 	color: lighten($b-colour, 50%);
-	font-family: $h-font;
+	font-family: $b-font;
 	font-weight: $light;
-	font-size: 12px;
+	font-size: small;
 	font-variant: small-caps;
 	line-height: 0px;
+	// margin: -20px 10px;
 	margin: -20px 10px;
+
 }
 
 
@@ -431,6 +426,7 @@ and (max-device-width: 720px)
 }
 
 .counter{
+	padding-top: 40px;
 	text-align: center;
 	line-height: 35px;
 	font-size: 13px;
@@ -755,7 +751,8 @@ body.post-template .site-header .quote-header{
 
 .description {
 	text-align: center;
-	padding-top: 20px !important;
+	padding-top: 10px !important;
+	color: lighten($color: $b-colour, $amount: 50%) !important;
 }
 
 
