@@ -226,7 +226,10 @@ and (max-device-width: 720px)
 
 
 .post h2{
-	margin: 20px;
+	margin: 20px 10px;
+	&:hover{
+		margin-left: 15px !important;
+	}
 }
 
 .post p{
@@ -236,7 +239,7 @@ and (max-device-width: 720px)
 .post h2 a{
 	font-size: 20px;
 	display: block;
-	padding: 15px 10px;
+	padding: 15px 0px;
 }
 .post-template h1{
 	font-size: 25px;
@@ -253,7 +256,7 @@ and (max-device-width: 720px)
 }
 
 .post{
-	margin-bottom: 15px;
+	margin-bottom: -20px !important;
 	padding-bottom: 0px;
 	border-bottom: 1px solid transparent;
 	min-height: 120px;
@@ -273,7 +276,7 @@ and (max-device-width: 720px)
 	height: 70px;
 	display: block; 
 	float: right;
-	margin: 20px 0px;
+	margin: 20px 10px 20px 0px;
 	position: relative;
 	box-shadow: 8px 8px 0 $ln-colour;
 }
