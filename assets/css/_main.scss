@@ -298,11 +298,12 @@ and (max-device-width: 720px)
 	font-size: small;
 	font-variant: small-caps;
 	line-height: 0px;
-	// margin: -20px 10px;
 	margin: -20px 10px;
-
 }
 
+.no-index {
+	margin: 0px;
+}
 
 .share-buttons{
 	list-style: none;
