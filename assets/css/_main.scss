@@ -261,9 +261,6 @@ and (max-device-width: 720px)
 	background-size: contain;
     background-repeat: no-repeat;
 	background-position: 0%;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px; 
-	border-radius: 3px;
 	background-color: transparent;
 	-webkit-box-shadow: inset 0 -1px 0 0 $ln-colour;
 	box-shadow: inset 0 -1px 0 0 $ln-colour;
@@ -303,6 +300,7 @@ and (max-device-width: 720px)
 
 .no-index {
 	margin: 0px;
+	box-shadow: none;
 }
 
 .share-buttons{
@@ -618,7 +616,7 @@ author-description, .author-name {
 	font-family: $h-font;
 	font-weight: $light;
 	color: lighten($b-colour, 50%);
-	margin-top: 20px !important;
+	margin-top: 60px !important;
 	font-variant: all-small-caps;
 	font-size: small !important;
 	letter-spacing: 1px;
@@ -634,7 +632,7 @@ author-description, .author-name {
 	}
 }
 .main-footer p{
-	font-size: 11px;
+	font-size: small;
 }
 
 .quote-header{
