@@ -155,7 +155,7 @@ img.emoji {
 
 
 .site-header{
-	background: $h-colour url(../img/header-bg.jpg) no-repeat center center; 
+	// background: $h-colour url(../img/header-bg.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -166,6 +166,7 @@ img.emoji {
     position: relative;
     height: 100px !important;
     transition:all 0.3s ease;
+	filter: opacity(0.6);
 }
 
 .site-header h2{
@@ -227,8 +228,11 @@ and (max-device-width: 720px)
 
 .post h2{
 	margin: 20px 10px;
+
 	&:hover{
-		margin-left: 15px !important;
+		transition:all 0.3s ease;		
+		margin-left: 20px !important;
+
 	}
 }
 
@@ -526,18 +530,20 @@ and (max-device-width: 720px)
 
 .quicklinks {
 	margin: 10px auto 0px auto;
-	text-align: center;
-	width: 800px;
+	width: 600px;
 	list-style: none;
 	padding: 0px;
 	display: grid;
-	grid-template-columns: 15% 20% 20% 20% 20%;
-	grid-gap: 10px;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-gap: normal;
 	font-size: medium;
 	font-variant: small-caps;
-	box-shadow: 1px 1px 2px 3px #dedede;
+	// box-shadow: 1px 1px 2px 3px #dedede;
 	border-radius: 3px;
-	background: white;
+	background: transparent;
+	position: absolute;
+	top: 20px;
+	right: 10%;
 }
 
 
