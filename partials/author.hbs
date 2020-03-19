@@ -1,21 +1,16 @@
 <div id="author" class="author">
-
-    <a href="{{@blog.url}}">
-        <img class="profile-image" src="{{primary_author.profile_image}}" alt="{{primary_author.name}}" />
-    </a>
-
+    <img class="profile-image" src="{{primary_author.profile_image}}" alt="{{primary_author.name}}" />
     <p class="name">
       <span>{{primary_author.name}}</span>
     </p>
-    
-    {{#if primary_author.location}}
+    {{!-- {{#if primary_author.location}}
       <p class="address">{{primary_author.location}}</p>
-    {{/if}}
-    
-    <p class="link">
+    {{/if}}     --}}
+    {{!-- <p class="link">
       <a class="website" href="{{primary_author.website}}" title="{{primary_author.name}}">{{@blog.url}}</a>
-    </p>
+    </p> --}}
     <p class="description">
         {{@blog.description}}
     <p>
+	{{>social}}
 </div>
