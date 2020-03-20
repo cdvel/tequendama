@@ -245,6 +245,16 @@ and (max-device-width: 720px)
 	display: block;
 	padding: 15px 0px;
 }
+
+@media only screen 
+and (max-device-width: 720px)
+{
+	.post h2 a{
+		font-size: 14px !important;
+	}
+}
+
+
 .post-template h1{
 	font-size: 25px;
 	margin-bottom: 15px;
@@ -287,11 +297,12 @@ and (max-device-width: 720px)
 and (max-device-width: 720px)
 {
         .post img{
-	        width: 50% !important;
+	        width: 100px !important;
         	display: block;
-        	margin: 40px auto !important;
-			float: none !important;
-        }
+        	margin: 20px 10px auto !important;
+			float: inherit !important;
+
+		}
 }
 
 
@@ -501,10 +512,9 @@ ul.social li{
 and (max-device-width: 720px)
 {
 	.floating{
- 	 top: 30vw;
-         right: 4vw;
-	 font-size: large;
-	 opacity: 0.6;	
+ 		top: 30vw;
+        right: 4vw;
+		font-size: large;
 	}
 }
 
