@@ -124,3 +124,18 @@ jobs:
           tar_tmp_path: "/tmp"
           overwrite: true
   
+  restart_ghost:
+    # The type of runner that the job will run on
+    needs: [scp_css]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: restart via ssh 
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: cd ghost; ghost restart
+
