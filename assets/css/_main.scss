@@ -285,7 +285,8 @@ and (max-device-width: 720px)
 
 
 .post img{
-	height: 70px;
+	height: 4.5em;
+	width: 6.5em;
 	display: block; 
 	float: right;
 	margin: 20px 10px 20px 0px;
@@ -297,7 +298,6 @@ and (max-device-width: 720px)
 and (max-device-width: 720px)
 {
         .post img{
-	        width: 100px !important;
         	display: block;
         	margin: 20px 10px auto !important;
 			float: right !important;
