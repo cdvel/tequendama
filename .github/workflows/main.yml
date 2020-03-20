@@ -1,33 +1,126 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Sass Build
 
 # Controls when the action will run. Triggers the workflow on push or pull request 
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [src-pages]
   pull_request:
-    branches: [ master ]
+    branches: [src-pages]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  # This workflow contains a single job called "build_css"
+  build_css:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - name: Checkout source Git branch
+      uses: actions/checkout@v2
+      with:
+        ref: src-pages
+        fetch-depth: 10
 
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
+    - name: Make destination directory for compiled CSS
+      run: mkdir -vp /tmp/assets/css
 
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
+    - name: Compile CSS from SCSS files
+      uses: gha-utilities/sass-build@v0.2.2
+      with:
+        source: assets/css/styles.scss
+        destination:  /tmp/assets/css/styles.css
+
+    - name: Upload Complied CSS
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: styles-artifact
+        path: /tmp/assets/css/styles.css
+
+  release_css:
+    needs: [build_css]
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout destination Git branch
+      uses: actions/checkout@v2
+      with:
+        ref: pr-pages
+        fetch-depth: 3
+  
+    - name: Download Compiled CSS
+      uses: actions/download-artifact@v1
+      with:
+        name: styles-artifact
+        path: assets/css
+    
+    - run: ls -lar assets/css
+    - run: git status
+    - run: echo ${{ github.sha }} > release.md
+
+    - name: Add and Commit changes to pr-pages branch
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        git config --local user.email 'action@github.com'
+        git config --local user.name 'GitHub Action'
+        git add .
+        git commit -m 'Updates compiled CSS files'
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: pr-pages
+
+  scp_theme:
+    # The type of runner that the job will run on
+    needs: [release_css]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout release Git branch
+        uses: actions/checkout@v2
+        with:
+          ref: src-pages
+      
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          source: "package.json, *.hbs, partials, static, assets"
+          rm: true
+          target: "/home/ghost-mgr/latest"
+          tar_tmp_path: "/tmp"
+          overwrite: true
+
+  # todo: make pull request
+
+  scp_css:
+    # The type of runner that the job will run on
+    needs: [scp_theme]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout release Git branch
+        uses: actions/checkout@v2
+        with:
+          ref: pr-pages
+      
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          source: "assets/css/*"
+          target: "~/latest/"
+          tar_tmp_path: "/tmp"
+          overwrite: true
+  

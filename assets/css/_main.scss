@@ -23,15 +23,17 @@
 	$h-colour: #fff; // Heading Colour
 	$b-colour: #222222; // Body Colour
 	$s-colour: #cb3443; // Secondary Colour
-
+	$ln-colour: #ececec;
+	$bg-colour: #f5f5f5;
 
 	$l-colour: #3dbbd2; //link
-	$hl-colour: #cb3443; //link
-
+	$hl-colour: #cb3443; //link	
 
 	// Fonts
 	$h-font: 'Audiowide', sans-serif; // Heading Font
 	$b-font: 'OpenSans', sans-serif; // Body Font
+	$c-font: 'Fira Code', monospace; // Code Font
+
 	$icon-font: 'fontello';// Icon Font
 
 	// Font Weights
@@ -70,6 +72,7 @@ body{
 	font-family: $b-font;
 	font-weight: $normal;
 	transition: all 0.3s ease;
+	background-color: $h-colour;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -85,7 +88,7 @@ a{
 	transition:all 0.3s ease;
 	&:hover{
 		color: $hl-colour;
-  	      transition:all 0.2s;
+  	    transition:all 0.2s;
 
 
 	}
@@ -93,13 +96,14 @@ a{
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 	color: $b-colour;
-	border-bottom-color: transparent;
-	border-bottom: 4px solid transparent;
 
 	&:hover{
-		color: $b-colour;
-		box-shadow: inset 0 -4px 0 #cb3443d9
+		color: $s-colour;
 	}
+}
+
+li{
+	margin-bottom: 15px;
 }
 
 hr{
@@ -127,14 +131,14 @@ hr{
 	text-align: center;
 	width: 90%;
 	float: left;
-        margin: -20px 5% 25px 5%;
+    margin: -20px 5% 25px 5%;
 	line-height: 2;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.3px;
 }
 
 .content{
-	width: 80%;
-	margin-right: 10%;
+	width: 60%;
+	margin-right: 20%;
 	float: right;
 }
 
@@ -157,7 +161,7 @@ img.emoji {
 
 
 .site-header{
-	background: $h-colour url(../img/header-bg.jpg) no-repeat center center; 
+	// background: $h-colour url(../img/header-bg.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -168,6 +172,7 @@ img.emoji {
     position: relative;
     height: 100px !important;
     transition:all 0.3s ease;
+	filter: opacity(0.6);
 }
 
 .site-header h2{
@@ -187,21 +192,15 @@ img.emoji {
 
 
 .profile-social, .profile-image{
-  -webkit-border-radius: 3px; 
-  -moz-border-radius: 3px; 
-  border-radius: 3px;
-  box-shadow: 1px 1px 3px 3px #d7d7d7; 
-  width: 100px;
-  margin: 10px; 
+  -webkit-border-radius: 90%; 
+  -moz-border-radius: 90%; 
+  border-radius: 90%;
+//   box-shadow: 1px 1px 3px 3px #d7d7d7;
+  border: 4px solid #ececec;
+  width: 80px;
+  margin: 50px 0px 0px; 
   position: relative;
   float: none;
-
-  &:hover{
-	filter: brightness(0.8)
- }
-
-
-
 
 }
 
@@ -228,7 +227,13 @@ and (max-device-width: 720px)
 
 
 .post h2{
-	margin-top: 0;
+	margin: 20px 10px;
+
+	&:hover{
+		transition:all 0.3s ease;		
+		margin-left: 20px !important;
+
+	}
 }
 
 .post p{
@@ -236,9 +241,20 @@ and (max-device-width: 720px)
 }
 
 .post h2 a{
-	font-size: 25px;
-	margin-bottom: 10px;
+	font-size: 20px;
+	display: block;
+	padding: 15px 0px;
 }
+
+@media only screen 
+and (max-device-width: 720px)
+{
+	.post h2 a{
+		font-size: 14px !important;
+	}
+}
+
+
 .post-template h1{
 	font-size: 25px;
 	margin-bottom: 15px;
@@ -250,49 +266,66 @@ and (max-device-width: 720px)
 .post-template h5,
 .post-template h6{
 	font-family: $h-font;
-	font-weight: $bold;
+	font-weight: $normal;
+	margin-left: 0px;
 }
 
 .post{
-	margin-bottom: 0px;
+	margin-bottom: -20px !important;
 	padding-bottom: 0px;
 	border-bottom: 1px solid transparent;
-	min-height: 230px;
+	min-height: 120px;
+	background-size: contain;
+    background-repeat: no-repeat;
+	background-position: 0%;
+	background-color: transparent;
+	-webkit-box-shadow: inset 0 -1px 0 0 $ln-colour;
+	box-shadow: inset 0 -1px 0 0 $ln-colour;
 }
 
 
 .post img{
-	max-width: 100%;
-	height: auto;
-    	width: 30%; 
+	height: 70px;
 	display: block; 
-	margin: 20px; 
-	float: left;
+	float: right;
+	margin: 20px 10px 20px 0px;
+	position: relative;
+	box-shadow: 8px 8px 0 $ln-colour;
 }
 
 @media only screen
 and (max-device-width: 720px)
 {
         .post img{
-	        width: 50% !important;
+	        width: 100px !important;
         	display: block;
-        	margin: 40px auto !important;
-		float: none !important;
-        }
+        	margin: 20px 10px auto !important;
+			float: right !important;
+
+		}
 }
 
 
 .post-info{
 	color: lighten($b-colour, 50%);
-	font-family: $h-font;
+	font-family: $b-font;
 	font-weight: $light;
-	font-size: 14px;
+	font-size: small;
 	font-variant: small-caps;
-	margin-top: -18px;
-	line-height: 30px;
-
+	line-height: 0px;
+	margin: -20px 10px;
 }
 
+.no-index {
+	margin: 0px;
+	box-shadow: none;
+
+	&:hover{
+		margin-left: 0px !important;
+	}
+	
+
+}
 
 .share-buttons{
 	list-style: none;
@@ -416,6 +449,7 @@ and (max-device-width: 720px)
 }
 
 .counter{
+	padding-top: 60px;
 	text-align: center;
 	line-height: 35px;
 	font-size: 13px;
@@ -443,9 +477,8 @@ and (max-device-width: 720px)
 
 .author p.name{
 	font-size: large;
-	font-weight: 400;
-	font-style: italic;
-	margin: 10px 0;
+	font-weight: 800;
+	margin: 0px;
 }
 
 .author p.address{
@@ -468,27 +501,20 @@ ul.social li{
 }
 
 .floating{
-	position: fixed;
+	// position: fixed;
 	top: 10vw;
 	right: 1vw;
-	background: #fff;
-	padding: 16px 8px 16px 8px;
-	opacity: 0.8;
+	background: transparent;
 	font-size: x-large;
-	-moz-box-shadow: 1px 1px 2px 3px #edecec;
-	-webkit-box-shadow: 1px 1px 2px 3px #edecec;
-	box-shadow: 1px 1px 2px 3px #edecec;
-	border-radius: 3px;
 }
 
 @media only screen 
 and (max-device-width: 720px)
 {
 	.floating{
- 	 top: 30vw;
-         right: 4vw;
-	 font-size: large;
-	 opacity: 0.6;	
+ 		top: 30vw;
+        right: 4vw;
+		font-size: large;
 	}
 }
 
@@ -507,7 +533,6 @@ and (max-device-width: 720px)
 .author ul.social li a{
 	padding: 5px;
 	font-size: medium;
-	color: #2e2e2e !important;
 }
 
 .website {
@@ -516,18 +541,21 @@ and (max-device-width: 720px)
 
 .quicklinks {
 	margin: 10px auto 0px auto;
-	text-align: center;
-	width: 800px;
+	width: 600px;
 	list-style: none;
 	padding: 0px;
 	display: grid;
-	grid-template-columns: 15% 20% 20% 20% 20%;
-	grid-gap: 10px;
+	// grid-template-columns: 25% 25% 25% 25%;
+	grid-template-columns: repeat(auto-fit, minmax(5px, 1fr));
+	grid-gap: normal;
 	font-size: medium;
 	font-variant: small-caps;
-	box-shadow: 1px 1px 2px 3px #dedede;
+	// box-shadow: 1px 1px 2px 3px #dedede;
 	border-radius: 3px;
-	background: white;
+	background: transparent;
+	position: absolute;
+	top: 20px;
+	right: 10%;
 }
 
 
@@ -535,11 +563,13 @@ and (max-device-width: 720px)
 and (max-device-width: 720px)
 {
         .quicklinks{
-		font-size: small;
+		font-size: x-small;
 		margin-top: 0px;
+		right: 0px;
+		top: 0px;
 		width: 100%;
-		grid-template-columns: 15% 15% 15% 20% 20%;
-		border-radius: 0px;
+		// grid-template-columns: 15% 15% 15% 20% 20%;
+		grid-template-columns: repeat(auto-fit, minmax(5px, 1fr));
 	}
 }
 
@@ -599,6 +629,7 @@ author-description, .author-name {
 .author-description{
 	font-size: small !important;
 	margin-bottom: 15px ;
+	color: lighten($color: $b-colour, $amount: 50%);
 }
 
 // -----------------------------------------------------------------------------
@@ -611,7 +642,7 @@ author-description, .author-name {
 	font-family: $h-font;
 	font-weight: $light;
 	color: lighten($b-colour, 50%);
-	margin-top: 10px;
+	margin-top: 60px !important;
 	font-variant: all-small-caps;
 	font-size: small !important;
 	letter-spacing: 1px;
@@ -627,7 +658,7 @@ author-description, .author-name {
 	}
 }
 .main-footer p{
-	font-size: 11px;
+	font-size: small;
 }
 
 .quote-header{
@@ -745,10 +776,17 @@ body.post-template .site-header .quote-header{
 
 .description {
 	text-align: center;
-	padding-top: 20px !important;
+	padding-top: 10px !important;
+	color: lighten($color: $b-colour, $amount: 50%) !important;
+	font-variant: all-small-caps;
 }
 
 
+code {
+	font-family: $c-font;
+	font-size: 0.95em;
+	line-height: 1.5em;
+}
 
 blockquote p {
   display: -webkit-box;
@@ -763,7 +801,7 @@ blockquote::before{
   /*Font*/
   font-family: Georgia, serif;
   font-size: 60px;
-  font-color: #656565;
+  color: #656565;
   font-weight: bold;
   color: #e4e4e4;
   

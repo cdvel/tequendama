@@ -1,37 +1,17 @@
 {{!< default}}
-
-
 <div class="container clearfix">
-
   <main role="main" class="content">
-
     {{#foreach posts}}
-
-    <article class="{{post_class}} post">
-      <a href="{{url}}" title="{{title}}">
-	<img src="{{img_url feature_image}}" class="post-img" style="width: 20%; display: block; margin: 10px 30px 50px; float: left">
-      </a>
-      <h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
-      <footer class="post-info" hidden>Posted on <span class="post-meta"><time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> {{tags separator=" // " prefix="Tagged in "}}</span></footer>
-      <footer class="post-info"> <span class="post-meta">{{tags separator=" // " prefix=""}}</span></footer>
-
-      <p>{{excerpt words="26"}}&hellip;</p>
-
-<!--      <a class="read-more" style="float: right;"  href="{{url}}" title="{{title}}">Read more &raquo;</a> -->
-
-    </article>
-
+      <article class="{{post_class}} post">
+        <img src="{{img_url feature_image}}" class="post-img">
+        <a href="{{url}}" title="{{title}}"></a>
+        <h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
+        <footer class="post-info" hidden>Posted on <span class="post-meta"><time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> {{tags separator=" // " prefix="Tagged in "}}</span></footer>
+        <footer class="post-info"> <span class="post-meta">{{tags separator=" // " prefix=""}}</span></footer>
+        {{!-- <p>{{excerpt words="26"}}&hellip;</p> --}}
+        <!-- <a class="read-more" style="float: right;"  href="{{url}}" title="{{title}}">Read more &raquo;</a> -->
+      </article>
     {{/foreach}}
-
     {{pagination}}
-
   </main>
-
-<!-- 
-  {{#foreach posts}}
-    {{#if @first}}
-      {{> author}}
-    {{/if}}
-  {{/foreach}}
--->
 </div>

@@ -26,7 +26,7 @@
 
   <script src="{{asset "js/vendor/modernizr-2.8.0.min.js"}}"></script>
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/solarized-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/tomorrow-night-blue.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
 
 <meta property="og:image" content="https://cdv.im/site-card">
@@ -38,7 +38,7 @@
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
-            <header class="site-header" style="background-image:url({{@blog.cover_image}})">
+            <header class="site-header" style="background-image:url({{@blog.cover_image}});">
 	<div>
             <a class="quote-header ir" href="#">
               <div class="main-title">
@@ -54,26 +54,28 @@
 
 
 <div>
+      {{#get "posts" limit="1" include="authors"}}
         {{#foreach posts}}
-                {{#if @first}}
-                        {{> author}}
-                {{/if}}
+          {{> author}}
         {{/foreach}}
+      {{/get}}
 </div>
 
 	{{navigation}}
 
-        {{{body}}}
-
-	{{>social}}
+  {{{body}}}
 
 
             <footer class="main-footer">
               <div class="container clearfix">
                
                 <a class="icon-rss" href="{{@blog.url}}/rss/" title="RSS Feed"></a>
-                <p><a href="{{@blog.url}}" title="{{@blog.description}}">{{@blog.title}}</a> &copy; <script>document.write(new Date().getFullYear())</script></p>
-		<span style="font-weight:lighter; font-size:x-small; float: right; cursor:pointer;" onclick="window.scrollTo(0, 0);">Back to top</span>
+                <p>
+                  <a href="{{@blog.url}}" title="{{@blog.title}}">
+                     {{@blog.title}}&copy; <script>document.write(new Date().getFullYear())</script>
+                  </a>
+                </p>
+		          <span style="font-weight:lighter; font-size:medium; float: right; cursor:pointer;" onclick="window.scrollTo(0, 0);">🔝</span>
 
               </div>
             </footer>
@@ -83,7 +85,7 @@
 
             <script async src="{{asset "js/vendor/jquery-1.11.0.min.js"}}"></script>
             <!--script>window.jQuery || document.write('<script src="{{asset "js/vendor/jquery-1.11.0.min.js"}}"><\/script>')</script-->
-            <script src="{{asset "js/plugins.js"}}"></script>
+            <!-- <script src="{{asset "js/plugins.js"}}"></script> -->
             <script src="{{asset "js/main.js"}}"></script>
 
             <!--script async src="{{asset "/js/plugins/jquery.fitvids.js"}}"></script-->
