@@ -32,6 +32,8 @@
 	// Fonts
 	$h-font: 'Audiowide', sans-serif; // Heading Font
 	$b-font: 'OpenSans', sans-serif; // Body Font
+	$c-font: 'Fira Code', monospace; // Code Font
+
 	$icon-font: 'fontello';// Icon Font
 
 	// Font Weights
@@ -752,9 +754,15 @@ body.post-template .site-header .quote-header{
 	text-align: center;
 	padding-top: 10px !important;
 	color: lighten($color: $b-colour, $amount: 50%) !important;
+	font-variant: all-small-caps;
 }
 
 
+code {
+	font-family: $c-font;
+	font-size: 0.95em;
+	line-height: 1.5em;
+}
 
 blockquote p {
   display: -webkit-box;

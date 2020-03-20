@@ -9,6 +9,6 @@
     },
   "description": "Tequendama ghost blog theme",
   "config": {
-        "posts_per_page": 21
+        "posts_per_page": 18
     }
 }
