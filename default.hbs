@@ -25,6 +25,8 @@
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/tomorrow-night-blue.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad(); console.log('end hljs load');</script>
+
 {{!-- 
 <meta property="og:image" content="https://cdv.im/site-card">
 <meta name="twitter:image" content="https://cdv.im/site-card"> 
@@ -91,7 +93,7 @@
             {{#if post}}
                      {{!-- <script src="{{asset "js/vendor/highlight.js/8.4/highlight.pack.js"}}"></script> --}}
                      {{!-- <script src="{{asset "//highlightjs.org/static/highlight.site.pack.js"}}"></script> --}}
-                     <script src="{{asset "js/highlight.pack.js"}}"></script>
+                     {{!-- <script src="{{asset "js/highlight.pack.js"}}"></script> --}}
                      <!--script src="http://yandex.st/highlightjs/7.4/highlight.min.js"></script--> 
                     {{!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script> --}}
                     <script>hljs.initHighlightingOnLoad(); console.log('end hljs load');</script>
