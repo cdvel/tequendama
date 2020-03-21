@@ -216,7 +216,11 @@ and (max-device-width: 720px)
 {
     .profile-social{
        	width: 20px !important;
-     }
+	 }
+	 .profile-social, .profile-image{
+		width: 60% !important;
+	}
+
 }
 
 
@@ -718,7 +722,7 @@ body.post-template .site-header .quote-header{
 	}
 
 	.author{
-		margin-bottom: 60px; 
+		margin-bottom: 30px; 
 	}
 
 	.site-header,
