@@ -1,14 +1,14 @@
 {
   "name": "tequendama",
   "version": "1.0.0",
-  "author": "Cesar Velandia",
   "author": {
-        "name": "Cesar Velandia",
-        "email": "cesar@velandia.co",
-        "url": "https://cesar.velandia.co"
-    },
+    "name": "Cesar Velandia",
+    "email": "cesar@velandia.co",
+    "url": "https://cesar.velandia.co"
+  },
   "description": "Tequendama ghost blog theme",
   "config": {
-        "posts_per_page": 5
-    }
+    "posts_per_page": 20
+  },
+  "dependencies": {}
 }
