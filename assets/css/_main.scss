@@ -91,7 +91,7 @@ a{
 		// color: $hl-colour;
   	    // transition:all 0.2s;
 		// color: #cb3443;
-		// background: linear-gradient(90deg,$l-colour,black);
+
 		background-clip: border-box;		  
 		  -webkit-background-clip: text;		  
 		//   -webkit-text-fill-color: transparent;
@@ -110,11 +110,22 @@ a{
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-	color: $b-colour;
+	// color: $b-colour;
 
-	&:hover{
-		color: $s-colour;
-	}
+	background-clip: border-box;		  
+		-webkit-background-clip: text;		  
+	//   -webkit-text-fill-color: transparent;
+	box-decoration-break: clone;
+	background: -webkit-gradient(linear,left top,right top,from($b-colour),to(black));
+	background: linear-gradient(90deg,$b-colour,black);
+	background-clip: border-box;
+	background-clip: border-box;
+		-webkit-background-clip: text;
+	//   -webkit-text-fill-color: transparent;
+		-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	text-shadow: none;
+	transition: all .2s;  
 }
 
 ol {
