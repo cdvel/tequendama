@@ -87,22 +87,8 @@ a{
 	text-decoration: none !important;
 	color: $l-colour;
 	transition: all 0.3s ease;
-
-
 	&:hover{
-		background-clip: border-box;		  
-		-webkit-text-fill-color: transparent;
-		-webkit-background-clip: text;		  
-		box-decoration-break: clone;
-		background: -webkit-gradient(linear,left top,right top,from($hl-colour),to($b-colour));
-		background: linear-gradient(90deg,$hl-colour,$b-colour);
-		background-clip: border-box;
-		background-clip: border-box;
-		-webkit-text-fill-color: transparent;
-		-webkit-box-decoration-break: clone;
-		-webkit-background-clip: text;
-		box-decoration-break: clone;
-		text-shadow: none;
+		color: $hl-colour;
 		transition: all 0.3s ease;
 	}
 }
@@ -123,6 +109,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 	box-decoration-break: clone;
 	text-shadow: none;
 	transition: all 0.3s ease;
+
+	&:hover{
+		background-clip: border-box;		  
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;		  
+		box-decoration-break: clone;
+		background: -webkit-gradient(linear,left top,right top,from($hl-colour),to($b-colour));
+		background: linear-gradient(90deg,$hl-colour,$b-colour);
+		background-clip: border-box;
+		background-clip: border-box;
+		-webkit-text-fill-color: transparent;
+		-webkit-box-decoration-break: clone;
+		-webkit-background-clip: text;
+		box-decoration-break: clone;
+		text-shadow: none;
+		transition: all 0.3s ease;
+	}
 }
 
 ol {
