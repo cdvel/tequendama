@@ -85,24 +85,24 @@ h1, h2, h3, h4, h5, h6{
 
 a{
 	text-decoration: none;
-	// color: $l-colour;
-	// transition:all 0.3s ease;
+	color: $l-colour;
+	transition:all 0.3s ease;
 
-	background: linear-gradient(90deg,$l-colour,$l-colour);  
-	background-clip: border-box;		  
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;		  
-	box-decoration-break: clone;
-	background: -webkit-gradient(linear,left top,right top,from($l-colour),to($l-colour));
-	background: linear-gradient(90deg,$l-colour,$l-colour);
-	background-clip: border-box;
-	background-clip: border-box;
-	-webkit-text-fill-color: transparent;
-	-webkit-box-decoration-break: clone;
-	-webkit-background-clip: text;
-	box-decoration-break: clone;
-	text-shadow: none;
-	transition: all 0.3s ease;
+	// background: linear-gradient(90deg,$l-colour,$l-colour);  
+	// background-clip: border-box;		  
+	// -webkit-text-fill-color: transparent;
+	// -webkit-background-clip: text;		  
+	// box-decoration-break: clone;
+	// background: -webkit-gradient(linear,left top,right top,from($l-colour),to($l-colour));
+	// background: linear-gradient(90deg,$l-colour,$l-colour);
+	// background-clip: border-box;
+	// background-clip: border-box;
+	// -webkit-text-fill-color: transparent;
+	// -webkit-box-decoration-break: clone;
+	// -webkit-background-clip: text;
+	// box-decoration-break: clone;
+	// text-shadow: none;
+	// transition: all 0.3s ease;
 
 
 	&:hover{
@@ -113,13 +113,14 @@ a{
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 
 	// color: $b-colour;
+	// background: linear-gradient(90deg,$l-colour,$b-colour);  
 
 	background-clip: border-box;		  
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;		  
 	box-decoration-break: clone;
-	background: -webkit-gradient(linear,left top,right top,from($l-colour),to($b-colour));
-	background: linear-gradient(90deg,$l-colour,$b-colour);
+	background: -webkit-gradient(linear,left top,right top,from($b-colour),to($b-colour));
+	background: linear-gradient(90deg,$b-colour,$b-colour);
 	background-clip: border-box;
 	background-clip: border-box;
 	-webkit-text-fill-color: transparent;
@@ -128,10 +129,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 	box-decoration-break: clone;
 	text-shadow: none;
 	transition: all 0.3s ease;
-	background: linear-gradient(90deg,$l-colour,$b-colour);  
 
 	&:hover{
-		color: $s-colour;
+		// color: $s-colour;
+		background-clip: border-box;		  
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;		  
+		box-decoration-break: clone;
+		background: -webkit-gradient(linear,left top,right top,from($l-colour),to($b-colour));
+		background: linear-gradient(90deg,$l-colour,$b-colour);
+		background-clip: border-box;
+		background-clip: border-box;
+		-webkit-text-fill-color: transparent;
+		-webkit-box-decoration-break: clone;
+		-webkit-background-clip: text;
+		box-decoration-break: clone;
+		text-shadow: none;
+		transition: all 0.3s ease;
 	}
 }
 
