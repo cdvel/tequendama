@@ -101,9 +101,9 @@ a{
 		background: linear-gradient(90deg,$l-colour,black);
 		background-clip: border-box;
 		background-clip: border-box;
-		//   -webkit-background-clip: text;
-		//   -webkit-text-fill-color: transparent;
-		//   -webkit-box-decoration-break: clone;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-webkit-box-decoration-break: clone;
 		box-decoration-break: clone;
 		text-shadow: none;
 
