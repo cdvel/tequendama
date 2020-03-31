@@ -88,9 +88,24 @@ a{
 	color: $l-colour;
 	transition:all 0.3s ease;
 	&:hover{
-		color: $hl-colour;
-  	    transition:all 0.2s;
-
+		// color: $hl-colour;
+  	    // transition:all 0.2s;
+		// color: #cb3443;
+		transition: all .2s;  
+		background: linear-gradient(90deg,$l-colour,black);  
+		background-clip: border-box;		  
+		//   -webkit-background-clip: text;		  
+		//   -webkit-text-fill-color: transparent;
+		box-decoration-break: clone;
+		background: -webkit-gradient(linear,left top,right top,from($l-colour),to(black));
+		background: linear-gradient(90deg,$l-colour,black);
+		background-clip: border-box;
+		background-clip: border-box;
+		//   -webkit-background-clip: text;
+		//   -webkit-text-fill-color: transparent;
+		//   -webkit-box-decoration-break: clone;
+		box-decoration-break: clone;
+		text-shadow: none;
 
 	}
 }
@@ -244,7 +259,7 @@ and (max-device-width: 720px)
 
 	&:hover{
 		transition:all 0.3s ease;		
-		margin-left: 20px !important;
+		// margin-left: 20px !important;
 
 	}
 }
