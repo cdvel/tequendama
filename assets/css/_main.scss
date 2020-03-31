@@ -85,65 +85,19 @@ h1, h2, h3, h4, h5, h6{
 
 a{
 	text-decoration: none;
-	// color: $l-colour;
-	// transition:all 0.3s ease;
-			// color: $hl-colour;
-  	    // transition:all 0.2s;
-		// color: #cb3443;
-
-		background-clip: border-box;		  
-		  -webkit-background-clip: text;		  
-		//   -webkit-text-fill-color: transparent;
-		box-decoration-break: clone;
-		background: -webkit-gradient(linear,left top,right top,from($l-colour),to(black));
-		background: linear-gradient(90deg,$l-colour,black);
-		background-clip: border-box;
-		background-clip: border-box;
-		  -webkit-background-clip: text;
-		//   -webkit-text-fill-color: transparent;
-		  -webkit-box-decoration-break: clone;
-		box-decoration-break: clone;
-		text-shadow: none;
-		transition: all .3s ease;  
+	color: $l-colour;
+	transition:all 0.3s ease;
 	&:hover{
-		// color: $hl-colour;
-  	    // transition:all 0.2s;
-		// color: #cb3443;
-
-		background-clip: border-box;		  
-		  -webkit-background-clip: text;		  
-		//   -webkit-text-fill-color: transparent;
-		box-decoration-break: clone;
-		background: -webkit-gradient(linear,left top,right top,from($l-colour),to(black));
-		background: linear-gradient(90deg,$l-colour,black);
-		background-clip: border-box;
-		background-clip: border-box;
-		  -webkit-background-clip: text;
-		//   -webkit-text-fill-color: transparent;
-		  -webkit-box-decoration-break: clone;
-		box-decoration-break: clone;
-		text-shadow: none;
-		transition: all .3s ease;  
+		color: $s-colour
 	}
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-	// color: $b-colour;
+	color: $b-colour;
 
-	background-clip: border-box;		  
-		-webkit-background-clip: text;		  
-	//   -webkit-text-fill-color: transparent;
-	box-decoration-break: clone;
-	background: -webkit-gradient(linear,left top,right top,from($b-colour),to(black));
-	background: linear-gradient(90deg,$b-colour,black);
-	background-clip: border-box;
-	background-clip: border-box;
-		-webkit-background-clip: text;
-	//   -webkit-text-fill-color: transparent;
-		-webkit-box-decoration-break: clone;
-	box-decoration-break: clone;
-	text-shadow: none;
-	transition: all .3s ease;  
+	&:hover{
+		color: $s-colour;
+	}
 }
 
 ol {
