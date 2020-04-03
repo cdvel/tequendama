@@ -841,6 +841,7 @@ blockquote p {
 .twitter-tweet::before{
 	content: '\e813' !important;
 	font-family: $icon-font !important;
+	font-size: 40px !important;
 }
 
 .kg-embed-card{
