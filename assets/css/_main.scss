@@ -861,6 +861,12 @@ blockquote::after{
   content: "";
 }
 
+.twitter-tweet blockquote::before{
+	content: '\e813' !important;
+	font-family: $icon-font !important;
+}
+
+
 
 // bookmarks
 
