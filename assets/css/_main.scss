@@ -906,6 +906,24 @@ blockquote::after{
     text-overflow: ellipsis;
 }
 
+.kg-bookmark-metadata img {
+    // max-width: 100%;
+    // height: auto;
+    // vertical-align: bottom;
+    // object-fit: cover;
+
+    max-width: 100% !important;
+	height: auto !important;
+	display: table-cell !important;
+	float: none !important;	
+	vertical-align: bottom;
+	margin: inherit !important;
+	position: inherit !important;
+	object-fit: cover !important;
+	box-shadow: none !important;
+
+}
+
 .kg-bookmark-description {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -929,10 +947,24 @@ blockquote::after{
 }
 
 .kg-bookmark-thumbnail img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: bottom;
-    object-fit: cover;
+    max-width: 100% !important;
+	height: auto !important;
+	display: table-cell !important;
+	float: none !important;	
+	vertical-align: bottom;
+	margin: inherit !important;
+	position: inherit !important;
+	object-fit: cover !important;
+	box-shadow: none !important;
+
+	// height: 4.5em;
+	// width: 6.5em;
+	// // display: block; 
+	// float: right;
+	// margin: 20px 10px 20px 0px;
+	// position: relative;
+	// box-shadow: 8px 8px 0 $ln-colour;
+
 }
 
 .kg-bookmark-author {
