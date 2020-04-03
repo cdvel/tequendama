@@ -926,10 +926,11 @@ blockquote::after{
 	position: inherit !important;
 	object-fit: cover !important;
 	box-shadow: none !important;
-	margin: 0 8px 0 0;
+	// margin: 0 8px 0 0;
 	width: 20px;
 	height: 20px;
 	vertical-align: bottom;
+	margin: 20px 10px auto 0px !important
 }
 
 .kg-bookmark-description {
@@ -982,7 +983,8 @@ blockquote::after{
 .kg-bookmark-author {
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
+	overflow: hidden;
+	display: none !important;
 }
 
 .kg-bookmark-publisher{
