@@ -866,7 +866,8 @@ blockquote::after{
 
 .kg-bookmark-card {
     width: 100%;
-    position: relative;
+	position: relative;
+	margin-left: auto;
 }
 
 .kg-bookmark-container {
@@ -892,12 +893,14 @@ blockquote::after{
 }
 
 .kg-bookmark-title {
-    font-weight: 600;
+	font-weight: $normal;
+	color: $b-colour;
 }
 
 .kg-bookmark-metadata,
 .kg-bookmark-description {
-    margin-top: .5em;
+	margin-top: .5em;
+	color: lighten($color: $b-colour, $amount: 40%);
 }
 
 .kg-bookmark-metadata {
@@ -982,6 +985,6 @@ blockquote::after{
 }
 
 .kg-bookmark-publisher::before {
-    content: " ";
+    content: "";
     margin: 0 .5em;
 }
