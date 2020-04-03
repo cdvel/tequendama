@@ -883,7 +883,8 @@ blockquote::after{
 }
 
 .kg-bookmark-container:hover {
-    text-decoration: none;
+	text-decoration: none;
+	box-shadow: 8px 8px 0 $ln-colour;
 }
 
 .kg-bookmark-content {
