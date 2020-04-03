@@ -874,11 +874,14 @@ blockquote::after{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
-    color: $ln-colour;
     font-family: inherit;
     text-decoration: none;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	font-size: small;
+	letter-spacing: 0.01rem;
+    line-height: 1.2rem;
+
+}
 }
 
 .kg-bookmark-container:hover {
@@ -900,7 +903,7 @@ blockquote::after{
 .kg-bookmark-metadata,
 .kg-bookmark-description {
 	margin-top: .5em;
-	color: lighten($color: $b-colour, $amount: 40%);
+	color: lighten($color: $b-colour, $amount: 50%);
 }
 
 .kg-bookmark-metadata {
@@ -984,7 +987,11 @@ blockquote::after{
     overflow: hidden;
 }
 
+.kg-bookmark-publisher{
+    color: $l-colour !important;
+}
+
 .kg-bookmark-publisher::before {
     content: "";
-    margin: 0 .5em;
+    margin: 0em;
 }
