@@ -843,6 +843,10 @@ blockquote p {
 	font-family: $icon-font !important;
 }
 
+.kg-embed-card{
+	margin-left: 0px !important;
+}
+
 blockquote::before{
   content: "\201C"; /*Unicode for Left Double Quote*/
   
