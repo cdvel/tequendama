@@ -331,7 +331,9 @@ and (max-device-width: 720px)
 	position: relative;
 	box-shadow: 8px 8px 0 $ln-colour;
     transition:all 0.3s ease;
+}
 
+.post a img{
 	&:hover{
 		filter: brightness(0.95);
 	}
@@ -630,22 +632,6 @@ and (max-device-width: 720px)
 .quicklinks a{
         margin: 0px;
         padding: 10px;
-/*
-        border: 0px solid;
-        border-radius: 5px;
-        -moz-box-shadow: 0px 2px 3px 3px #e6e6e6;
-        -webkit-box-shadow: 0px 2px 3px 3px #e6e6e6;
-        box-shadow: 0px 2px 3px 3px #e6e6e6;
-*/
-
-        &:hover{
-/*
-	        -moz-box-shadow: 0px 3px 4px 4px #e6e6e6;
-       	 	-webkit-box-shadow: 0px 3px 4px 4px #e6e6e6;
-        	box-shadow: 0px 3px 4px 4px #e6e6e6;
-*/
-        }
-
 }
 
 .quicklinks a button{
