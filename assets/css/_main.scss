@@ -354,6 +354,19 @@ and (max-device-width: 720px)
 	margin: -20px 0px;
 }
 
+
+.feature-image{
+	width: 85% !important; 
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto; 
+	height: auto !important; 
+	box-shadow: 8px 8px 0 $ln-colour; 
+	padding: 0px; 
+	margin: 20px 10%;
+}
+
+
 .no-index {
 	margin: 0px;
 	box-shadow: none;
@@ -675,12 +688,11 @@ author-description, .author-name {
 .main-footer{
 	background-color: #f3f3f3;
 	text-align: center;
-	font-family: $h-font;
+	font-family: $b-font;
 	font-weight: $light;
 	color: lighten($b-colour, 50%);
 	margin-top: 60px !important;
 	font-variant: all-small-caps;
-	font-size: small !important;
 	letter-spacing: 1px;
 }
 .main-footer .container{
