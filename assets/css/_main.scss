@@ -399,23 +399,20 @@ and (max-device-width: 720px)
 
 
 .tag-title{
-	font-family: $h-font;
 	font-weight: $light;
-	border-bottom: 1px solid #ececec;
 	margin-bottom: 40px;
 }
 
 .tag-title h1{
+	font-family: $h-font;
 	font-size: 28px;
-	margin-top: 0;
-	margin-bottom: 40px;
 }
 
 .tag-title p {
-	color: $s-colour;
-	font-size: 14px;
-	margin-bottom: 0;
-	
+	color: lighten($b-colour, 50%);
+	font-family: $b-font;
+	font-weight: $light;
+	font-variant: small-caps;
 }
 
 
