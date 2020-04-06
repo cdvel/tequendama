@@ -1,35 +1,23 @@
 {{!< default}}
-
-        <div class="container clearfix">
-          <main role="main" class="content">
+<div class="container clearfix">
+	<main role="main" class="content">
 		<a class="btn" href="{{@blog.url}}" title="Back to homepage">&laquo; Back to home</a>
-              <div class="tag-title">
-                <p>All articles tagged as:</p>
-                <h1>{{tag.name}}</h1>
-              </div>
-
-              {{#foreach posts}}  
-              <article class="{{post_class}} post">
-                <h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
-                <footer class="post-info" hidden>Posted on <span class="post-meta"><time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> {{tags separator=", " prefix="Tagged in "}}</span></footer>
-                <footer class="post-info"><span class="post-meta">{{tags separator=" // " prefix=""}}</span></footer>
-                
-                <p>{{excerpt characters="180"}}&hellip;</p>
-                
-                <a class="read-more" href="{{url}}" title="{{title}}">Read more &raquo;</a>
-              </article>
-              {{/foreach}}
-
-              {{pagination}}
-             
-          </main>
-
-  <!-- Author info -->
-  {{#foreach posts}}
-    {{#if @first}}
-      {{> author}}
-    {{/if}}
-  {{/foreach}}
-
-
-        </div>
+		<div class="tag-title">
+			<h1>{{tag.name}}</h1>
+			<p>{{tag.description}}</p>
+		</div>
+		{{#foreach posts}}
+		<article class="{{post_class}} post">
+			<img src="{{img_url feature_image}}&w=160" class="post-img">
+			<a href="{{url}}" title="{{title}}"></a>
+			<h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
+			<footer class="post-info" hidden>Posted on <span class="post-meta"><time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> {{tags separator=" // " prefix="Tagged in "}}</span></footer>
+			<footer class="post-info"> <span class="post-meta">{{tags separator=" // " prefix=""}}</span></footer>
+			<footer class="post-info">Posted on <span class="post-meta"><time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> {{tags separator=", " prefix="Tagged in "}}</span></footer>
+			{{!-- <p>{{excerpt words="26"}}&hellip;</p> --}}
+			<!-- <a class="read-more" style="float: right;"  href="{{url}}" title="{{title}}">Read more &raquo;</a> -->
+		</article>
+		{{/foreach}}
+		{{pagination}}		
+	</main>
+</div>
