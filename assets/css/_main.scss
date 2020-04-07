@@ -757,7 +757,7 @@ body.post-template > .site-header{
 }
 
 @media (prefers-color-scheme: dark) {
-	body.post-template > .site-header{
+	.site-header{
 		filter: invert(1);
 	}	
 }
