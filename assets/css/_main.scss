@@ -25,6 +25,7 @@
 	$s-colour: #cb3443; // Secondary Colour
 	$ln-colour: #ececec;
 	$bg-colour: #f5f5f5;
+	$dg-colour: #595959;
 
 	$l-colour: #3dbbd2; //link
 	$hl-colour: #cb3443; //link	
@@ -669,7 +670,7 @@ author-description, .author-name {
 .author-description{
 	font-size: small !important;
 	margin-bottom: 15px ;
-	color: lighten($color: $b-colour, $amount: 50%);
+	color: $dg-colour;
 }
 
 // -----------------------------------------------------------------------------
@@ -681,7 +682,7 @@ author-description, .author-name {
 	text-align: center;
 	font-family: $b-font;
 	font-weight: $light;
-	color: lighten($b-colour, 50%);
+	color: $dg-colour;
 	margin-top: 60px !important;
 	font-variant: all-small-caps;
 	letter-spacing: 1px;
@@ -691,7 +692,7 @@ author-description, .author-name {
 }
 
 .main-footer a{
-	color: lighten($b-colour, 50%);
+	color: $dg-colour;
 	&:hover{
 		color: $b-colour;
 	}

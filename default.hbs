@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <head>
 
     {{!-- Document Settings --}}
@@ -32,28 +32,21 @@
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
-            <header class="site-header" style="background-image:url({{@blog.cover_image}});">
-	<div>
-            <a class="quote-header ir" href="#">
-              <div class="main-title">
-                <label id="main-quote"></label>
-              </div>
-                <div class="main-title" style="font-size: 20px;">
-              <label id="main-quote-author"></label>
-	    </div>
+          <header class="site-header" style="background-image:url({{@blog.cover_image}});">
+        	<div>
+            <a class="quote-header ir" href="#" aria-label="quote header">
+              <div class="main-title"><label id="main-quote"></label></div>
+              <div class="main-title" style="font-size: 20px;"><label id="main-quote-author"></label></div>
             </a> 
-
-            </header>
-	</div>
-
-
-<div>
-      {{#get "posts" limit="1" include="authors"}}
-        {{#foreach posts}}
-          {{> author}}
-        {{/foreach}}
-      {{/get}}
-</div>
+	        </div>
+          </header>
+          <div>
+                {{#get "posts" limit="1" include="authors"}}
+                  {{#foreach posts}}
+                    {{> author}}
+                  {{/foreach}}
+                {{/get}}
+          </div>
 
 	{{navigation}}
 
