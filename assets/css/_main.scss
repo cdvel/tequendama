@@ -21,6 +21,7 @@
 
 //	$h-colour: #252525; // Heading Colour
 	$h-colour: #fff; // Heading Colour
+	$a-colour: #FAEBD7; // Heading Colour
 	$b-colour: #222222; // Body Colour
 	$s-colour: #cb3443; // Secondary Colour
 	$ln-colour: #ececec;
@@ -77,6 +78,13 @@ body{
 	background-color: $h-colour;
 }
 
+@media (prefers-color-scheme: dark) {
+	body {
+	  background-color: $b-colour;
+	  color: $a-colour;
+	}
+}
+
 h1, h2, h3, h4, h5, h6{
 	font-family: $h-font;
 	font-weight: $light;
@@ -129,6 +137,27 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 	}
 }
 
+@media (prefers-color-scheme: dark) {
+
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+		background-clip: border-box;		  
+		// -webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;		  
+		box-decoration-break: clone;
+		// background: -webkit-gradient(linear,left top,right top,from($b-colour),to($b-colour));
+		// background: linear-gradient(90deg,$b-colour,$b-colour);
+		background-clip: border-box;
+		background-clip: border-box;
+		// -webkit-text-fill-color: transparent;
+		-webkit-box-decoration-break: clone;
+		-webkit-background-clip: text;
+		box-decoration-break: clone;
+		text-shadow: none;
+		transition: all 0.3s ease;
+		color: $a-colour !important;
+	}
+}
+
 ol {
 	list-style:lower-roman;
 }
@@ -162,7 +191,7 @@ hr{
 
 .author{
 	font-family: $b-font !important;
-	color: $b-colour;
+	// color: $b-colour;
 	text-align: center;
 	width: 90%;
 	float: left;
@@ -678,7 +707,7 @@ author-description, .author-name {
 // -----------------------------------------------------------------------------
 
 .main-footer{
-	background-color: #f3f3f3;
+	background-color: $ln-colour;
 	text-align: center;
 	font-family: $b-font;
 	font-weight: $light;
@@ -687,6 +716,14 @@ author-description, .author-name {
 	font-variant: all-small-caps;
 	letter-spacing: 1px;
 }
+
+@media (prefers-color-scheme: dark) {
+	.main-footer{
+		background-color: $b-colour;
+		color: $a-colour;
+	}
+}
+
 .main-footer .container{
 	padding: 30px 0;
 }
@@ -717,6 +754,12 @@ author-description, .author-name {
 body.post-template > .site-header{
     height: 100px;
     transition:all 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+	body.post-template > .site-header{
+		filter: invert(1);
+	}	
 }
 
 
