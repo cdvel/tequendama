@@ -817,7 +817,7 @@ body.post-template .site-header .quote-header{
 .description {
 	text-align: center;
 	padding-top: 10px !important;
-	color: lighten($color: $b-colour, $amount: 50%) !important;
+	color: $dg-colour !important;
 	font-variant: all-small-caps;
 }
 
