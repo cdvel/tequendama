@@ -12,7 +12,10 @@
   			<img src="{{img_url feature_image}}&w=160" class="post-img">
       </a>
 			<h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
-			<footer class="post-info">Last Update <time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> <span class="post-meta">{{tags separator=" // " prefix=" in "}}</span></footer>
+			<footer class="post-info">
+			Last Update <time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time>
+			{{!-- <span class="post-meta">{{tags separator=" // " prefix=" in "}}</span> --}}
+			</footer>
 			{{!-- <footer class="post-info">Posted on <span class="post-meta"> {{tags separator=", " prefix="Tagged in "}}</span></footer> --}}
 			{{!-- <p>{{excerpt words="26"}}&hellip;</p> --}}
 			<!-- <a class="read-more" style="float: right;"  href="{{url}}" title="{{title}}">Read more &raquo;</a> -->
