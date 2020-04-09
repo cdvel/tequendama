@@ -78,40 +78,6 @@ body{
 	background-color: $h-colour;
 }
 
-@media (prefers-color-scheme: dark) {
-	body {
-	  background-color: $b-colour;
-	  color: $a-colour;
-	}
-
-	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-		background-clip: border-box;		  
-		-webkit-text-fill-color: $a-colour;
-		-webkit-background-clip: text;		  
-		box-decoration-break: clone;
-		// background: -webkit-gradient(linear,left top,right top,from($b-colour),to($b-colour));
-		// background: linear-gradient(90deg,$b-colour,$b-colour);
-		background-clip: border-box;
-		background-clip: border-box;
-		-webkit-text-fill-color: $a-colour;
-		-webkit-box-decoration-break: clone;
-		-webkit-background-clip: text;
-		box-decoration-break: clone;
-		text-shadow: none;
-		transition: all 0.3s ease;
-		color: $a-colour !important;
-	}
-
-	.main-footer{
-		background-color: $b-colour;
-		color: $a-colour;
-	}
-
-	.site-header{
-		filter: invert(1);
-	}	
-}
-
 h1, h2, h3, h4, h5, h6{
 	font-family: $h-font;
 	font-weight: $light;
@@ -912,9 +878,6 @@ blockquote::after{
   content: "";
 }
 
-
-
-
 // bookmarks
 
 .kg-bookmark-card {
@@ -1049,4 +1012,40 @@ blockquote::after{
 .kg-bookmark-publisher::before {
     content: "";
     margin: 0em;
+}
+
+//dark mode
+
+@media (prefers-color-scheme: dark) {
+	body {
+	  background-color: $b-colour;
+	  color: $a-colour;
+	}
+
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+		background-clip: border-box;		  
+		-webkit-text-fill-color: $a-colour;
+		-webkit-background-clip: text;		  
+		box-decoration-break: clone;
+		// background: -webkit-gradient(linear,left top,right top,from($b-colour),to($b-colour));
+		// background: linear-gradient(90deg,$b-colour,$b-colour);
+		background-clip: border-box;
+		background-clip: border-box;
+		-webkit-text-fill-color: $a-colour;
+		-webkit-box-decoration-break: clone;
+		-webkit-background-clip: text;
+		box-decoration-break: clone;
+		text-shadow: none;
+		transition: all 0.3s ease;
+		color: $a-colour !important;
+	}
+
+	.main-footer{
+		background-color: $b-colour;
+		color: $a-colour;
+	}
+
+	.site-header{
+		filter: invert(1);
+	}	
 }
