@@ -76,19 +76,14 @@ body{
 	font-weight: $normal;
 	transition: all 0.3s ease;
 	background-color: $h-colour;
-
-	dark{
-		background-color: $b-colour !important;
-		color: $a-colour !important;
-	}
 }
 
-// @media (prefers-color-scheme: dark) {
-// 	body {
-// 	  background-color: $b-colour;
-// 	  color: $a-colour;
-// 	}
-// }
+@media (prefers-color-scheme: dark) {
+	body {
+	  background-color: $b-colour;
+	  color: $a-colour;
+	}
+}
 
 h1, h2, h3, h4, h5, h6{
 	font-family: $h-font;
