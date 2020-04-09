@@ -14,10 +14,7 @@
 
   <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
   <link href="{{asset "css/typography.css"}}" rel='stylesheet' type='text/css'>
-  {{!-- <link rel="stylesheet" href="{{asset "css/styles.css"}}"> --}}
-<link rel="stylesheet" href="{{asset "css/styles.css"}}" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
-<link rel="stylesheet" href="{{asset "css/styles.css"}}" media="(prefers-color-scheme: dark)">
-
+  <link rel="stylesheet" href="{{asset "css/styles.css"}}">
 
     {{ghost_head}}
 
@@ -46,7 +43,11 @@
 <aside>
   <dark-mode-toggle
       id="dark-mode-toggle-1"
-      appearance="toggle" 
+      legend="Theme Switcher"
+      appearance="switch"
+      dark="Dark"
+      light="Light"
+      remember="Remember this"
   ></dark-mode-toggle>
 </aside>
 
