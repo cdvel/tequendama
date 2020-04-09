@@ -83,6 +83,33 @@ body{
 	  background-color: $b-colour;
 	  color: $a-colour;
 	}
+
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+		background-clip: border-box;		  
+		-webkit-text-fill-color: $a-colour;
+		-webkit-background-clip: text;		  
+		box-decoration-break: clone;
+		// background: -webkit-gradient(linear,left top,right top,from($b-colour),to($b-colour));
+		// background: linear-gradient(90deg,$b-colour,$b-colour);
+		background-clip: border-box;
+		background-clip: border-box;
+		-webkit-text-fill-color: $a-colour;
+		-webkit-box-decoration-break: clone;
+		-webkit-background-clip: text;
+		box-decoration-break: clone;
+		text-shadow: none;
+		transition: all 0.3s ease;
+		color: $a-colour !important;
+	}
+
+	.main-footer{
+		background-color: $b-colour;
+		color: $a-colour;
+	}
+
+	.site-header{
+		filter: invert(1);
+	}	
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -137,26 +164,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 	}
 }
 
-@media (prefers-color-scheme: dark) {
 
-	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-		background-clip: border-box;		  
-		-webkit-text-fill-color: $a-colour;
-		-webkit-background-clip: text;		  
-		box-decoration-break: clone;
-		// background: -webkit-gradient(linear,left top,right top,from($b-colour),to($b-colour));
-		// background: linear-gradient(90deg,$b-colour,$b-colour);
-		background-clip: border-box;
-		background-clip: border-box;
-		-webkit-text-fill-color: $a-colour;
-		-webkit-box-decoration-break: clone;
-		-webkit-background-clip: text;
-		box-decoration-break: clone;
-		text-shadow: none;
-		transition: all 0.3s ease;
-		color: $a-colour !important;
-	}
-}
 
 ol {
 	list-style:lower-roman;
@@ -720,13 +728,6 @@ author-description, .author-name {
 	letter-spacing: 1px;
 }
 
-@media (prefers-color-scheme: dark) {
-	.main-footer{
-		background-color: $b-colour;
-		color: $a-colour;
-	}
-}
-
 .main-footer .container{
 	padding: 30px 0;
 }
@@ -758,13 +759,6 @@ body.post-template > .site-header{
     height: 100px;
     transition:all 0.3s ease;
 }
-
-@media (prefers-color-scheme: dark) {
-	.site-header{
-		filter: invert(1);
-	}	
-}
-
 
 body.post-template .site-header .quote-header{
 
