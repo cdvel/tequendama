@@ -1105,14 +1105,14 @@ blockquote::after{
 :root {
 	--color-mode: 'light';
 	// --color-dark: #141414;
-	--color-dark: $b-colour;
+	--color-dark: #222222;
 	// --color-dark-alpha: rgba(0, 0, 0, 0.1);
-	--color-light: $a-colour;
+	--color-light: #FAEBD7;
 	// #efefef;
 	// --color-light-alpha: rgba(255, 255, 255, 0.9);
-	--background: $bg-colour;
+	--background: #f5f5f5;
 	// #efefef;
-	--text-color: $b-colour;
+	--text-color: #222222;
 	// #141414;
 	// $h-colour: #fff; // Heading Colour
 	// $a-colour: #FAEBD7; // Heading Colour
