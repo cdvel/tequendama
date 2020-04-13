@@ -1148,7 +1148,7 @@ body {
 // os or browser set to dark
 
 @media (prefers-color-scheme: dark) {
-	:root:not([data-user-color-scheme]) {
+	:root {
 	  --color-mode: 'dark';
 	  --background: var(--color-dark);
 	  --text-color: var(--color-light);
