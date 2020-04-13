@@ -23,13 +23,14 @@
   initial_mode_set(user_color_scheme);
 
   window.addEventListener('DOMContentLoaded', (event) => {
+	document.documentElement.classList.remove('no-js');
     var STORAGE_KEY = 'user-color-scheme';
     var COLOR_MODE_KEY = '--color-mode';
     var modeToggleButton = document.querySelector('.js-mode-toggle');
     var modeToggleText = document.querySelector('.js-mode-toggle-text');
-    var modeToggleTitle = document.querySelector('.js-mode-toggle-title');
-
-    var getCSSCustomProp = function getCSSCustomProp(propKey) {
+	var modeStatusElement = document.querySelector('.js-mode-status');
+    
+	var getCSSCustomProp = function getCSSCustomProp(propKey) {
       var response = getComputedStyle(document.documentElement).getPropertyValue(propKey);
 
       if (response.length) {
@@ -52,7 +53,6 @@
 
     var setButtonLabelAndStatus = function setButtonLabelAndStatus(currentSetting) {
       modeToggleText.innerText = "Enable ".concat(currentSetting === 'dark' ? 'light' : 'dark', " mode");
-      modeToggleTitle.title = "Enable ".concat(currentSetting === 'dark' ? 'light' : 'dark', " mode");
     };
 
     var toggleSetting = function toggleSetting() {
