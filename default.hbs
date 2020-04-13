@@ -109,10 +109,17 @@
 					<div class="main-title" style="font-size: 20px;"><label id="main-quote-author"></label></div>
 				</a>
 			</div>
-			<button class="c-nav__link c-color-mode-btn js-mode-toggle js-mode-toggle-title" title="Enable dark mode">
+			  <div class="user-toggle">
+				<div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
+				<button class="[ toggle-button ] [ js-mode-toggle ]">
+				<span class="[ toggle-button__text ] [ js-mode-toggle-text ]">Enable dark mode</span>
+				<span class="toggle-button__icon" aria-hidden="true"></span>
+				</button>
+			</div>
+			{{!-- <button class="c-nav__link c-color-mode-btn js-mode-toggle js-mode-toggle-title" title="Enable dark mode">
                       <span class="u-hidden-visually js-mode-toggle-text">Enable dark mode</span>
                       <span class="c-color-mode-btn__icon" aria-hidden="true"></span>
-            </button>
+            </button> --}}
 		</header>
 		<div>
 			{{#get "posts" limit="1" include="authors"}}
