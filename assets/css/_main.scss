@@ -1148,7 +1148,7 @@ body {
 // os or browser set to dark
 
 @media (prefers-color-scheme: dark) {
-	:root {
+	:root:not([data-user-color-scheme]) {
 	  --color-mode: 'dark';
 	  --background: var(--color-dark);
 	  --text-color: var(--color-light);
@@ -1270,9 +1270,8 @@ body {
   .toggle-button {
 	display: inline-flex;
 	// background: var(--button-background);
-	color: var(--button-color);
-	font: inherit;
-	font-size: 1.5rem;
+	// color: var(--button-color);
+	font-size: large;
 	padding: 0.5rem 1rem;
 	border-radius: 100%;
 	border: 0.15rem solid;
