@@ -1124,7 +1124,7 @@ blockquote::after{
 	
   }
 
-  body {
+body {
 	background: var(--background);
 	color: var(--text-color);
 	transition: background 500ms ease-in-out, color 200ms ease;
@@ -1134,18 +1134,21 @@ blockquote::after{
 	font-weight: $normal;
 	// transition: all 0.3s ease;
 	// background-color: $h-colour;
-  }
+}
 
 // os or browser set to dark
 
-  @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
 	:root {
 	  --color-mode: 'dark';
-	}
-	
-	:root:not([data-user-color-scheme]) {
 	  --background: var(--color-dark);
 	  --text-color: var(--color-light);
+	}
+	
+	// :root:not([data-user-color-scheme]) {
+
+	// --background: var(--color-dark);
+	//  --text-color: var(--color-light);
 	//   --button-icon: var(--icon-sun);
 	//   --button-icon-filter: var(--icon-sun-filter);
 	//   --button-background: var(--color-light-alpha);
@@ -1153,39 +1156,38 @@ blockquote::after{
 	//   --border-color: var(--color-light-alpha);
 
 
-	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-		background-clip: border-box;		  
-		-webkit-text-fill-color: $a-colour;
-		-webkit-background-clip: text;		  
-		box-decoration-break: clone;
-		// background: -webkit-gradient(linear,left top,right top,from($b-colour),to($b-colour));
-		// background: linear-gradient(90deg,$b-colour,$b-colour);
-		background-clip: border-box;
-		background-clip: border-box;
-		-webkit-text-fill-color: $a-colour;
-		-webkit-box-decoration-break: clone;
-		-webkit-background-clip: text;
-		box-decoration-break: clone;
-		text-shadow: none;
-		transition: all 0.3s ease;
-		color: $a-colour !important;
-	}
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+			background-clip: border-box;		  
+			-webkit-text-fill-color: $a-colour;
+			-webkit-background-clip: text;		  
+			box-decoration-break: clone;
+			// background: -webkit-gradient(linear,left top,right top,from($b-colour),to($b-colour));
+			// background: linear-gradient(90deg,$b-colour,$b-colour);
+			background-clip: border-box;
+			background-clip: border-box;
+			-webkit-text-fill-color: $a-colour;
+			-webkit-box-decoration-break: clone;
+			-webkit-background-clip: text;
+			box-decoration-break: clone;
+			text-shadow: none;
+			transition: all 0.3s ease;
+			color: $a-colour !important;
+		}
 
-	.main-footer{
-		background-color: lighten($color: $b-colour, $amount: 20%);
-		color: $a-colour;
-	}
+		.main-footer{
+			background-color: lighten($color: $b-colour, $amount: 20%);
+			color: $a-colour;
+		}
 
-	.site-header{
-		filter: invert(1);
-	}
-}
-
+		.site-header{
+			filter: invert(1);
+		}
+	// }
 
 }
   
 // user has selected dark 
-  [data-user-color-scheme="dark"] {
+[data-user-color-scheme="dark"] {
 	--background: var(--color-dark);
 	--text-color: var(--color-light);
 	// --button-icon: var(--icon-sun);
