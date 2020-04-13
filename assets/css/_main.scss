@@ -1098,3 +1098,58 @@ blockquote::after{
 	}	
 }
 
+
+
+
+//other prefs
+
+  /* Remove _all_ animations and transitions for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+	body {
+	  scroll-behavior: auto;
+	}
+  
+	* {
+	  -webkit-animation: none !important;
+	  animation: none !important;
+	  transition: none !important;
+	}
+  }
+  
+  /* If there’s no JS, there’s no need for the user toggle component to show */
+  .no-js .user-toggle {
+	display: none;
+  }
+  
+  .user-toggle {
+	margin: 2rem auto 0 auto;
+	padding-top: 2.5rem;
+	max-width: 20rem;
+	text-align: center;
+  }
+  
+  .toggle-button {
+	display: inline-flex;
+	background: var(--button-background);
+	color: var(--button-color);
+	border: none;
+	font: inherit;
+	font-size: 1.5rem;
+	padding: 0.5rem 1rem;
+	transition: background 500ms ease-in-out, color 200ms ease;
+  }
+  
+  .toggle-button__icon {
+	background: var(--button-icon);
+	width: 1.2em; 
+	height: 1.2em;
+	margin: 0 0 0 0.5em;
+	filter: var(--button-icon-filter);
+	transform: translateY(1px); /* Optical adjustment */
+	transition: filter 500ms ease-in-out;
+  }
+  
+  .toggle-button:focus {
+	outline: 1px solid var(--button-background);
+	outline-offset: 0.5rem;
+  }
