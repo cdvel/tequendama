@@ -1103,20 +1103,18 @@ blockquote::after{
 
 :root {
 	--color-mode: 'light';
-	--color-dark: #141414;
-	--color-dark-alpha: rgba(0, 0, 0, 0.1);
-	--color-light: #efefef;
-	--color-light-alpha: rgba(255, 255, 255, 0.9);
-	
-	--background: #efefef;
-	--text-color: #141414;
-  }
+	--color-dark: $b-colour;
+	--color-light: $amount;
+	--background: $bg-colour;
+	--text-color: $b-colour;
+	// --color-dark-alpha: rgba(0, 0, 0, 0.1);
+	// --color-light-alpha: rgba(255, 255, 255, 0.9);
+}
   
   body {
 	background: var(--background);
 	color: var(--text-color);
 	transition: background 500ms ease-in-out, color 200ms ease;
-
 	// color: $b-colour;
 	font-family: $b-font;
 	font-weight: $normal;
@@ -1132,22 +1130,22 @@ blockquote::after{
 	:root:not([data-user-color-scheme]) {
 	  --background: var(--color-dark);
 	  --text-color: var(--color-light);
-	  --button-icon: var(--icon-sun);
-	  --button-icon-filter: var(--icon-sun-filter);
-	  --button-background: var(--color-light);
-	  --button-color: var(--color-dark);
-	  --border-color: var(--color-light-alpha);
+	//   --button-icon: var(--icon-sun);
+	//   --button-icon-filter: var(--icon-sun-filter);
+	//   --button-background: var(--color-light);
+	//   --button-color: var(--color-dark);
+	//   --border-color: var(--color-light-alpha);
 	}
   }
   
   [data-user-color-scheme="dark"] {
 	--background: var(--color-dark);
 	--text-color: var(--color-light);
-	--button-icon: var(--icon-sun);
-	--button-icon-filter: var(--icon-sun-filter);
-	--button-background: var(--color-light-alpha);
-	--button-color: var(--color-dark);
-	--border-color: var(--color-light-alpha);
+	// --button-icon: var(--icon-sun);
+	// --button-icon-filter: var(--icon-sun-filter);
+	// --button-background: var(--color-light-alpha);
+	// --button-color: var(--color-dark);
+	// --border-color: var(--color-light-alpha);
   }
   
   /* Remove _all_ animations and transitions for people that prefer not to see them */
