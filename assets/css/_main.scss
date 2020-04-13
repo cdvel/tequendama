@@ -1151,8 +1151,8 @@ blockquote::after{
 	//   --button-background: var(--color-light-alpha);
 	//   --button-color: var(--color-dark);
 	//   --border-color: var(--color-light-alpha);
-	}
-  
+
+
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 		background-clip: border-box;		  
 		-webkit-text-fill-color: $a-colour;
@@ -1179,6 +1179,8 @@ blockquote::after{
 	.site-header{
 		filter: invert(1);
 	}
+}
+
 
 }
   
