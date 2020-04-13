@@ -1,9 +1,90 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-user-color-scheme="light">
 	<head>
 		{{!-- Document Settings --}}
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		{{!-- dark-mode --}}
+		<script>
+
+  // =====================
+  // Dark Mode Toogle 🌒 ☀️ - Inspired by:
+  // https://hankchizljaw.com/wrote/create-a-user-controlled-dark-or-light-mode/
+  // =====================
+
+  var user_color_scheme = localStorage.getItem('user-color-scheme');
+
+  function initial_mode_set(mode) {
+    if (mode) {
+      document.documentElement.setAttribute('data-user-color-scheme', mode);
+    }
+  }
+
+  initial_mode_set(user_color_scheme);
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+    var STORAGE_KEY = 'user-color-scheme';
+    var COLOR_MODE_KEY = '--color-mode';
+    var modeToggleButton = document.querySelector('.js-mode-toggle');
+    var modeToggleText = document.querySelector('.js-mode-toggle-text');
+    var modeToggleTitle = document.querySelector('.js-mode-toggle-title');
+
+    var getCSSCustomProp = function getCSSCustomProp(propKey) {
+      var response = getComputedStyle(document.documentElement).getPropertyValue(propKey);
+
+      if (response.length) {
+        response = response.replace(/\"/g, '').trim();
+      }
+
+      return response;
+    };
+
+    var applySetting = function applySetting(passedSetting) {
+      var currentSetting = passedSetting || localStorage.getItem(STORAGE_KEY);
+
+      if (currentSetting) {
+        document.documentElement.setAttribute('data-user-color-scheme', currentSetting);
+        setButtonLabelAndStatus(currentSetting);
+      } else {
+        setButtonLabelAndStatus(getCSSCustomProp(COLOR_MODE_KEY));
+      }
+    };
+
+    var setButtonLabelAndStatus = function setButtonLabelAndStatus(currentSetting) {
+      modeToggleText.innerText = "Enable ".concat(currentSetting === 'dark' ? 'light' : 'dark', " mode");
+      modeToggleTitle.title = "Enable ".concat(currentSetting === 'dark' ? 'light' : 'dark', " mode");
+    };
+
+    var toggleSetting = function toggleSetting() {
+      var currentSetting = localStorage.getItem(STORAGE_KEY);
+
+      switch (currentSetting) {
+        case null:
+          currentSetting = getCSSCustomProp(COLOR_MODE_KEY) === 'dark' ? 'light' : 'dark';
+          break;
+
+        case 'light':
+          currentSetting = 'dark';
+          break;
+
+        case 'dark':
+          currentSetting = 'light';
+          break;
+      }
+
+      localStorage.setItem(STORAGE_KEY, currentSetting);
+      return currentSetting;
+    };
+
+    modeToggleButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      applySetting(toggleSetting());
+    });
+    applySetting();
+  });
+
+		</script>
+
 		{{!-- Base Meta --}}
 		<title>{{meta_title}}</title>
 		<meta name="HandheldFriendly" content="True" />
@@ -28,6 +109,10 @@
 					<div class="main-title" style="font-size: 20px;"><label id="main-quote-author"></label></div>
 				</a>
 			</div>
+			<button class="c-nav__link c-color-mode-btn js-mode-toggle js-mode-toggle-title" title="Enable dark mode">
+                      <span class="u-hidden-visually js-mode-toggle-text">Enable dark mode</span>
+                      <span class="c-color-mode-btn__icon" aria-hidden="true"></span>
+            </button>
 		</header>
 		<div>
 			{{#get "posts" limit="1" include="authors"}}
