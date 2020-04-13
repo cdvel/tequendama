@@ -1104,7 +1104,7 @@ blockquote::after{
 :root {
 	--color-mode: 'light';
 	--color-dark: $b-colour;
-	--color-light: $amount;
+	--color-light: $a-colour;
 	--background: $bg-colour;
 	--text-color: $b-colour;
 	// --color-dark-alpha: rgba(0, 0, 0, 0.1);
