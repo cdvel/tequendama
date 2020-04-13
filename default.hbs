@@ -27,7 +27,7 @@
     var STORAGE_KEY = 'user-color-scheme';
     var COLOR_MODE_KEY = '--color-mode';
     var modeToggleButton = document.querySelector('.js-mode-toggle');
-    var modeToggleText = document.querySelector('.js-mode-toggle-text');
+    //var modeToggleText = document.querySelector('.js-mode-toggle-text');
 	var modeStatusElement = document.querySelector('.js-mode-status');
     
 	var getCSSCustomProp = function getCSSCustomProp(propKey) {
@@ -45,16 +45,17 @@
 
       if (currentSetting) {
         document.documentElement.setAttribute('data-user-color-scheme', currentSetting);
-        setButtonLabelAndStatus(currentSetting);
-      } else {
-        setButtonLabelAndStatus(getCSSCustomProp(COLOR_MODE_KEY));
-      }
+//        setButtonLabelAndStatus(currentSetting);
+      } 
+//	  else {
+//        setButtonLabelAndStatus(getCSSCustomProp(COLOR_MODE_KEY));
+//      }
     };
-
+/*
     var setButtonLabelAndStatus = function setButtonLabelAndStatus(currentSetting) {
-      modeToggleText.innerText = "Enable ".concat(currentSetting === 'dark' ? 'light' : 'dark', " mode");
+      modeToggleText.innerText =  "Enable ".concat(currentSetting === 'dark' ? 'light' : 'dark', " mode");
     };
-
+*/
     var toggleSetting = function toggleSetting() {
       var currentSetting = localStorage.getItem(STORAGE_KEY);
 

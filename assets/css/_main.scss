@@ -1128,7 +1128,7 @@ blockquote::after{
 	</svg>');
 	--icon-mode-day-transform: transform: rotateZ(0deg);
 	--icon-mode-night-transform: transform: rotateZ(180deg);
-	--button-icon-transform: var(--icon-mode-night-transform);
+	--icon-mode-transform: var(--icon-mode-night-transform);
 	--button-color:var(--color-light);
   }
 
@@ -1152,7 +1152,7 @@ body {
 	  --color-mode: 'dark';
 	  --background: var(--color-dark);
 	  --text-color: var(--color-light);
-	  --button-icon-transform: var(--icon-mode-day-transform);
+	  --icon-mode-transform: var(--icon-mode-day-transform);
 	  --button-color: var(--color-dark);
 
 	}
@@ -1202,7 +1202,7 @@ body {
 	--background: var(--color-dark);
 	--text-color: var(--color-light);
 	// --button-icon: var(--icon-sun);
-	--button-icon-transform: var(--icon-mode-day-transform);
+	--icon-mode-transform: var(--icon-mode-day-transform);
 	// --button-background: var(--color-light-alpha);
 	--button-color: var(--color-dark);
 	// --border-color: var(--color-light-alpha);
@@ -1258,10 +1258,13 @@ body {
   }
   
   .user-toggle {
-	margin: 2rem auto 0 auto;
-	padding-top: 2.5rem;
-	max-width: 20rem;
+	// margin: 2rem auto 0 auto;
+	// padding-top: 2.5rem;
+	// max-width: 20rem;
 	text-align: center;	
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
   }
   
   .toggle-button {
