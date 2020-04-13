@@ -1152,7 +1152,7 @@ body {
 	  --color-mode: 'dark';
 	  --background: var(--color-dark);
 	  --text-color: var(--color-light);
-	  --button-icon-transform: var(--icon-mode-day-transform);
+	  --icon-mode-transform: var(--icon-mode-day-transform);
 	  --button-color: var(--color-dark);
 
 	}
@@ -1202,7 +1202,7 @@ body {
 	--background: var(--color-dark);
 	--text-color: var(--color-light);
 	// --button-icon: var(--icon-sun);
-	--button-icon-transform: var(--icon-mode-day-transform);
+	--icon-mode-transform: var(--icon-mode-day-transform);
 	// --button-background: var(--color-light-alpha);
 	--button-color: var(--color-dark);
 	// --border-color: var(--color-light-alpha);
