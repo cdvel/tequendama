@@ -665,8 +665,8 @@ and (max-device-width: 720px)
 
 
 author-description, .author-name {
-        font-family: $h-font;
-        font-weight: $light;
+    font-family: $h-font;
+    font-weight: $light;
 	font-size: medium;
 	color: #444;
 	margin-bottom: 5px;
@@ -819,9 +819,11 @@ body.post-template .site-header .quote-header{
 
 
 .description {
+	font-family: $h-font !important;
+	font-size: x-large;
 	text-align: center;
 	padding-top: 10px !important;
-	color: $dg-colour !important;
+	color: inherit !important;
 	font-variant: all-small-caps;
 }
 
