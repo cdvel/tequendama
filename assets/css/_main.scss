@@ -689,7 +689,7 @@ author-description, .author-name {
 	text-align: center;
 	font-family: $b-font;
 	font-weight: $light;
-	color: inherit;
+	color: darken(var(--background), $amount: 30%);
 	margin-top: 60px !important;
 	font-variant: all-small-caps;
 	letter-spacing: 1px;
@@ -700,7 +700,7 @@ author-description, .author-name {
 }
 
 .main-footer a{
-	color: inherit;
+	color: var(--text-color);
 	text-decoration: none;
 }
 .main-footer p{
