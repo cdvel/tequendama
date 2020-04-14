@@ -9,8 +9,9 @@
     {{!-- <p class="link">
       <a class="website" href="{{primary_author.website}}" title="{{primary_author.name}}">{{@blog.url}}</a>
     </p> --}}
-    <p class="description">
-        {{@blog.description}}
-    <p>
+    <span class="description typeit typewrite" data-period="3000" 
+     data-type='[ {{@blog.description}} ]' aria-label="cesar.velandia.co" style="background-color: #fff;">
+    	<span class="wrap" style="background-color: #fff;"></span>
+    </span>
 	{{>social}}
 </div>
