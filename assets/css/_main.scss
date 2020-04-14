@@ -685,7 +685,7 @@ author-description, .author-name {
 // -----------------------------------------------------------------------------
 
 .main-footer{
-	background-color: $ln-colour;
+	background-color: darken(inherit, 30%);
 	text-align: center;
 	font-family: $b-font;
 	font-weight: $light;
@@ -1275,6 +1275,11 @@ body {
 	border-radius: 100%;
 	border: 0.15rem solid;
 	transition: background 500ms ease-in-out, color 200ms ease;
+
+	&:hover{
+		border-color: darken(inherit, 20%);
+	}
+
   }
   
   .toggle-button__icon {
