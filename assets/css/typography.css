@@ -36,10 +36,10 @@
 @font-face {
   font-family: 'fontello';
   src: url('../font/fontello.eot?55664638');
-  src: url('../font/fontello.eot?55664638#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff?55664638') format('woff'),
+  src: url('../font/fontello.woff?55664638') format('woff'),
        url('../font/fontello.ttf?55664638') format('truetype'),
-       url('../font/fontello.svg?55664638#fontello') format('svg');
+       url('../font/fontello.svg?55664638#fontello') format('svg'),
+       url('../font/fontello.eot?55664638#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
