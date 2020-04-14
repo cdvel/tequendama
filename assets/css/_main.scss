@@ -81,9 +81,13 @@
 h1, h2, h3, h4, h5, h6{
 	font-family: $h-font;
 	font-weight: $light;
-	line-height: 1.3em;
+	line-height: 1.5rem;
 	letter-spacing: 0.04em;
 }
+
+
+line-height: 1.3em;
+
 
 a{
 	text-decoration: none !important;
@@ -366,7 +370,7 @@ and (max-device-width: 720px)
 	font-size: small;
 	font-variant: small-caps;
 	line-height: 0px;
-	margin: -20px 0px;
+	margin: 0px 0px;
 }
 
 .excerpt{
@@ -375,6 +379,10 @@ and (max-device-width: 720px)
 	line-height: 0.1px;
 	font-size: x-small;
 	margin-top: 0.5em;
+	width: 100%;
+	overflow: visible;
+	text-overflow: ellipsis;
+	margin-top: -20px;
 }
 
 .feature-image{
