@@ -6,10 +6,10 @@
       <a href="{{url}}" title="{{title}}">
         <img src="{{img_url feature_image}}&w=160" class="post-img" alt="{{title}}">
         <a href="{{url}}" title="{{title}}"></a>
-        <h2><a href="{{url}}" title="{{excerpt words="26"}}">{{title}}</a></h2>
-        <footer class="post-info" hidden>Posted on <span class="post-meta"><time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> {{tags separator=" // " prefix="Tagged in "}}</span></footer>
+        <h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
+        {{!-- <footer class="post-info" hidden>Posted on <span class="post-meta"><time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> {{tags separator=" // " prefix="Tagged in "}}</span></footer> --}}
         <footer class="post-info"> <span class="post-meta">{{tags separator=" // " prefix=""}}</span></footer>
-        <span>{{excerpt words="10"}}&hellip;</span>
+        <div class="excerpt" alt="{{excerpt words="28"}}&hellip;">{{excerpt characters="28"}}&hellip;</div>
         <!-- <a class="read-more" style="float: right;"  href="{{url}}" title="{{title}}">Read more &raquo;</a> -->
       </article>
       {{/foreach}}

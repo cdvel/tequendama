@@ -369,6 +369,12 @@ and (max-device-width: 720px)
 	margin: -20px 0px;
 }
 
+.excerpt{
+	color: inherit;
+	filter: opacity(0.6); 
+	line-height: 0.1px;
+	font-size: x-small;
+}
 
 .feature-image{
 	width: 85% !important; 
