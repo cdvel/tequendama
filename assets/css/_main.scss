@@ -685,7 +685,7 @@ author-description, .author-name {
 // -----------------------------------------------------------------------------
 
 .main-footer{
-	background-color: var(--background);
+	background-color: #333e;
 	text-align: center;
 	font-family: $b-font;
 	font-weight: $light;
@@ -693,7 +693,6 @@ author-description, .author-name {
 	margin-top: 60px !important;
 	font-variant: all-small-caps;
 	letter-spacing: 1px;
-	border-top: 0.1px groove;
 }
 
 .main-footer .container{
