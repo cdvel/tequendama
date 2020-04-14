@@ -24,14 +24,13 @@
 	$a-colour: #FAEBD7; // Heading Colour
 	$b-colour: #222222; // Body Colour
 	$s-colour: #cb3443; // Secondary Colour
-	$ln-colour: #ecececee;
+	$ln-colour: #ececec;
 	$bg-colour: #f5f5f5;
 	$dg-colour: #595959;
 
 	$l-colour: #3dbbd2; //link
 	$hl-colour: #cb3443; //link	
 
-	$footer-colour: #aaaaaa11;
 	// Fonts
 	$h-font: 'Audiowide', sans-serif; // Heading Font
 	// $b-font: 'OpenSans', sans-serif; // Body Font
@@ -197,7 +196,7 @@ img.emoji {
 	color: $ln-colour;
 }
 
-// -ee----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // Header
 // -----------------------------------------------------------------------------
 
@@ -327,11 +326,11 @@ and (max-device-width: 720px)
 	background-position: 0%;
 	background-color: transparent;
 	-webkit-box-shadow: inset 0 -1px 0 0 $ln-colour;
-	box-sheeadow: inset 0 -1px 0 0 $ln-colour;
+	box-shadow: inset 0 -1px 0 0 $ln-colour;
 }
 
 
-.poeest img{
+.post img{
 	height: 4.5em;
 	width: 6.5em;
 	display: block; 
@@ -339,7 +338,7 @@ and (max-device-width: 720px)
 	margin: 20px 10px 20px 0px;
 	position: relative;
 	box-shadow: 8px 8px 0 $ln-colour;
-    traeensition:all 0.3s ease;
+    transition:all 0.3s ease;
 }
 
 .post a img{
@@ -378,7 +377,7 @@ and (max-device-width: 720px)
 	margin-right: auto; 
 	height: auto !important; 
 	box-shadow: 8px 8px 0 $ln-colour; 
-	paddieeng: 0px; 
+	padding: 0px; 
 	margin: 20px 10% !important;
 }
 
@@ -686,7 +685,7 @@ author-description, .author-name {
 // -----------------------------------------------------------------------------
 
 .main-footer{
-	background-color: $footer-colour;
+	background-color: var(--background);
 	text-align: center;
 	font-family: $b-font;
 	font-weight: $light;
@@ -694,6 +693,7 @@ author-description, .author-name {
 	margin-top: 60px !important;
 	font-variant: all-small-caps;
 	letter-spacing: 1px;
+	border-top: 0.1px groove;
 }
 
 .main-footer .container{
@@ -903,7 +903,7 @@ blockquote::after{
 	box-shadow: 8px 8px 0 $ln-colour;
 }
 
-.kg-eebookmark-content {
+.kg-bookmark-content {
     flex-basis: 0;
     flex-grow: 999;
     margin: 15px;
@@ -998,7 +998,7 @@ blockquote::after{
 
 }
 
-.kgee-bookmark-author {
+.kg-bookmark-author {
     white-space: nowrap;
     text-overflow: ellipsis;
 	overflow: hidden;
@@ -1118,7 +1118,7 @@ blockquote::after{
 	// $a-colour: #FAEBD7; // Heading Colour
 	// $b-colour: #222222; // Body Colour
 	// $s-colour: #cb3443; // Secondary Colour
-	// $ln-colour: #ecececee;
+	// $ln-colour: #ececec;
 	// $bg-colour: #f5f5f5;
 	// $dg-colour: #595959;
 
