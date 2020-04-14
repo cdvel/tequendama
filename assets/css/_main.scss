@@ -366,7 +366,7 @@ and (max-device-width: 720px)
 	font-size: small;
 	font-variant: small-caps;
 	line-height: 0px;
-	margin: 20px 0px;
+	margin-top: -20px;
 }
 
 .excerpt{
@@ -378,7 +378,7 @@ and (max-device-width: 720px)
 	width: 100%;
 	overflow: visible;
 	text-overflow: ellipsis;
-	margin-top: -20px;
+	margin-top: 0px;
 }
 
 .feature-image{
