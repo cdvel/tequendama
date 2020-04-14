@@ -528,9 +528,8 @@ and (max-device-width: 720px)
 // -----------------------------------------------------------------------------
 
 .author{
-	font-family: $h-font;
 	font-weight: $light;
-
+	margin-top: -9vw;
 }
 
 .author p{
@@ -630,7 +629,7 @@ and (max-device-width: 720px)
 		margin-top: 0px;
 		right: 0px;
 		top: 0px;
-		width: 96%;
+		width: 95%;
 		// grid-template-columns: 15% 15% 15% 20% 20%;
 		grid-template-columns: repeat(auto-fit, minmax(5px, 1fr));
 	}
@@ -762,7 +761,8 @@ body.post-template .site-header .quote-header{
 	}
 
 	.author{
-		margin-bottom: 30px; 
+		margin-bottom: 30px;
+		margin-top: -20vw;
 	}
 
 	.site-header,
