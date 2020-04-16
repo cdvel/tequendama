@@ -1154,7 +1154,7 @@ blockquote::after{
 	// border-radius: 100%;
 	border: 0.15rem solid;
 	transition: background 500ms ease-in-out, color 200ms ease;
-	background: inherit;
+	background: var(--button-background);
 	}
   
   .toggle-button__icon {
@@ -1239,6 +1239,7 @@ body {
 	  --text-color: var(--color-light);
 	  --icon-mode-transform: var(--icon-mode-day-transform);
 	  --button-color: var(--color-dark);
+	  --button-background: var(--background);
 
 	}
 	
@@ -1248,7 +1249,6 @@ body {
 	//  --text-color: var(--color-light);
 	//   --button-icon: var(--icontransform
 	//   --icon-mode-transform: var(--icon-sun-filter);
-	//   --button-background: var(--color-light-alpha);
 	//   --border-color: var(--color-light-alpha);
 
 
@@ -1291,6 +1291,7 @@ body {
 	// --button-background: var(--color-light-alpha);
 	--button-color: var(--color-dark);
 	// --border-color: var(--color-light-alpha);
+	--button-background: var(--background);
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 		background-clip: border-box;		  
