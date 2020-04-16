@@ -1113,6 +1113,77 @@ blockquote::after{
 }
 */
 
+//other prefs
+
+  /* Remove _all_ animations and transitions for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+	body {
+	  scroll-behavior: auto;
+	}
+  
+	* {
+	  -webkit-animation: none !important;
+	  animation: none !important;
+	  transition: none !important;
+	}
+  }
+  
+  
+  /* If there’s no JS, there’s no need for the user toggle component to show */
+  .no-js .user-toggle {
+	display: none;
+  }
+  
+  .user-toggle {
+	// margin: 2rem auto 0 auto;
+	// padding-top: 2.5rem;
+	// max-width: 20rem;
+	text-align: center;	
+	position: absolute;
+	top: -1.8rem;
+	right: 1rem;
+	cursor: pointer;
+  }
+  
+  .toggle-button {
+	display: inline-flex;
+	// background: var(--button-background);
+	// color: var(--button-color);
+	font-size: 20px;
+	padding: 0.6rem 0.5rem 0.2rem;
+	// border-radius: 100%;
+	border: 0.15rem solid;
+	transition: background 500ms ease-in-out, color 200ms ease;
+	background: inherit;
+	}
+  
+  .toggle-button__icon {
+	background: var(--icon-mode);
+	width: 1.2em; 
+	height: 1.2em;
+	margin: 0.4rem 0;
+	transform: var(--icon-mode-transform);
+	// transform: var(-icon-transfor);
+	// transform: translateY(1px); /* Optical adjustment */
+	transition: transform 500ms ease-in-out;
+  }
+  
+  .toggle-button:focus {
+	outline: 1px solid var(--button-background);
+	outline-offset: 0.5rem;
+  }
+
+  .visually-hidden { 
+	display: block;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(1px);
+	white-space: nowrap;
+	position: absolute;
+  }
 
 // dark toggle
 
@@ -1250,74 +1321,3 @@ body {
 
 }
 
-//other prefs
-
-  /* Remove _all_ animations and transitions for people that prefer not to see them */
-  @media (prefers-reduced-motion: reduce) {
-	body {
-	  scroll-behavior: auto;
-	}
-  
-	* {
-	  -webkit-animation: none !important;
-	  animation: none !important;
-	  transition: none !important;
-	}
-  }
-  
-  
-  /* If there’s no JS, there’s no need for the user toggle component to show */
-  .no-js .user-toggle {
-	display: none;
-  }
-  
-  .user-toggle {
-	// margin: 2rem auto 0 auto;
-	// padding-top: 2.5rem;
-	// max-width: 20rem;
-	text-align: center;	
-	position: absolute;
-	top: -1.8rem;
-	right: 1rem;
-	cursor: pointer;
-  }
-  
-  .toggle-button {
-	display: inline-flex;
-	// background: var(--button-background);
-	// color: var(--button-color);
-	font-size: 20px;
-	padding: 0.6rem 0.5rem 0.2rem;
-	// border-radius: 100%;
-	border: 0.15rem solid;
-	transition: background 500ms ease-in-out, color 200ms ease;
-	background: inherit;
-	}
-  
-  .toggle-button__icon {
-	background: var(--icon-mode);
-	width: 1.2em; 
-	height: 1.2em;
-	margin: 0.4rem 0;
-	transform: var(--icon-mode-transform);
-	// transform: var(-icon-transfor);
-	// transform: translateY(1px); /* Optical adjustment */
-	transition: transform 500ms ease-in-out;
-  }
-  
-  .toggle-button:focus {
-	outline: 1px solid var(--button-background);
-	outline-offset: 0.5rem;
-  }
-
-  .visually-hidden { 
-	display: block;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px 1px 1px 1px);
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(1px);
-	white-space: nowrap;
-	position: absolute;
-  }
