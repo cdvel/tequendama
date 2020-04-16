@@ -1291,7 +1291,8 @@ body {
 	// border-radius: 100%;
 	border: 0.15rem solid;
 	transition: background 500ms ease-in-out, color 200ms ease;
-  }
+	background: var(--background);
+	}
   
   .toggle-button__icon {
 	background: var(--icon-mode);
