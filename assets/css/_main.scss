@@ -1152,9 +1152,10 @@ blockquote::after{
 	font-size: 20px;
 	padding: 0.6rem 0.5rem 0.2rem;
 	// border-radius: 100%;
-	border: 0.15rem solid;
+	// border: 0.15rem solid;
 	transition: background 500ms ease-in-out, color 200ms ease;
-	background: var(--button-background);
+	background: transparent;
+	// var(--button-background);
 	}
   
   .toggle-button__icon {
