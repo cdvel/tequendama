@@ -385,13 +385,13 @@ and (max-device-width: 720px)
 }
 
 .feature-image{
-	width: 85% !important; 
+	width: 90% !important; 
 	display: block; 
 	margin-left: auto; 
 	margin-right: auto; 
 	height: auto !important; 
 	box-shadow: 8px 8px 0 $ln-colour; 
-	padding: 0px 0px 10px 0px; 
+	padding: 0px 0px 0px 0px; 
 	margin: 20px 10% !important;
 }
 
@@ -1287,9 +1287,9 @@ body {
 	// background: var(--button-background);
 	// color: var(--button-color);
 	font-size: 20px;
-	padding: 0.5rem 1rem;
-	border-radius: 100%;
-	border: 0.15rem solid;
+	padding: 0.6rem 0.5rem 0.2rem;
+	// border-radius: 100%;
+	border: 0rem solid;
 	transition: background 500ms ease-in-out, color 200ms ease;
   }
   
