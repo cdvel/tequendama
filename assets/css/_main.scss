@@ -1156,6 +1156,7 @@ blockquote::after{
 	transition: background 500ms ease-in-out, color 200ms ease;
 	background: transparent;
 	// var(--button-background);
+	border: none;
 	}
   
   .toggle-button__icon {
