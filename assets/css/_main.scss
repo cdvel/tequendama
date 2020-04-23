@@ -111,6 +111,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 	box-decoration-break: clone;
 	text-shadow: none;
 	transition: all 0.3s ease;
+	
 
 	&:hover{
 		background-clip: border-box;		  
@@ -127,7 +128,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 		box-decoration-break: clone;
 		text-shadow: none;
 		transition: all 0.3s ease;
-		border-right: 5px solid !important;
 	}
 }
 
@@ -292,6 +292,11 @@ and (max-device-width: 720px)
 	display: inline-block;
 	padding: 0px;
 	margin: 15px 0px;
+	border-right: 5px solid transparent;
+
+	:hover{
+		border-right: 5px solid;
+	}
 }
 
 @media only screen 
