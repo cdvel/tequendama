@@ -317,10 +317,10 @@ and (max-device-width: 720px)
 }
 
 .post{
-	margin-bottom: -20px !important;
+	margin-bottom: auto !important;
 	padding-bottom: 0px;
 	border-bottom: 1px solid transparent;
-	min-height: 120px;
+	min-height: 80px;
 	background-size: contain;
     background-repeat: no-repeat;
 	background-position: 0%;
@@ -365,7 +365,7 @@ and (max-device-width: 720px)
 	font-weight: $light;
 	font-size: small;
 	font-variant: small-caps;
-	line-height: 0px;
+	line-height: 6rem;
 	margin-top: 10px;
 }
 
