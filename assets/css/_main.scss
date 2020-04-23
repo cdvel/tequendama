@@ -295,7 +295,7 @@ and (max-device-width: 720px)
 	border-right: 5px solid transparent;
 
 	:hover{
-		border-right: 5px solid;
+		border-right: 5px solid inherit !important;
 	}
 }
 
