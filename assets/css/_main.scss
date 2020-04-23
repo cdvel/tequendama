@@ -373,15 +373,15 @@ and (max-device-width: 720px)
 	color: inherit;
 	filter: opacity(0.6); 
 	// line-height: 0.1px;
-	font-size: x-small;
+	font-size: inherit;
 	// margin-top: 0.5em;
 	display: block;
 	width: auto;
 	overflow: hidden;	
 	text-overflow: ellipsis;
 	margin-top: -30px;
-	white-space: nowrap;
-	padding-right: 5vw;
+	white-space: normal;
+	padding-right: 0vw;
 }
 
 .feature-image{
