@@ -289,8 +289,9 @@ and (max-device-width: 720px)
 
 .post h2 a{
 	font-size: 22px;
-	display: block;
-	padding: 15px 0px;
+	display: inline-block;
+	padding: 0px;
+	margin: 15px 0px;
 }
 
 @media only screen 
