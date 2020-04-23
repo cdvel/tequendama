@@ -2,16 +2,20 @@
 <div class="container clearfix">
   <main role="main" class="content">
     {{#foreach posts}}
-    <article class="{{post_class}} post">
+    <article class="{{post_class}}" style="display: flex;">
       {{!-- <a href="{{url}}" title="{{title}}"> --}}
         {{!-- <a href="{{url}}" title="{{title}}">
           <img src="{{img_url feature_image}}&w=160" class="post-img" alt="{{title}}">
         </a> --}}
-        <a href="{{url}}" title="{{title}}"></a>
-        <h2><a href="{{url}}" title="{{excerpt words="48"}}&hellip;">{{title}}</a></h2>
         {{!-- <footer class="post-info" hidden>Posted on <span class="post-meta"><time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> {{tags separator=" // " prefix="Tagged in "}}</span></footer> --}}
-        <div class="excerpt">{{excerpt words="48"}}&hellip;</div>
-        <footer class="post-info"> <span class="post-meta">{{tags separator=" // " prefix=""}}</span></footer>
+
+        <div class="post-info" style="-webkit-box-flex: 0;flex: 0 0 auto;margin: 0 16px 0 0;"> 
+          <span class="post-meta">{{tags separator=" // " prefix=""}}</span>
+        </div>
+        <div style="-webkit-box-flex: 1; flex: 1 1 100%;">
+          <h2><a href="{{url}}">{{title}}</a></h2>
+          <div class="excerpt">{{excerpt words="30"}}&hellip;</div>        
+        </div>
         <!-- <a class="read-more" style="float: right;"  href="{{url}}" title="{{title}}">Read more &raquo;</a> -->
       </article>
       {{/foreach}}
