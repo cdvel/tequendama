@@ -111,7 +111,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 	box-decoration-break: clone;
 	text-shadow: none;
 	transition: all 0.3s ease;
-	
+	border-right: 5px solid transparent;
 
 	&:hover{
 		background-clip: border-box;		  
@@ -275,7 +275,7 @@ and (max-device-width: 720px)
 
 
 .post h2{
-	margin: 0px 0px 20px;
+	margin: 15px 0px 15px;
 
 	&:hover{
 		transition:all 0.3s ease;		
@@ -867,14 +867,18 @@ body.post-template .site-header .quote-header{
 }
 
 
+pre{
+	border: none;
+}
+
 code {
 	font-family: $c-font;
 	font-size: 0.95em;
 	line-height: 1.5em;
 	color: #cb3443;
 	background-color: whitesmoke;
-	padding: 2px 8px;
-	border: none;
+	padding: 1rem;
+	border-left: 1rem solid $l-colour !important;
 }
 
 blockquote p {
@@ -1263,6 +1267,7 @@ body {
 	// background-color: $h-colour;
 
 	border: 1rem inset var(--background);
+	text-align: justify;
 
 }
 
