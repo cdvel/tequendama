@@ -9,15 +9,16 @@
         </a> --}}
         {{!-- <footer class="post-info" hidden>Posted on <span class="post-meta"><time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> {{tags separator=" // " prefix="Tagged in "}}</span></footer> --}}
 
-        <div class="post-info" style="-webkit-box-flex: 0;flex: 0 0 auto; margin: 30px 10px 0 0;"> 
-          <div class="post-meta tag-list" style="float: left; width: 100%; line-height: 0px; display: grid; grid-template-columns: 1.5rem; grid-template-rows: 1.5rem 1.5rem; transform: rotate(-90deg);">
-            {{tags separator="" prefix=""}}
-          </div>
-        </div>
-        <div class="post-excerpt" style="-webkit-box-flex: 1; flex: 1 1 100%;">
+        <div class="post-excerpt">
           <h2><a href="{{url}}">{{title}}</a></h2>
           <div class="excerpt">{{excerpt characters="160"}}&hellip;</div>
         </div>
+        <div class="post-info"> 
+          <div class="post-meta tag-list">
+            {{tags separator="" prefix=""}}
+          </div>
+        </div>
+
         <!-- <a class="read-more" style="float: right;"  href="{{url}}" title="{{title}}">Read more &raquo;</a> -->
       </article>
       {{/foreach}}
