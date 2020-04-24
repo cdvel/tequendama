@@ -375,7 +375,6 @@ and (max-device-width: 720px)
 	font-size: small;
 	line-height: 1rem;
 	margin: 30px 0px;
-
 }
 
 .post-meta a{
@@ -416,14 +415,8 @@ and (max-device-width: 720px)
 
 
 .no-index {
-	margin: 0px;
+	margin: 30px 0px;
 	box-shadow: none;
-
-	&:hover{
-		margin-left: 0px !important;
-	}
-	
-
 }
 
 .share-buttons{
@@ -869,7 +862,7 @@ body.post-template .site-header .quote-header{
 
 pre{
 	border: 0px;
-	border-left: 1rem solid $l-colour;
+	border-left: .5rem solid $l-colour;
 }
 
 code {
