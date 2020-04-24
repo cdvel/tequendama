@@ -128,6 +128,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 		box-decoration-break: clone;
 		text-shadow: none;
 		transition: all 0.3s ease;
+		border-right: 5px solid $hl-colour !important
 	}
 }
 
@@ -295,7 +296,8 @@ and (max-device-width: 720px)
 	border-right: 5px solid transparent;
 
 	:hover{
-		border-right: 5px solid inherit !important;
+		border-right: 5px solid $hl-colour !important;
+
 	}
 }
 
@@ -371,9 +373,9 @@ and (max-device-width: 720px)
 	font-family: $b-font;
 	font-weight: $light;
 	font-size: small;
-	font-variant: small-caps;
-	line-height: 6rem;
-	margin-top: 10px;
+	line-height: 1rem;
+	margin-top: 30px 0px;
+
 }
 
 .tag-list a{
@@ -383,6 +385,7 @@ and (max-device-width: 720px)
 	font-weight: bold ;
 	border-radius: .1rem;
 	font-variant: none;
+	margin-right: .3rem;
 }
 
 .excerpt{
