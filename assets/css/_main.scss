@@ -285,7 +285,7 @@ and (max-device-width: 720px)
 }
 
 .post p{
-	line-height: 28px;
+	line-height: 2rem;
 }
 
 .post h2 a{
@@ -400,6 +400,7 @@ and (max-device-width: 720px)
 	text-overflow: ellipsis;
 	white-space: normal;
 	padding-right: 0vw;
+	line-height: 2rem;
 }
 
 .feature-image{
@@ -849,7 +850,7 @@ body.post-template .site-header .quote-header{
 
 .main-title{
 	text-align: center;
-	line-height:27px;
+	line-height: 2rem;
 	color: #f3f3f3;
 	font-size: 2.0375em;
 	font-family: "Kaushan Script",cursive;
@@ -1260,7 +1261,9 @@ body {
 	font-weight: $normal;
 	// transition: all 0.3s ease;
 	// background-color: $h-colour;
-	
+
+	border: 1rem inset var(--background);
+
 }
 
 // os or browser set to dark
@@ -1311,6 +1314,9 @@ body {
 		.site-header{
 			filter: invert(1);
 		}
+		.icon-top{
+			filter: invert(1);
+		}
 	// }
 
 }
@@ -1353,5 +1359,16 @@ body {
 		filter: invert(1);
 	}
 
+	.icon-top{
+		filter: invert(1);
+	}
+	
+
+}
+
+.icon-top{
+	font-size:large; 
+	float: right; 
+	cursor:pointer; 
 }
 
