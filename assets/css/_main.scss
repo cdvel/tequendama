@@ -868,7 +868,7 @@ body.post-template .site-header .quote-header{
 
 
 pre{
-	border: none;
+	border-left: 1rem solid $l-colour !important;
 }
 
 code {
@@ -877,8 +877,6 @@ code {
 	line-height: 1.5em;
 	color: #cb3443;
 	background-color: whitesmoke;
-	padding: 1rem;
-	border-left: 1rem solid $l-colour !important;
 }
 
 blockquote p {
