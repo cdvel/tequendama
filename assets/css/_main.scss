@@ -390,7 +390,7 @@ and (max-device-width: 720px)
 
 .excerpt{
 	color: inherit;
-	filter: opacity(0.6); 
+	// filter: opacity(0.6); 
 	// line-height: 0.1px;
 	font-size: inherit;
 	// margin-top: 0.5em;
@@ -650,6 +650,7 @@ and (max-device-width: 720px)
 	// position: absolute;
 	top: 20px;
 	right: 10%;
+	text-align: center;
 }
 
 
@@ -669,7 +670,12 @@ and (max-device-width: 720px)
 
 .quicklinks a{
         margin: 0px;
-        padding: 10px;
+		padding: 10px;
+		border-bottom: 3px solid transparent;
+
+		&:hover{
+			border-bottom: 3px solid $hl-colour;
+		}
 }
 
 .quicklinks a button{
