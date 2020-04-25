@@ -567,6 +567,7 @@ and (max-device-width: 720px)
 	font-size: large;
 	font-weight: 800;
 	margin: 0px;
+	color: $b-font;
 }
 
 .author p.address{
@@ -868,6 +869,11 @@ code {
 	font-family: $c-font;
 	font-size: 0.95em;
 	line-height: 1.5em;
+	background: aliceblue;
+	color: $hl-colour;
+	padding: 3px;
+	margin: 0px;
+	border: 1px;
 }
 
 blockquote p {
