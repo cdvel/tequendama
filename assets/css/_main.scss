@@ -559,6 +559,10 @@ and (max-device-width: 720px)
 	margin-top: -10vh;
 }
 
+author a{
+	color: $b-colour;
+}
+
 .author p{
 	margin: 0;
 	padding: 0px 5px;
@@ -919,7 +923,7 @@ blockquote::after{
 }
 
 blockquote{
-	margin-left: 0px;
+	margin: 0px;
 }
 
 // bookmarks
