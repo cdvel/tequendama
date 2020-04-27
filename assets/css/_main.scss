@@ -156,6 +156,7 @@ hr{
 
 .post ul li{
 	font-size: 1rem;
+	line-height: 2rem;
 }
 
 
@@ -967,6 +968,7 @@ blockquote{
 .kg-bookmark-metadata,
 .kg-bookmark-description {
 	margin-top: .5em;
+	text-align: start;
 	color: lighten($color: $b-colour, $amount: 50%);
 }
 
@@ -1272,7 +1274,7 @@ body {
 	// background-color: $h-colour;
 
 	border: .5rem inset var(--background);
-	text-align: justify;
+	text-align: left;
 
 }
 
