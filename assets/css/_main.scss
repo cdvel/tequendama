@@ -9,15 +9,14 @@
 	//$s-colour: #979797; // Secondary Colour
 
 //	$h-colour: #252525; // Heading Colour
-	$h-colour: #fff; // Heading Colour
-	$a-colour: #FAEBD7; // Heading Colour
+	$h-colour: #ffffff; // Heading Colour
+	$a-colour: #faebd7; // Heading Colour
 	$b-colour: #222222; // Body Colour
 	$s-colour: #cb3443; // Secondary Colour
 	$ln-colour: #ececec;
 	$bg-colour: #f5f5f5;
 	$dg-colour: #595959;
 	$f-colour: #ccc2;
-
 	$l-colour: #3dbbd2; //link
 	$hl-colour: #cb3443; //link	
 
@@ -1371,16 +1370,10 @@ body {
 	.site-header div{
 		filter: invert(1);
 	}
-
-	// .icon-top{
-	// 	filter: invert(1);
-	// }
-	
-
 }
 
 .icon-top{
-	color: $b-colour;
+	color: var(--text-color);
 	font-size:x-large; 
 	float: right; 
 	// bottom: 10px;
