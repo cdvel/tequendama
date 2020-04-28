@@ -1251,8 +1251,8 @@ blockquote{
 	--icon-mode-night-transform: rotateZ(90deg);
 	--icon-mode-transform: var(--icon-mode-night-transform);
 	--button-color:var(--color-light);
-	--background-light: var(--color-light) url('https://www.transparenttextures.com/patterns/concrete-wall.png') repeat center center;
-	--background-dark: var(--color-dark) url('https://www.transparenttextures.com/patterns/concrete-wall.png') repeat center center;
+	--background-light:  #FAEBD7 url('https://www.transparenttextures.com/patterns/concrete-wall.png') repeat center center;
+	--background-dark:  #222222 url('https://www.transparenttextures.com/patterns/concrete-wall.png') repeat center center;
 	--background-image:var(--background-image-light);
 
 	// background: $h-colour url(../img/header-bg.jpg) no-repeat center center; 
