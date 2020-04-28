@@ -476,8 +476,8 @@ and (max-device-width: 720px)
 }
 
 .btn{
-  border: solid 1px rgb( 236, 236, 236 );
-  background-color: #FFF;
+  border: solid 2px var(--text-color);
+  background-color: transparent;
   width: 150px;
   height: 35px;
   display: block;
