@@ -1228,7 +1228,9 @@ blockquote{
 	--color-light: #FAEBD7;
 	// #efefef;
 	// --color-light-alpha: rgba(255, 255, 255, 0.9);
-	--background: #f5f5f5;
+	--background-light: #f5f5f5;
+	--background-dark: #222;
+
 	// #efefef;
 	--text-color: #222222;
 
@@ -1251,8 +1253,8 @@ blockquote{
 	--icon-mode-night-transform: rotateZ(90deg);
 	--icon-mode-transform: var(--icon-mode-night-transform);
 	--button-color:var(--color-light);
-	--background-light:  #FAEBD7 url('https://www.transparenttextures.com/patterns/concrete-wall.png') repeat center center;
-	--background-dark:  #222222 url('https://www.transparenttextures.com/patterns/concrete-wall.png') repeat center center;
+	--background-light:  #f5f5f5 url('https://www.transparenttextures.com/patterns/batthern.png') repeat center center;
+	--background-dark:  #222 url('https://www.transparenttextures.com/patterns/batthern.png') repeat center center;
 	--background-image:var(--background-light);
 
 	// background: $h-colour url(../img/header-bg.jpg) no-repeat center center; 
