@@ -10,7 +10,7 @@
 
 //	$h-colour: #252525; // Heading Colour
 	$h-colour: #ffffff; // Heading Colour
-	$a-colour: #faebd7; // Heading Colour
+	$a-colour: #FFF6E9; // Heading Colour
 	$b-colour: #222222; // Body Colour
 	$s-colour: #cb3443; // Secondary Colour
 	$ln-colour: #ececec;
@@ -488,7 +488,7 @@ and (max-device-width: 720px)
   font-weight: $light;
   line-height: 35px;
   font-size: 13px;
-  color: #000;
+  color: $b-colour;
 
   &:hover{
   	background-color: $h-colour;
@@ -551,7 +551,7 @@ and (max-device-width: 720px)
 }
 
 author a{
-	color: $b-colour;
+	color: var(--text-color);
 }
 
 .author p{
