@@ -1262,7 +1262,7 @@ blockquote{
 }
 
 body {
-	background: var(--background-light);
+	background: var(--background-image);
 	color: var(--text-color);
 	transition: background 500ms ease-in-out, color 200ms ease;
 
@@ -1282,7 +1282,7 @@ body {
 @media (prefers-color-scheme: dark) {
 	:root {
 	  --color-mode: 'dark';
-	  --background: var(--background-dark);
+	  --background-image: var(--background-dark);
 	  --text-color: var(--color-light);
 	  --icon-mode-transform: var(--icon-mode-day-transform);
 	  --button-color: var(--color-dark);
@@ -1334,7 +1334,7 @@ body {
   
 // user has selected dark 
 [data-user-color-scheme="dark"] {
-	--background: var(--background-dark);
+	--background-image: var(--background-dark);
 	--text-color: var(--color-light);
 	// --button-icon: var(--icon-sun);
 	--icon-mode-transform: var(--icon-mode-day-transform);
