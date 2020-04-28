@@ -1170,7 +1170,7 @@ blockquote{
 	top: 10px;
 	right: 10px;
 	cursor: pointer;
-	border: 0.5rem inset;
+	// border: 0.5rem inset;
 	height: 1rem;
 	width: 1rem;
 	background: black;
@@ -1192,9 +1192,11 @@ blockquote{
   
   .toggle-button__icon {
 	// background: var(--icon-mode);
-	width: 1.2em; 
-	height: 1.2em;
+	width: 1em; 
+	height: 1em;
 	margin: 0.1rem 0;
+	color: $b-colour;
+	font-size: x-large;
 	// transform: var(--icon-mode-transform);
 	// transform: var(-icon-transfor);
 	// transform: translateY(1px); /* Optical adjustment */
@@ -1378,11 +1380,11 @@ body {
 }
 
 .icon-top{
-	color: $hl-colour;
+	color: $b-colour;
 	font-size:x-large; 
 	float: right; 
 	position: absolute;
-	bottom: 10px;
+	// bottom: 10px;
 	right: 10px;
 	cursor:pointer; 
 }
