@@ -488,7 +488,7 @@ and (max-device-width: 720px)
   font-weight: $light;
   line-height: 35px;
   font-size: 13px;
-  color: $b-colour;
+  color: var(--text-color);
 
   &:hover{
   	background-color: $h-colour;
