@@ -35,7 +35,7 @@
 
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?55664638');
+  /* src: url('../font/fontello.eot?55664638'); */
   src: url('../font/fontello.woff?55664638') format('woff'),
        url('../font/fontello.ttf?55664638') format('truetype'),
        url('../font/fontello.svg?55664638#fontello') format('svg'),
