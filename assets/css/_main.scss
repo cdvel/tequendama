@@ -1223,28 +1223,14 @@ blockquote{
 
 :root {
 	--color-mode: 'light';
-	// --color-dark: #141414;
 	--color-dark: #222222;
-	// --color-dark-alpha: rgba(0, 0, 0, 0.1);
 	--color-light: #FAEBD7;
-	// #efefef;
-	// --color-light-alpha: rgba(255, 255, 255, 0.9);
 	--background-light: #f5f5f5;
 	--background-dark: #222;
 
-	// #efefef;
 	--text-color: #222222;
 
 	--button-background: var(--background);
-
-	// #141414;
-	// $h-colour: #fff; // Heading Colour
-	// $a-colour: #FAEBD7; // Heading Colour
-	// $b-colour: #222222; // Body Colour
-	// $s-colour: #cb3443; // Secondary Colour
-	// $ln-colour: #ececec;
-	// $bg-colour: #f5f5f5;
-	// $dg-colour: #595959;
 
 	--icon-mode: url('data:image/svg+xml,\
 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 50 50">\
@@ -1254,16 +1240,16 @@ blockquote{
 	--icon-mode-night-transform: rotateZ(90deg);
 	--icon-mode-transform: var(--icon-mode-night-transform);
 	--button-color:var(--color-light);
-	--background-light: #f5f5f5ff url('https://www.transparenttextures.com/patterns/concrete-wall.png') ;
-	--background-dark:  #26323822 url('https://www.transparenttextures.com/patterns/concrete-wall.png');
-	--background-image: var(--background-light);
+	--background-light: #f5f5f5ff url('https://www.transparenttextures.com/patterns/concrete-wall.png') no-repeat center center;
+	--background-dark:  #263238ed url('https://www.transparenttextures.com/patterns/concrete-wall.png') no-repeat center center;
+	--bg: var(--background-light);
 
-	// background: $h-colour url(../img/header-bg.jpg) no-repeat center center; 
+	// background: $h-colour url(../img/header-bg.jpg) no-repeat center center;
 	 
 }
 
 body {
-	background: var(--background-image);
+	background: var(--bg);
 	color: var(--text-color);
 	transition: background 500ms ease-in-out, color 200ms ease;
 
@@ -1283,7 +1269,7 @@ body {
 @media (prefers-color-scheme: dark) {
 	:root {
 	  --color-mode: 'dark';
-	  --background-image: var(--background-dark);
+	  --bg: var(--background-dark);
 	  --text-color: var(--color-light);
 	  --icon-mode-transform: var(--icon-mode-day-transform);
 	  --button-color: var(--color-dark);
@@ -1335,7 +1321,7 @@ body {
   
 // user has selected dark 
 [data-user-color-scheme="dark"] {
-	--background-image: var(--background-dark);
+	--bg: var(--background-dark);
 	--text-color: var(--color-light);
 	// --button-icon: var(--icon-sun);
 	--icon-mode-transform: var(--icon-mode-day-transform);
