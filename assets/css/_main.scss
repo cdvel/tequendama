@@ -1194,7 +1194,7 @@ blockquote{
 	width: 1em; 
 	height: 1em;
 	margin: 0.1rem 0;
-	color: $b-colour;
+	color: var(--text-color);
 	font-size: 1.5rem;
 	// transform: var(--icon-mode-transform);
 	// transform: var(-icon-transfor);
@@ -1361,7 +1361,7 @@ body {
 
 .icon-top{
 	color: var(--text-color);
-	font-size: 1.5rem; 
+	font-size: 1.3rem; 
 	float: right; 
 	// bottom: 10px;
 	right: 10px;
