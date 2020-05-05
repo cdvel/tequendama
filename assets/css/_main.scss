@@ -888,6 +888,7 @@ blockquote p {
 
 .kg-embed-card{
 	margin-left: 0px !important;
+	width: 100%;
 }
 
 blockquote::before{
@@ -1238,7 +1239,7 @@ blockquote{
 	--icon-mode-transform: var(--icon-mode-night-transform);
 	--button-color:var(--color-light);
 	--background-light: #f5f5f5ff;
-	--background-dark:  #263238ed;
+	--background-dark:  #192024ed;
 	--bg: var(--background-light);
 
 	// background: $h-colour url(../img/header-bg.jpg) no-repeat center center;
