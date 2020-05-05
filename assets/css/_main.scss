@@ -1309,7 +1309,8 @@ body {
 		// }
 
 		.site-header{
-			filter: invert(1);
+			// filter: invert(1);
+			color: var(--text-color) !important;
 		}
 		.icon-top{
 			filter: invert(1);
@@ -1353,13 +1354,14 @@ body {
 	// }
 
 	.site-header div{
-		filter: invert(1);
+		color: var(--text-color) !important;
+		// filter: invert(1);
 	}
 }
 
 .icon-top{
 	color: var(--text-color);
-	font-size: 2rem; 
+	font-size: 1.5rem; 
 	float: right; 
 	// bottom: 10px;
 	right: 10px;
