@@ -365,7 +365,7 @@ and (max-device-width: 720px)
 	font-family: $b-font;
 	font-weight: $light;
 	font-size: small;
-	line-height: 1rem;
+	line-height: 2rem;
 	margin: 20px 0px;
 }
 
@@ -377,6 +377,10 @@ and (max-device-width: 720px)
 	border-radius: .1rem;
 	font-variant: none;
 	margin-right: .3rem;
+
+	&:hover{
+		filter: brightness(1.1);
+	}
 }
 
 .excerpt{
@@ -446,7 +450,7 @@ and (max-device-width: 720px)
 
 .tag-title{
 	font-weight: $light;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 .tag-title h1{
