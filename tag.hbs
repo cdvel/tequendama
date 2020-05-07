@@ -3,7 +3,7 @@
 	<main role="main" class="content">
 		<a class="btn" href="{{@blog.url}}" title="Back to homepage">&laquo; Back to home</a>
 		<div class="tag-title">
-			<h1>🏷{{tag.name}}</h1>
+			<h1>🏷 {{tag.name}}</h1>
 			<p>{{tag.description}}</p>
 		</div>
 
@@ -11,7 +11,7 @@
 		{{#foreach tags}}
 	      <span class="post-info no-index">
 			<span class="post-meta">
-				<a class="tags-meta" href="{{url}}">{{name}} <small>({{ count.posts }})</small></a>
+				<a class="tag-meta" href="{{url}}">{{name}} <small>({{ count.posts }})</small></a>
 			</span>
 		  </span>
 		  {{else}}

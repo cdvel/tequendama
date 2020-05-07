@@ -464,7 +464,9 @@ and (max-device-width: 720px)
 	font-weight: $light;
 	font-variant: small-caps;
 }
-
+.tag-meta{
+	white-space: nowrap;
+}
 
 // -----------------------------------------------------------------------------
 // Pagination
