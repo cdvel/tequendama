@@ -6,11 +6,20 @@
 			<h1>🏷{{tag.name}}</h1>
 			<p>{{tag.description}}</p>
 		</div>
+
+		{{#get "tags"}}
 		{{#foreach tags}}
 	      <span class="post-info no-index">
-			<span class="post-meta">{{tags separator=" " prefix=""}}</span>
+			<span class="post-meta">
+				<a class="tags-meta" href="{{url}}">{{name}}</a>
+			</span>
 		  </span>
+		  {{else}}
+		  <p>no tags :(</p>
 		{{/foreach}}
+
+		{{/get}}
+
 
 		{{#foreach posts}}
 		<article class="{{post_class}} post">
