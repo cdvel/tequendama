@@ -3,17 +3,23 @@
 	<main role="main" class="content">
 		<a class="btn" href="{{@blog.url}}" title="Back to homepage">&laquo; Back to home</a>
 		<div class="tag-title">
-			<h1>{{tag.name}}</h1>
+			<h1>🏷{{tag.name}}</h1>
 			<p>{{tag.description}}</p>
 		</div>
+		{{foreach tags}}
+	      {{!-- <span class="post-info no-index"> --}}
+			<span class="post-meta">{{tags separator=" " prefix=""}}</span>
+		  {{!-- </span> --}}
+		{{/foreach}}
+
 		{{#foreach posts}}
 		<article class="{{post_class}} post">
 			{{!-- <a href="{{url}}" title="{{title}}">
 				<img src="{{img_url feature_image}}&w=160" class="post-img">
 			</a> --}}
-			<h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
+			<h3><a href="{{url}}" title="{{title}}">{{title}}</a></h3>
 	        <div class="excerpt">{{excerpt words="48"}}&hellip;</div>
-			<footer class="post-info">Last Update <time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time>
+			{{!-- <footer class="post-info">Last Update <time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> --}}
 				{{!-- <span class="post-meta">{{tags separator=" // " prefix=" in "}}</span> --}}
 			</footer>
 			{{!-- <footer class="post-info">Posted on <span class="post-meta"> {{tags separator=", " prefix="Tagged in "}}</span></footer> --}}
