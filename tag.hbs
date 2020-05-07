@@ -7,11 +7,11 @@
 			<p>{{tag.description}}</p>
 		</div>
 
-		{{#get "tags"}}
+		{{#get "tags" limit='all' include='count.posts' order='count.posts desc'}}
 		{{#foreach tags}}
 	      <span class="post-info no-index">
 			<span class="post-meta">
-				<a class="tags-meta" href="{{url}}">{{name}}</a>
+				<a class="tags-meta" href="{{url}}">{{name}} <small>({{ count.posts }})</small></a>
 			</span>
 		  </span>
 		  {{else}}
