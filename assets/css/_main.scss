@@ -144,6 +144,7 @@ hr{
 }
 
 .read-more{
+	font-family: $b-font;
 	font-variant: all-petite-caps; 
 	display: grid;
 }
@@ -500,11 +501,13 @@ and (max-device-width: 720px)
   line-height: 35px;
   font-size: 13px;
   color: inherit;
+  border-color: inherit;
 
   &:hover{
-  	background-color: $h-colour;
-  	border-color: $h-colour;
-  	color: $hl-colour;
+  	// background-color: $h-colour;
+  	// border-color: $h-colour;
+	  color: $hl-colour;
+	  border-color: var(--text-color);
   } 
 }
 
