@@ -143,6 +143,10 @@ hr{
 	margin: 40px 0;
 }
 
+.read-more{
+	font-variant: all-petite-caps; 
+	display: grid;
+}
 
 .post ul li{
 	font-size: 1rem;
@@ -370,8 +374,9 @@ and (max-device-width: 720px)
 }
 
 .post-meta a{
-	background: $l-colour;
-	color: $h-colour;
+	// background: $l-colour;
+	color: var(--text-color);
+	border-bottom: 3px solid $l-colour;
 	padding: .1rem .3rem;
 	font-weight: normal;
 	border-radius: .1rem;
