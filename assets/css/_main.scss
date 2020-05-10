@@ -184,7 +184,7 @@ img.emoji {
 }
 
 .read-more{
-	font-family: $h-font;
+	font-family: $b-font;
 	font-weight: $light;
 	font-size: 14px;
 	font-variant: small-caps;
@@ -501,7 +501,7 @@ and (max-device-width: 720px)
   line-height: 35px;
   font-size: 13px;
   color: inherit;
-  border-color: inherit;
+  border-color: var(--text-color);
 
   &:hover{
   	// background-color: $h-colour;
@@ -946,7 +946,7 @@ blockquote{
     flex-direction: row-reverse;
     font-family: inherit;
     text-decoration: none;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	border: 1px solid var(--text-color);
 	font-size: small;
 	letter-spacing: 0.01rem;
     line-height: 1.2rem;
@@ -954,7 +954,8 @@ blockquote{
 
 .kg-bookmark-container:hover {
 	text-decoration: none;
-	box-shadow: 8px 8px 0 $ln-colour;
+	background-color: rgba($color: #fff, $alpha: 0.1);
+	// box-shadow: 8px 8px 0 $ln-colour;
 }
 
 .kg-bookmark-content {
