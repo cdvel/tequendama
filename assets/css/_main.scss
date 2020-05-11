@@ -648,7 +648,7 @@ and (max-device-width: 720px)
 	// grid-template-columns: 25% 25% 25% 25%;
 	grid-template-columns: repeat(auto-fit, minmax(5px, 1fr));
 	grid-gap: normal;
-	font-size: medium;
+	font-size: 1rem;
 	font-variant: small-caps;
 	border-radius: 3px;
 	background: transparent;
@@ -656,6 +656,7 @@ and (max-device-width: 720px)
 	top: 20px;
 	right: 10%;
 	text-align: center;
+	white-space: nowrap;
 }
 
 
@@ -663,7 +664,7 @@ and (max-device-width: 720px)
 and (max-device-width: 720px)
 {
         .quicklinks{
-		font-size: x-small;
+		font-size: 0.8rem;
 		margin-top: 0px;
 		right: 0px;
 		top: 0px;
@@ -1377,12 +1378,13 @@ body {
 
 .icon-top{
 	color: var(--text-color);
-	font-size: 1.3rem; 
+	font-size: 1.6rem; 
 	float: right; 
 	// bottom: 10px;
 	right: 10px;
 	cursor:pointer;
 	position: fixed;
 	bottom: 0;
+	filter: opacity(0.6);
 }
 
