@@ -4,44 +4,31 @@
 
 Ghost theme for personal blog
 
-## Recompile theme
+## Compile this theme manually
 
 ```
  sass -t compressed assets/css/styles.scss assets/css/styles.css
 ```
 
+## Migration links
 
-## Run process with forever
-
-```
-
-/opt/ghost$ sudo NODE_ENV=production forever start index.js
-
-```
-
-
-
-#Migration links
-
-manual installation
+### manual installation
 
 https://nehalist.io/installing-ghost-1-0-without-ghost-cli/
 
 
-How to migrate
+### How to migrate
 
 https://docs.ghost.org/docs/migrating-to-ghost-1-0-0#section-4-copy-your-images
 
 
-Updating your theme
+### Updating your theme
 
 https://gscan.ghost.org/
 
 
 
-
-
-## How to update Ghost to latest version:
+## Manual update to latest Ghost:
 
 At `~/` follow these comands:
 
@@ -68,11 +55,8 @@ sudo chown -R ghost:ghost /opt/ghost
 Then restart service
 
 ```
-sudo su
-forever restartall
 service nginx restart
-exit
-
+```
 
 ### troubleshoot
 
