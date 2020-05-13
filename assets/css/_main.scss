@@ -101,7 +101,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 	box-decoration-break: clone;
 	text-shadow: none;
 	transition: all 0.3s ease;
-	border-right: 5px solid transparent;
+	// border-right: 5px solid transparent;
 
 	&:hover{
 		background-clip: border-box;		  
@@ -118,7 +118,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 		box-decoration-break: clone;
 		text-shadow: none;
 		transition: all 0.3s ease;
-		border-right: 5px solid $hl-colour !important
+		// border-right: 5px solid $hl-colour !important
 	}
 }
 
@@ -285,17 +285,17 @@ and (max-device-width: 720px)
 }
 
 .post h2 a{
-	font-size: 2.2rem;
+	font-size: 2rem;
 	line-height: 2rem;
 	display: block;
 	padding: 0px;
 	// margin: 15px 0px;
-	border-right: 5px solid transparent;
+	// border-right: 5px solid transparent;
 
-	:hover{
-		border-right: 5px solid $hl-colour !important;
+	// :hover{
+	// 	border-right: 5px solid $hl-colour !important;
 
-	}
+	// }
 }
 
 @media only screen 
@@ -306,6 +306,9 @@ and (max-device-width: 720px)
 	}
 }
 
+.post-title{
+	font-size: 1.6rem;
+}
 
 .post-template h1{
 	font-size: 2rem;
@@ -1212,8 +1215,8 @@ blockquote{
   
   .toggle-button__icon {
 	// background: var(--icon-mode);
-	width: 1.2em; 
-	height: 1.2em;
+	width: 1.2rem; 
+	height: 1.2rem;
 	margin: 0.1rem 0;
 	color: var(--text-color);
 	font-size: 1.5rem;
