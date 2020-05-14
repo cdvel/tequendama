@@ -12,7 +12,7 @@
 	$h-colour: #ffffff; // Heading Colour
 	$a-colour: #FFF6E9; // Heading Colour
 	$b-colour: #222222; // Body Colour
-	$s-colour: #cb3443; // Secondary Colour
+	$s-colour: #837e7f; // Secondary Colour
 	$ln-colour: #ececec;
 	$bg-colour: #f5f5f5;
 	$dg-colour: #595959;
@@ -855,7 +855,9 @@ body.post-template .site-header .quote-header{
     clear: both;
 }
 
-
+.subscribed-status{
+	color: $hl-colour;
+}
 // -----------------------------------------------------------------------------
 // Quote
 // -----------------------------------------------------------------------------

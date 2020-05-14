@@ -127,7 +127,7 @@
         <label style="display: grid; align-items: baseline; text-align: center; font-size: small;" for="email-address">Join my newsletter</label>
   		<input type="email" name="email" id="email-address" style="height: 25px; width: 240px; display:inline; margin: 10px; color: #333;" placeholder=" Email address"/>     
   		<button id="newsletter-form-button" type="submit" style="display:inline !important;" class="btn" >Subscribe</button>
-  		<p id="newsletter-form-status"></p>
+  		<p id="newsletter-form-status" class="subscribed-status"></p>
 	</center>
 </form>
 
@@ -146,11 +146,11 @@
     function success() {
       form.reset();
       button.style = "display: none ";
-      status.innerHTML = "Thanks!";
+      status.innerHTML = "✔︎ You've been subscribed!";
     }
 
     function error() {
-      status.innerHTML = "Oops! There was a problem.";
+      status.innerHTML = "✖︎ Please try again later.";
     }
 
     // handle the form submission event
