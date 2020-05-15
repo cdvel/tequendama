@@ -566,6 +566,16 @@ and (max-device-width: 720px)
 // Sidebar
 // -----------------------------------------------------------------------------
 
+.toc{
+	overflow-y: auto;
+	position: sticky;
+	top: 70px;
+	min-width: 260px;
+	line-height: 1.6em;
+	padding: 0 0.8em;
+}
+
+
 .author{
 	font-weight: $light;
 	margin-top: -10vh;
