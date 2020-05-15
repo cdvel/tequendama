@@ -578,13 +578,15 @@ and (max-device-width: 720px)
 
 .toc-list-item{
 	margin-bottom: 10px;
-	font-weight: normal !important;
-
-	&:before{
-		background-color: var(--text-color) !important;
-		filter: opacity(0.5) !important;
+	
+	a{
+		font-weight: normal !important;
+		&:before{
+			background-color: var(--text-color) !important;
+			filter: opacity(0.5) !important;
+		}
 	}
-
+	
 	&:hover{
 		text-decoration: underline $l-colour 2px;
 	}
