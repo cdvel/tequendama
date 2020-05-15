@@ -566,15 +566,26 @@ and (max-device-width: 720px)
 // Sidebar
 // -----------------------------------------------------------------------------
 
-.toc{
-	overflow-y: auto;
-	position: sticky;
-	top: 70px;
-	min-width: 260px;
-	line-height: 1.6em;
-	padding: 0 0.8em;
+// .toc{
+// 	overflow-y: auto;
+// 	position: sticky;
+// 	top: 70px;
+// 	min-width: 260px;
+// 	line-height: 1.6em;
+// 	padding: 0 0.8em;
+// }
+
+.toc-list-item{
+	margin-bottom: 10px;
+
+	&:hover{
+		text-decoration: underline $l-colour;
+	}
 }
 
+.is-active-link::before{
+	background-color: $hl-colour;
+}
 
 .author{
 	font-weight: $light;
