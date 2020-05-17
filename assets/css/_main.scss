@@ -958,7 +958,7 @@ blockquote::before{
   position: relative;
   float: left;
   left: -8px;
-  top: -10px;
+  top: 10px;
   margin-bottom: -26px;
 }
 
@@ -976,11 +976,7 @@ blockquote{
 }
 
 blockquote p{
-	line-height: inherit;
 	margin: inherit;
-	display: inherit;
-	color: inherit;
-	filter: inherit;  
 }
 
 // bookmarks
