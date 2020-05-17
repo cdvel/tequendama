@@ -926,12 +926,13 @@ code {
 	border: 1px;
 }
 
-blockquote p {
-  display: -webkit-box;
-  color: #808080;
-  font-style: italic;
-  font-size: 0.9em;
-}
+// blockquote {
+//   display: -webkit-box;
+//   color: inherit;
+//   filter: opacity(.6);
+// //   font-style: italic;
+// //   font-size: 0.9em;
+// }
 
 .twitter-tweet::before{
 	content: '\e813' !important;
@@ -950,9 +951,8 @@ blockquote::before{
   /*Font*/
   font-family: Georgia, serif;
   font-size: 60px;
-  color: #656565;
+  color: #7b7b7b47;
   font-weight: bold;
-  color: #e4e4e4;
   
   /*Positioning*/
   position: relative;
@@ -968,7 +968,19 @@ blockquote::after{
 }
 
 blockquote{
+	line-height: 2rem;;
 	margin: 0px;
+	display: -webkit-box;
+	color: inherit;
+	filter: opacity(.6);
+}
+
+blockquote p{
+	line-height: inherit;
+	margin: inherit;
+	display: inherit;
+	color: inherit;
+	filter: inherit;  
 }
 
 // bookmarks
