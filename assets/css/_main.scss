@@ -125,7 +125,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 
 
 ol {
-	list-style:lower-roman;
+	list-style:decimal-leading-zero;
 }
 
 ul{
@@ -134,7 +134,7 @@ ul{
 
 li{
 	margin-bottom: 15px;
-	line-height: 2rem;
+	line-height: 1.8rem;
 }
 
 hr{
@@ -926,34 +926,34 @@ code {
 	border: 1px;
 }
 
-// blockquote {
+/*// blockquote {
 //   display: -webkit-box;
 //   color: inherit;
 //   filter: opacity(.6);
 // //   font-style: italic;
 // //   font-size: 0.9em;
 // }
-
-.twitter-tweet::before{
+*/
+/*.twitter-tweet::before{
 	content: '\e813' !important;
 	font-family: $icon-font !important;
 	font-size: 35px !important;
-}
+}*/
 
 .kg-embed-card{
-	margin-left: 0px !important;
+	/*margin-left: 0px !important;*/
 	width: 100%;
 }
 
 blockquote::before{
   content: "\201C"; /*Unicode for Left Double Quote*/
-  
+
   /*Font*/
   font-family: Georgia, serif;
   font-size: 60px;
   color: #7b7b7b47;
   font-weight: bold;
-  
+
   /*Positioning*/
   position: relative;
   float: left;
