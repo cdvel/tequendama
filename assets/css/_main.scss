@@ -1434,3 +1434,14 @@ body {
 	filter: opacity(0.6);
 }
 
+.notes-grid{
+	    display: grid;
+        grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
+		grid-gap: 1rem;
+
+		.post{
+			box-shadow: none !important;
+			-webkit-box-shadow: none !important;
+		}
+
+}

@@ -1,8 +1,0 @@
-  <aside class="author">
-        {{tags separator=" <br/> "}}        </aside>
-	{{#tags}}
-
-	{{/tags}}
-  </aside>
-
-
