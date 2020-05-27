@@ -1,11 +1,11 @@
 {{!< default}} <div class="container clearfix">
     <main role="main" class="content">
-        <a class="btn" href="{{@blog.url}}" title="Back to homepage">&laquo; Back to home</a>
         <div class="post no-index">
             <h1>📚 Books </h1>
             <code>Short summaries and notes of books I've read, includes quotes and some relevant ideas for future reference</code>
         </div>
         <hr/>
+		<div class="notes-grid">
                 {{#get "posts" limit='all' filter="tags:books"}}
                 {{#foreach posts}}
                         <article class="{{post_class}} post">
@@ -15,6 +15,7 @@
                         </article>
                 {{/foreach}}
                 {{/get}}
+         </div>
         {{pagination}}
     </main>
     </div>

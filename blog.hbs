@@ -1,13 +1,12 @@
 {{!< default}} <div class="container clearfix">
     <main role="main" class="content">
-        <a class="btn" href="{{@blog.url}}" title="Back to homepage">&laquo; Back to home</a>
         <div class="post no-index">
-            <h1>📓 Notes </h1>
-            <code>My collection of quick notes, how-tos, reference material, and guides on practical subjects.</code>
+            <h1>📌 Blog </h1>
+            <code>Writing on technology, personal growth and self-development</code>
         </div>
         <hr/>
-                {{#get "pages" limit='all' filter="tags:notes"}}
-                {{#foreach pages}}
+                {{#get "posts" limit='all'}}
+                {{#foreach posts}}
                         <article class="{{post_class}} post">
                             <h3><a href="{{url}}" title="{{title}}">{{title}}</a></h3>
                             <div class="excerpt">{{excerpt characters="160"}}&hellip;<a class="read-more" href="{{url}}">▷ read more</a></div>
