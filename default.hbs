@@ -23,7 +23,7 @@
 		var modeToggleButton = document.querySelector('.js-mode-toggle');
 		//var modeToggleText = document.querySelector('.js-mode-toggle-text');
 		var modeStatusElement = document.querySelector('.js-mode-status');
-		
+
 		var getCSSCustomProp = function getCSSCustomProp(propKey) {
 		var response = getComputedStyle(document.documentElement).getPropertyValue(propKey);
 		if (response.length) {
@@ -71,8 +71,8 @@
 		</script>
 		{{!-- Base Meta --}}
 		<title>{{meta_title}} | {{@blog.title}}</title>
-		<meta name="twitter:image" content="https://res.cloudinary.com/cdvel/image/upload/w_760,c_fit,co_rgb:232129,g_south_west,x_480,y_254,l_text:audiowide_60:{{meta_title}}/w_760,c_fit,co_rgb:232129,g_north_west,x_480,y_445,l_text:lato_36:{{meta_title}},co_rgb:3dbbd2/v1591612415/post_social_card.webp">
-		<meta name="og:image" content="https://res.cloudinary.com/cdvel/image/upload/w_760,c_fit,co_rgb:232129,g_south_west,x_480,y_254,l_text:audiowide_60:{{meta_title}}/w_760,c_fit,co_rgb:232129,g_north_west,x_480,y_445,l_text:lato_36:{{meta_title}},co_rgb:3dbbd2/v1591612415/post_social_card.webp">
+		<meta name="twitter:image" content="https://res.cloudinary.com/cdvel/image/upload/w_760,c_fit,co_rgb:232129,g_south_west,x_480,y_254,l_text:audiowide_60:{{meta_title}}/w_760,c_fit,co_rgb:232129,g_north_west,x_480,y_445,l_text:lato_36:{{@site.description}},co_rgb:3dbbd2/v1591612415/post_social_card.webp">
+		<meta name="og:image" content="https://res.cloudinary.com/cdvel/image/upload/w_760,c_fit,co_rgb:232129,g_south_west,x_480,y_254,l_text:audiowide_60:{{meta_title}}/w_760,c_fit,co_rgb:232129,g_north_west,x_480,y_445,l_text:lato_36:{{@site.description}},co_rgb:3dbbd2/v1591612415/post_social_card.webp">
 		<meta name="HandheldFriendly" content="True" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		{{!-- Styles'n'Scripts --}}
@@ -124,66 +124,6 @@
 		{{{body}}}
 		<footer class="main-footer">
 			<div class="container clearfix">
-
-<!-- modify this form HTML and place wherever you want your form -->
-
-<!-- <form id="newsletter-form" method="POST" action="https://formspree.io/xlewkorz">
-	<center style="font-variant: none;">
-        <label style="display: grid; align-items: baseline; text-align: center; font-size: small;" for="email-address">Join my newsletter</label>
-  		<input type="email" name="email" id="email-address" style="height: 25px; width: 240px; display:inline; margin: 10px; color: #333;" placeholder=" Email address"/>
-  		<input type="email" name="email2" id="email-address2" style="height: 25px; width: 240px; display:none; margin: 10px; color: #333;" placeholder=" Email address" value=""/>
-  		<button id="newsletter-form-button" type="submit" style="display:inline !important;" class="btn" >Subscribe</button>
-  		<p id="newsletter-form-status" class="subscribed-status"></p>
-	</center>
-</form>
- -->
-
-<!-- Place this script at the end of the body tag -->
-
-<!-- <script>
-  window.addEventListener("DOMContentLoaded", function() {
-
-    // get the form elements defined in your form HTML above
-    var form = document.getElementById("newsletter-form");
-    var button = document.getElementById("newsletter-form-button");
-    var status = document.getElementById("newsletter-form-status");
-
-    // Success and Error functions for after the form is submitted
-    function success() {
-      form.reset();
-      button.style = "display: none ";
-      status.innerHTML = "✔︎ You've been subscribed!";
-    }
-
-    function error() {
-      status.innerHTML = "✖︎ Please try again later or send an <a href='mail-to:&#099;&#101;&#115;&#097;&#114;&#064;&#118;&#101;&#108;&#097;&#110;&#100;&#105;&#097;&#046;&#099;&#111;'>email</a>";
-    }
-
-    // handle the form submission event
-    form.addEventListener("submit", function(ev) {
-      ev.preventDefault();
-      var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
-    });
-  });
-
-  // helper function for sending an AJAX request
-  function ajax(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);
-      } else {
-        error(xhr.status, xhr.response, xhr.responseType);
-      }
-    };
-    xhr.send(data);
-  }
-</script> -->
-
 				<a class="icon-rss" href="{{@blog.url}}/rss/" title="RSS Feed"></a>
 				<p>
 					<a href="{{@blog.url}}" title="{{@blog.title}}">
