@@ -1,14 +1,16 @@
 
+
+
 // -----------------------------------------------------------------------------
 // Variables
 // -----------------------------------------------------------------------------
 
 	// Colours
-	//$h-colour: #2a373d; // Heading Colour
+/*	//$h-colour: #2a373d; // Heading Colour
 	//$b-colour: #222222; // Body Colour
-	//$s-colour: #979797; // Secondary Colour
+	//$s-colour: #979797; // Secondary Colour*/
 
-//	$h-colour: #252525; // Heading Colour
+/*//	$h-colour: #252525; // Heading Colour*/
 	$h-colour: #ffffff; // Heading Colour
 	$a-colour: #FFF6E9; // Heading Colour
 	$b-colour: #222222; // Body Colour
@@ -85,7 +87,7 @@ a{
 	}
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+/*h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 
 	background-clip: border-box;		  
 	-webkit-text-fill-color: transparent;
@@ -120,9 +122,33 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 		transition: all 0.3s ease;
 		// border-right: 5px solid $hl-colour !important
 	}
+}*/
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+
+	color: $h-colour;
+	box-decoration-break: clone;
+	text-shadow: none;
+	transition: all 0.3s ease;
+
+	&:hover{
+/*		background-clip: border-box;		  
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;		  
+		box-decoration-break: clone;
+		background: -webkit-gradient(linear,left top,right top,from($b-colour),to($hl-colour));
+		background: linear-gradient(90deg,$b-colour, $hl-colour);
+		background-clip: border-box;
+		background-clip: border-box;
+		-webkit-text-fill-color: transparent;
+		-webkit-box-decoration-break: clone;
+		-webkit-background-clip: text;
+		box-decoration-break: clone;
+*/		text-shadow: none;
+		transition: all 0.3s ease;
+
+	}
 }
-
-
 
 ol {
 	list-style:decimal-leading-zero;
@@ -1342,18 +1368,18 @@ body {
 	  --button-background: var(--color-dark);
 
 	}
-	
-	// :root:not([data-user-color-scheme]) {
 
-	// --background: var(--color-dark);
+	/*// :root:not([data-user-color-scheme]) {*/
+
+/*	// --background: var(--color-dark);
 	//  --text-color: var(--color-light);
 	//   --button-icon: var(--icontransform
 	//   --icon-mode-transform: var(--icon-sun-filter);
-	//   --border-color: var(--color-light-alpha);
+	//   --border-color: var(--color-light-alpha);*/
 
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-			background-clip: border-box;		  
+		/*	background-clip: border-box;
 			-webkit-text-fill-color: $a-colour;
 			-webkit-background-clip: text;		  
 			box-decoration-break: clone;
@@ -1365,15 +1391,15 @@ body {
 			-webkit-box-decoration-break: clone;
 			-webkit-background-clip: text;
 			box-decoration-break: clone;
-			text-shadow: none;
+			text-shadow: none;*/
 			transition: all 0.3s ease;
 			color: $a-colour !important;
 		}
 
-		// .main-footer{
+/*		// .main-footer{
 		// 	background-color: lighten($color: $b-colour, $amount: 20%);
 		// 	color: $a-colour;
-		// }
+		// }*/
 
 		.site-header{
 			// filter: invert(1);
@@ -1382,11 +1408,11 @@ body {
 		.icon-top{
 			filter: invert(1);
 		}
-	// }
+	/*// }*/
 
 }
   
-// user has selected dark 
+/*// user has selected dark */
 [data-user-color-scheme="dark"] {
 	--bg: var(--background-dark);
 	--text-color: var(--color-light);
