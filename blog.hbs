@@ -5,7 +5,7 @@
             <code>Writing on technology, personal growth and self-development</code>
         </div>
         <hr/>
-                {{#get "posts" limit='all'}}
+                {{#get "posts" limit='all' filter="tags:blog"}}
                 {{#foreach posts}}
                         <article class="{{post_class}} post">
                             <h3><a href="{{url}}" title="{{title}}">{{title}}</a></h3>
