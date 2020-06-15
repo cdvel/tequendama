@@ -1,17 +1,28 @@
 <div id="author" class="author">
-    <a href="/">
-      <img class="profile-image" src="{{primary_author.profile_image}}" alt="{{primary_author.name}}" />
-      <p class="name"><span>{{primary_author.name}}</span></p>
-    </a>
+<div style="display: grid; grid-template-columns: repeat(5,1fr);grid-column-gap: 0; grid-row-gap: 0;">
 
-    {{!-- {{#if primary_author.location}}
-      <p class="address">{{primary_author.location}}</p>
-    {{/if}}     --}}
-    {{!-- <p class="link">
-      <a class="website" href="{{primary_author.website}}" title="{{primary_author.name}}">{{@blog.url}}</a>
-    </p> --}}
-    <span class="description typeit typewrite" data-period="3000" data-type='[ "{{@blog.description}}" ]' aria-label="cesar.velandia.co">
-    	<span class="wrap"></span>
-    </span>
-	{{>social}}
+  <div>
+      <a href="/">
+        <img class="profile-image" src="{{primary_author.profile_image}}" alt="{{primary_author.name}}" />
+      </a>
+
+  </div>
+  <div>
+      <a href="/">
+        <p class="name"><span>{{primary_author.name}}</span></p>
+      </a>
+      {{#if primary_author.location}}
+        <p class="address">{{primary_author.location}}</p>
+      {{/if}}
+<!--       <p class="link">
+        <a class="website" href="{{primary_author.website}}" title="{{primary_author.name}}">{{@blog.url}}</a>
+      </p> -->
+      <p class="address">{{primary_author.description}}</p>
+      <span class="description typeit typewrite" data-period="3000" data-type='[ "{{@blog.description}}" ]' aria-label="cesar.velandia.co">
+      	<span class="wrap"></span>
+      </span>
+  </div>
+
+</div>
+{{>social}}
 </div>
