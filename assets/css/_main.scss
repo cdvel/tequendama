@@ -189,14 +189,14 @@ hr{
 
 .author{
 	font-family: $b-font !important;
-	// color: $b-colour;
+	// color: $b1-colour;
 	text-align: center;
 	width: 40%;
 	float: left;
     margin: 0px 5% 25px 5%;
 	line-height: 2;
 	letter-spacing: 0.3px;
-    padding: 20px 25%;
+    padding: 0px 25%;
 }
 
 .content{
@@ -626,7 +626,7 @@ and (max-device-width: 720px)
 
 .author{
 	font-weight: $light;
-	margin-top: -10vh;
+	margin-top: 10px;
 }
 
 author a{
@@ -644,6 +644,7 @@ author a{
 	font-weight: 800;
 	margin: 0px;
 	color: var(--text-color);
+	letter-spacing: 2px;
 }
 
 .author p.address{
@@ -697,7 +698,7 @@ and (max-device-width: 720px)
 
 .author ul.social li a{
 	padding: 5px;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 }
 
 .website {
@@ -939,6 +940,7 @@ body.post-template .site-header .quote-header{
 	font-variant: all-small-caps;
     height: 2rem;
     display: inline-block;
+    padding-left: 10px;
 }
 
 
