@@ -1,13 +1,12 @@
 <div id="author" class="author">
 <div style="display: grid; grid-template-columns: repeat(5,1fr);grid-column-gap: 0; grid-row-gap: 0;">
-
-  <div>
+  <div style="grid-area: 1/1/2/4;">
       <a href="/">
         <img class="profile-image" src="{{primary_author.profile_image}}" alt="{{primary_author.name}}" />
       </a>
-
   </div>
-  <div>
+
+  <div style="grid-area: 1/3/2/6;text-align: left;">
       <a href="/">
         <p class="name"><span>{{primary_author.name}}</span></p>
       </a>
@@ -17,7 +16,7 @@
 <!--       <p class="link">
         <a class="website" href="{{primary_author.website}}" title="{{primary_author.name}}">{{@blog.url}}</a>
       </p> -->
-      <p class="address">{{primary_author.description}}</p>
+      <p class="address">{{primary_author.bio}}</p>
       <span class="description typeit typewrite" data-period="3000" data-type='[ "{{@blog.description}}" ]' aria-label="cesar.velandia.co">
       	<span class="wrap"></span>
       </span>
