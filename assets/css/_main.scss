@@ -200,6 +200,26 @@ hr{
     padding: 0px 25%;
 }
 
+.author-image{
+	grid-area: 1/1/2/3;
+}
+
+.author-bio {
+	grid-area: 1/3/2/6;
+	text-align: left;
+}
+@media only screen
+and (max-device-width: 720px)
+{
+	.author-image{
+		grid-area: 1/1/1/6 !important;
+	}
+
+	.author-bio {
+		grid-area: 2/1/2/6 !important;
+		text-align: center; !important;
+	}
+}
 .content{
 	width: 60%;
 	margin-right: 20%;
@@ -289,7 +309,7 @@ and (max-device-width: 720px)
         padding: 0px !important;
         margin: 0px !important;
     }
-    
+
     .author p.address{
         width: 100% !important;
     }
