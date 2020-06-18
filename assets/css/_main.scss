@@ -269,7 +269,7 @@ img.emoji {
 //   box-shadow: 1px 1px 3px 3px #d7d7d7;
   border: 4px solid #ececec;
   width: 8rem;
-  margin: 1rem auto auto 6rem;
+  margin: 1rem auto auto 7rem;
   position: relative;
   float: none;
 
@@ -285,13 +285,14 @@ img.emoji {
 @media only screen
 and (max-device-width: 720px)
 {
-    .profile-social{
-       	width: 20px !important;
-	 }
-	 .profile-social, .profile-image{
-		width: 60px !important;
-	}
-
+    .author{
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+    
+    .author p.address{
+        width: 100% !important;
+    }
 }
 
 
