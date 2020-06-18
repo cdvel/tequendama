@@ -4,7 +4,8 @@
   <main role="main" class="content">
     {{#post}}
       <h1><a href="{{url}}" title="{{title}}">{{title}}</a></h1>
-      <footer class="post-info no-index"><span class="post-meta">{{tags separator=" " prefix=""}}</span></footer>
+      <code>{{excerpt}}</code>
+      {{!-- <footer class="post-info no-index"><span class="post-meta">{{tags separator=" " prefix=""}}</span></footer> --}}
       <div class="post-content">
       {{content}}
       </div>
