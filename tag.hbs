@@ -7,37 +7,26 @@
 		</div>
 
 		{{#get "tags" limit='all' include='count.posts' order='count.posts desc'}}
-			{{#foreach tags}}
-		      <span class="post-info no-index">
-				<span class="post-meta">
-					<a class="tag-meta" href="{{url}}">{{name}} <small>({{ count.posts }})</small></a>
-				</span>
-			  </span>
-			  {{else}}
-			  <p>no tags :(</p>
-			{{/foreach}}
+		{{#foreach tags}}
+	      <span class="post-info no-index">
+			<span class="post-meta">
+				<a class="tag-meta" href="{{url}}">{{name}} <small>({{ count.posts }})</small></a>
+			</span>
+		  </span>
+		  {{else}}
+		  <p>no tags :(</p>
+		{{/foreach}}
+
 		{{/get}}
 
 
 		{{#foreach posts}}
-			<article class="{{post_class}} post">
-				<h3><a href="{{url}}" title="{{title}}">{{title}}</a></h3>
-		        <div class="excerpt">{{excerpt characters="160"}}&hellip;<a class="read-more" href="{{url}}">▷ read more</a></div>
-				</footer>
-			</article>
+		<article class="{{post_class}} post">
+			<h3><a href="{{url}}" title="{{title}}">{{title}}</a></h3>
+	        <div class="excerpt">{{excerpt characters="160"}}&hellip;<a class="read-more" href="{{url}}">▷ read more</a></div>
+			</footer>
+		</article>
 		{{/foreach}}
-
-		{{#foreach post}}
-		{{#is "page"}}
-		<h3>Pages</h3>>
-			<article class="{{post_class}} post">
-				<h3><a href="{{url}}" title="{{title}}">{{title}}</a></h3>
-		        <div class="excerpt">{{excerpt characters="160"}}&hellip;<a class="read-more" href="{{url}}">▷ read more</a></div>
-				</footer>
-			</article>
-		{{/is}}
-		{{/foreach}}
-
 		{{pagination}}
 	</main>
 </div>
