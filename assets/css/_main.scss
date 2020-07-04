@@ -314,6 +314,7 @@ and (max-device-width: 720px)
     .author p.address{
         width: 100% !important;
     }
+
 }
 
 
@@ -672,6 +673,12 @@ author a{
 
 .author p.address{
 	color: $s-colour;
+    width: 80%;
+}
+
+.author p.location{
+	white-space: nowrap
+	color: $b-colour;
     width: 80%;
 }
 
