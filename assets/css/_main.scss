@@ -187,18 +187,6 @@ hr{
 	padding: 50px 0 0 0;
 }
 
-.author{
-	font-family: $b-font !important;
-	// color: $b1-colour;
-	text-align: center !important;
-	width: 40%;
-	float: left;
-    margin: 0px 5% 25px 5%;
-	line-height: 2;
-	letter-spacing: 0.2px;
-    text-align: justify;
-    padding: 0px 25%;
-}
 
 .author-image{
 	grid-area: 1/1/2/2;
@@ -307,7 +295,7 @@ img.emoji {
 and (max-device-width: 720px)
 {
     .author{
-        padding: 0px !important;
+        padding: 20px 0px !important;
         margin: 0px !important;
     }
 
@@ -649,9 +637,17 @@ and (max-device-width: 720px)
 }
 
 .author{
-	font-weight: $light;
-	margin-top: 10px;
+	font-family: $b-font !important;
+	// color: $b1-colour;
+	text-align: center !important;
+	width: auto;
+	float: left;
+	line-height: 2;
+	letter-spacing: 0.2px;
+    align: justify;
+    padding: 15px 25%;
 }
+
 
 author a{
 	color: var(--text-color);
@@ -673,12 +669,12 @@ author a{
 
 .author div.address{
 	color: $s-colour;
-    width: 80%;
+    width: 100%;
 }
 
 .author div.location{
 	color: $b-colour;
-    width: 80%;
+    width: 100%;
 }
 
 .author div.link{
