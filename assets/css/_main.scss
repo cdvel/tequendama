@@ -190,7 +190,7 @@ hr{
 .author{
 	font-family: $b-font !important;
 	// color: $b1-colour;
-	text-align: center;
+	text-align: center !important;
 	width: 40%;
 	float: left;
     margin: 0px 5% 25px 5%;
@@ -633,14 +633,14 @@ and (max-device-width: 720px)
 .toc-list-item{
 	margin-bottom: 10px;
 	text-decoration: underline $l-colour 2px;
-	
+
 	a{
 		font-weight: normal !important;
 		&:before{
 			background-color: $s-colour !important;
 		}
 	}
-	
+
 	&:hover{
 		font-weight: bold !important;
 	}
@@ -657,13 +657,13 @@ author a{
 	color: var(--text-color);
 }
 
-.author p{
+.author div{
 	margin: 0;
 	padding: 0px 5px;
 	font-size: medium;
 }
 
-.author p.name{
+.author div.name{
 	font-size: x-large;
 	font-weight: 800;
 	margin: 0px;
@@ -671,18 +671,17 @@ author a{
 	letter-spacing: 1px;
 }
 
-.author p.address{
+.author div.address{
 	color: $s-colour;
     width: 80%;
 }
 
-.author p.location{
-	white-space: nowrap;
+.author div.location{
 	color: $b-colour;
     width: 80%;
 }
 
-.author p.link{
+.author div.link{
 	margin-bottom: 10px;
 }
 
@@ -698,7 +697,6 @@ ul.social li{
 }
 
 .floating{
-	// position: fixed;
 	top: 10vw;
 	right: 1vw;
 	background: transparent;

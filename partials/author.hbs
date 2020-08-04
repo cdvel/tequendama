@@ -1,27 +1,25 @@
 <div id="author" class="author">
-<div style="display: grid; grid-template-columns: repeat(5,1fr);grid-column-gap: 20px; grid-row-gap: 0;">
-  <div class="author-image">
+  <div style="display: grid; grid-template-columns: repeat(5,1fr);grid-column-gap: 20px; grid-row-gap: 0;">
+    <div class="author-image">
       <a href="/">
         <img class="profile-image" src="{{primary_author.profile_image}}" alt="{{primary_author.name}}" />
       </a>
-  </div>
-
-  <div class="author-bio">
+    </div>
+    <div class="author-bio">
       <a href="/">
-        <p class="name"><span>{{primary_author.name}}</span></p>
+        <div class="name"><span>{{primary_author.name}}</span></div>
       </a>
       {{#if primary_author.location}}
-        <p class="location">{{primary_author.location}}</p>
+      <div class="location">{{primary_author.location}}</div>
       {{/if}}
-<!--       <p class="link">
+      <!--       <div class="link">
         <a class="website" href="{{primary_author.website}}" title="{{primary_author.name}}">{{@blog.url}}</a>
-      </p> -->
-      <p class="address">{{primary_author.bio}}</p>
+      </div> -->
+      <div class="address">{{primary_author.bio}}</div>
       <span class="description typeit typewrite" data-period="3000" data-type='[ "{{@blog.description}}" ]' aria-label="cesar.velandia.co">
-      	<span class="wrap"></span>
+        <span class="wrap"></span>
       </span>
-    {{>social}}
+      {{>social}}
+    </div>
   </div>
-
-</div>
 </div>
