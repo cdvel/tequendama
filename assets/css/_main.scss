@@ -669,7 +669,7 @@ author a{
 }
 
 .author div{
-	margin: 0px;
+	margin: 10px 0px;
 	padding: 0px;
 	font-size: medium;
 }
@@ -689,7 +689,8 @@ author a{
 
 .author div.location{
 	color: var(--text-color);
-    width: 100%;
+    width: auto;
+    padding: 0px 10px;
 }
 
 .author div.link{
@@ -981,6 +982,8 @@ body.post-template .site-header .quote-header{
     height: 2rem !important;
     min-height: 2rem !important;
     display: inline-block;
+    min-width: 100% !important;
+    width: 100% !important;
 }
 
 
