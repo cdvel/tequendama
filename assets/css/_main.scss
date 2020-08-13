@@ -371,7 +371,7 @@ and (max-device-width: 720px)
 .section-title{
 	display: inline-flex;
 	border-bottom: 3px solid #3dbbd2;
-	margin: 2rem 0px 1rem 1.5rem;
+	margin: 2rem 1.5rem 1rem 0px;
 }
 
 .post{
@@ -669,8 +669,8 @@ author a{
 }
 
 .author div{
-	margin: 0;
-	padding: 0px 5px;
+	margin: 0px;
+	padding: 0px;
 	font-size: medium;
 }
 
@@ -759,7 +759,7 @@ and (max-device-width: 720px)
 	border-radius: 3px;
 	background: transparent;
 	top: 0px;
-	right: 0px;
+	left: 0px;
 	text-align: center;
 	text-transform: capitalize;
 	position: absolute;

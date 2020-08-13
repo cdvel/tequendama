@@ -9,6 +9,8 @@
       <a href="/">
         <div class="name"><span>{{primary_author.name}}</span></div>
       </a>
+      {{>social}}
+
       {{#if primary_author.location}}
       <div class="location">{{primary_author.location}}</div>
       {{/if}}
@@ -19,7 +21,6 @@
       <span class="description typeit typewrite" data-period="3000" data-type='[ "{{@blog.description}}" ]' aria-label="cesar.velandia.co">
         <span class="wrap"></span>
       </span>
-      {{>social}}
     </div>
   </div>
 </div>
