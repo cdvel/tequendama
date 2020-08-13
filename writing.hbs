@@ -5,6 +5,7 @@
             <code>Writing on technology, personal growth and self-development</code>
         </div>
         <hr/>
+        <div class="notes-grid">
                 {{#get "posts" limit='all' filter="tags:writing"}}
                 {{#foreach posts}}
                         <article class="{{post_class}} post">
@@ -14,6 +15,7 @@
                         </article>
                 {{/foreach}}
                 {{/get}}
+        </div>
         {{pagination}}
     </main>
     </div>

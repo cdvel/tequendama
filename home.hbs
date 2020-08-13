@@ -1,7 +1,7 @@
 {{!< default}}
 <div class="container clearfix">
   <main role="main" class="content">
-    <h2 class="section-title">Latest writing</h2><a class="view-all" href="/writings">view all writing ▷</a>
+    <h2 class="section-title">Latest writing</h2><a class="view-all" href="/writing">view all writing ▷</a>
     {{#foreach posts limit="5"}}
     <article class="{{post_class}}">
         <div class="post-excerpt">
@@ -33,7 +33,7 @@
       {{/foreach}}
     {{/get}}
 
-    <h2 class="section-title">Latest reference notes</h2><a class="view-all" href="/notes">view all notes ▷</a>
+    <h2 class="section-title">Latest reference</h2><a class="view-all" href="/notes">view all notes ▷</a>
     {{#get "posts" include="tags" limit='5' filter="tags:notes"}}
     {{#foreach posts}}
     <article class="{{post_class}}">
