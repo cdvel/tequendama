@@ -20,7 +20,7 @@
 	$dg-colour: #595959;
 	$f-colour: #ccc2;
 	$l-colour: #3dbbd2; //link
-	$hl-colour: #cb3443; //link	
+	$hl-colour: #3dbbd2; //link	
 
 	// Fonts
 	$h-font: 'Audiowide', sans-serif; // Heading Font
@@ -83,6 +83,7 @@ a{
 	transition: all 0.3s ease;
 	&:hover{
 		color: $hl-colour;
+		filter: brightness(1.1);
 		transition: all 0.3s ease;
 	}
 }
@@ -146,6 +147,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 		-webkit-background-clip: text;
 		box-decoration-break: clone;
 */		text-shadow: none;
+		filter: brightness(1.1);
 		transition: all 0.3s ease;
 
 	}
@@ -317,8 +319,6 @@ and (max-device-width: 720px)
 
 	&:hover{
 		transition:all 0.3s ease;
-		// margin-left: 20px !important;
-
 	}
 }
 
@@ -331,13 +331,6 @@ and (max-device-width: 720px)
 	line-height: 2rem;
 	display: block;
 	padding: 0px;
-	// margin: 15px 0px;
-	// border-right: 5px solid transparent;
-
-	// :hover{
-	// 	border-right: 5px solid $hl-colour !important;
-
-	// }
 }
 
 @media only screen 
@@ -427,7 +420,7 @@ and (max-device-width: 720px)
 	font-weight: $light;
 	font-size: small;
 	line-height: 2rem;
-	margin: auto;
+	margin: auto 5px auto auto;
 	text-align: right;
 }
 
@@ -473,8 +466,8 @@ and (max-device-width: 720px)
 
 
 .no-index {
-	// margin: 30px 0px;
 	box-shadow: none;
+	text-align: left;
 }
 
 .share-buttons{
@@ -780,6 +773,7 @@ and (max-device-width: 720px)
 
 		&:hover{
 			border-bottom: 3px solid $hl-colour;
+			filter: brightness(1.1);
 		}
 }
 
