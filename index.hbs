@@ -1,7 +1,8 @@
 {{!< default}}
 <div class="container clearfix">
   <main role="main" class="content">
-    {{#foreach posts}}
+    <h2>Latest writing</h2>
+    {{#foreach posts limit="5"}}
     <article class="{{post_class}}">
         <div class="post-excerpt">
           <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
@@ -14,6 +15,37 @@
         </div>
       </article>
       {{/foreach}}
+
+    <h2>Latest book notes</h2>
+    {{#foreach posts limit="5" filter="tags:books"}}
+    <article class="{{post_class}}">
+        <div class="post-excerpt">
+          <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
+          <div class="post-info">
+            <div class="post-meta">
+              {{tags separator=" " prefix=""}}
+            </div>
+          </div>
+          <div class="excerpt">{{excerpt characters="260"}}&hellip;<a class="read-more" href="{{url}}">▷ read more</a></div>
+        </div>
+      </article>
+      {{/foreach}}
+
+    <h2>Latest reference notes</h2>
+    {{#foreach posts limit="5" filter="tags:notes"}}
+    <article class="{{post_class}}">
+        <div class="post-excerpt">
+          <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
+          <div class="post-info">
+            <div class="post-meta">
+              {{tags separator=" " prefix=""}}
+            </div>
+          </div>
+          <div class="excerpt">{{excerpt characters="260"}}&hellip;<a class="read-more" href="{{url}}">▷ read more</a></div>
+        </div>
+      </article>
+      {{/foreach}}
+
       {{pagination}}
     </main>
   </div>
