@@ -974,7 +974,7 @@ body.post-template .site-header .quote-header{
 
 .description {
 	font-family: $h-font !important;
-	font-size: inherit;
+	font-size: large;
 	text-align: center;
 	padding: 20px 0px !important;
 	color: inherit !important;
@@ -984,7 +984,8 @@ body.post-template .site-header .quote-header{
     display: inline-block;
     min-width: 100% !important;
     width: 100% !important;
-    text-align: left;
+    position: absolute;
+    text-align: center;
 }
 
 
