@@ -690,7 +690,7 @@ author a{
 .author div.location{
 	color: var(--text-color);
     width: auto;
-    padding: 0px 10px;
+    padding: 0px 10px 0px 0px;
 }
 
 .author div.link{
@@ -701,7 +701,7 @@ ul.social{
 	list-style: none;
 	display: inline;
 	padding: 0;
-
+	margin-left: -10px;
 }
 
 ul.social li{
@@ -984,6 +984,7 @@ body.post-template .site-header .quote-header{
     display: inline-block;
     min-width: 100% !important;
     width: 100% !important;
+    text-align: left;
 }
 
 
