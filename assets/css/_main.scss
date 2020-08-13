@@ -174,8 +174,14 @@ hr{
 
 .read-more{
 	font-family: $b-font;
-	font-variant: all-petite-caps; 
+	font-variant: all-petite-caps;
 	display: grid;
+}
+
+.view-all{
+	margin: 0px 0px 0px 1.5rem;
+	font-variant: all-petite-caps;
+	display: inline-flex;
 }
 
 .post ul li{
@@ -343,6 +349,7 @@ and (max-device-width: 720px)
 
 .post-title{
 	font-size: 1.2rem;
+	margin: 0.6rem 0px !important;
 }
 
 .post-template h1{
@@ -360,12 +367,18 @@ and (max-device-width: 720px)
 	margin-left: 0px;
 }
 
+.section-title{
+	display: inline-flex;
+	border-bottom: 3px solid #3dbbd2;
+	margin: 2rem 0px 1rem 0px;
+}
+
 .post{
 	margin-bottom: auto !important;
 	padding-bottom: 0px;
 	border-bottom: 1px solid transparent;
 	min-height: auto;
-	padding: 0px 15px;
+	padding: 0px 5px;
 	background-size: contain;
     background-repeat: no-repeat;
 	background-position: 0%;
