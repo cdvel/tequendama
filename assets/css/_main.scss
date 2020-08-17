@@ -374,6 +374,23 @@ and (max-device-width: 720px)
 	margin: 2rem 1.5rem 1rem 0px;
 }
 
+reference-grid, books-grid{
+/*	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 1rem;*/
+}
+
+.notes-img{
+	height: 3rem;
+	width: auto;
+	display: inline;
+	float: inherit;
+	margin: 0px;
+	position: relative;
+	box-shadow: none;
+	padding: 0px 15px 0px 0px;
+}
+
 .post{
 	margin-bottom: auto !important;
 	padding-bottom: 0px;
