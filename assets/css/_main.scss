@@ -436,15 +436,14 @@ reference-grid, books-grid{
 @media only screen
 and (max-device-width: 720px)
 {
-	    .notes-img{
-        	margin: 0px 5px 0px 0px !important;
-
-		}
         .post img{
         	display: block;
         	margin: 20px 10px 20px 20px !important;
 			float: right !important;
 
+		}
+	    .notes-img{
+        	margin: 0px 5px 0px 0px !important;
 		}
 }
 
