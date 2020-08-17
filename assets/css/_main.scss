@@ -449,7 +449,7 @@ and (max-device-width: 720px)
 		}
         .post img{
         	display: block;
-        	margin: 20px 10px 20px 20px !important;
+        	margin: 20px 10px 20px 20px;
 			float: right !important;
 
 		}
@@ -1192,7 +1192,7 @@ blockquote p{
     width: 100% !important;
 	height: auto !important;
 	display: table-cell !important;
-	float: none !important;	
+	float: none !important;
 	vertical-align: bottom;
 	margin: inherit !important;
 	position: inherit !important;
@@ -1201,7 +1201,7 @@ blockquote p{
 
 	// height: 4.5em;
 	// width: 6.5em;
-	// // display: block; 
+	// // display: block;
 	// float: right;
 	// margin: 20px 10px 20px 0px;
 	// position: relative;
