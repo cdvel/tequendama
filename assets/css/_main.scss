@@ -381,14 +381,14 @@ reference-grid, books-grid{
 }
 
 .notes-img{
-	height: 3rem;
+	height: 1.65rem !important;
 	width: auto;
-	display: inline;
-	float: inherit;
-	margin: 0px;
-	position: relative;
-	box-shadow: none;
-	padding: 0px 15px 0px 0px;
+	display: inherit !important;
+	float: inherit !important;
+	margin: 0px !important;
+	position: relative !important;
+	box-shadow: none !important;
+	padding: 15px 0px !important;
 }
 
 .post{
