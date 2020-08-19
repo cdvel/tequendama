@@ -1333,13 +1333,13 @@ blockquote p{
   
   .user-toggle {
 	text-align: center;	
-	position: fixed;
-	bottom: 10px;
+	position: sticky;
+	bottom: 60px;
 	left: 20px;
 	cursor: pointer;
 	// border: 0.5rem inset;
 	height: auto;
-	width: auto;
+	width: max-content;
 	font-size: x-small;
 	color: var(--text-color);
   }
@@ -1538,8 +1538,8 @@ body {
 	float: right; 
 	bottom: 15px;
 	right: 20px;
-	cursor:pointer;
-	position: fixed;
+	cursor: pointer;
+	position: sticky;
 	letter-spacing: 0px;
 }
 
