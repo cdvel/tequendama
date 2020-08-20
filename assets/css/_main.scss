@@ -264,6 +264,28 @@ img.emoji {
 	background-color: $f-colour;
 }
 
+.header-title{
+	display: inline-block;
+	position: absolute;
+	float: left;
+	top: 0px;
+	left: 0px;
+	font-family: $h-font;
+	font-size: 1.2rem;
+	margin: 20px 30px;
+	padding: 5px 40px 5px 15px;
+	text-align: left;
+	border-bottom: 3px solid $l-colour;
+}
+
+@media only screen
+and (max-device-width: 720px)
+{
+	.header-title{
+		display: none;
+	}
+}
+
 .site-header h2{
 	margin: 0;
 }
@@ -787,8 +809,8 @@ and (max-device-width: 720px)
 	// font-variant: small-caps;
 	border-radius: 3px;
 	background: transparent;
-	top: 0px;
-	left: 0px;
+	top: 5px;
+	right: 0px;
 	text-align: center;
 	text-transform: capitalize;
 	position: absolute;
@@ -799,14 +821,13 @@ and (max-device-width: 720px)
 and (max-device-width: 720px)
 {
         .quicklinks{
-		font-size: 0.8rem;
-		margin: 5px;
-		right: 0px;
-		top: 0px;
-		width: 95%;
-		// grid-template-columns: 15% 15% 15% 20% 20%;
-		grid-template-columns: repeat(auto-fit, minmax(5px, 1fr));
-	}
+			font-size: 0.8rem;
+			margin: 5px;
+			right: 0px;
+			top: 5px;
+			width: 100%;
+			grid-template-columns: repeat(auto-fit, minmax(5px, 1fr));
+		}
 }
 
 .quicklinks a{

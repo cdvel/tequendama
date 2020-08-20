@@ -107,6 +107,9 @@
 			{{/foreach}}
 			{{/get}}
 		</div>
+		<div class="header-title">
+			{{{{@blog.title}}}}
+		<div>
 		{{navigation}}
 		{{{body}}}
 		<footer class="main-footer">
@@ -118,7 +121,7 @@
 					</a>
 				</p>
 			</div>
-			<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+			<div style="display: grid; grid-template-columns: repeat(2, 1fr);">
 			<div alt="toggle dark mode" style="text-align: left;">
 				<div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
 				<button class="[ toggle-button ] [ js-mode-toggle ]">
