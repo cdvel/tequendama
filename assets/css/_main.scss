@@ -215,7 +215,7 @@ and (max-device-width: 720px)
 
 	.author-bio {
 		grid-area: 2/1/2/6 !important;
-		text-align: center !important;
+		text-align: center;
 	}
 }
 .content{
@@ -722,6 +722,17 @@ author a{
 	margin: 10px 0px;
 	padding: 0px;
 	font-size: medium;
+}
+
+@media only screen
+and (max-device-width: 720px)
+{
+	.author div{
+		padding: 0px 5px;
+	}
+	.author bio{
+		text-align: left;
+	}
 }
 
 .author div.name{
