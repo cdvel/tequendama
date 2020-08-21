@@ -819,18 +819,19 @@ and (max-device-width: 720px)
 	list-style: none;
 	padding: 0px;
 	display: grid;
-	// grid-template-columns: 25% 25% 25% 25%;
 	grid-template-columns: repeat(auto-fit, minmax(5px, 1fr));
 	grid-gap: normal;
-	font-size: 1rem;
-	// font-variant: small-caps;
+	font-size: 0.9rem;
 	border-radius: 3px;
 	background: transparent;
-	top: 5px;
+	top: 0px;
 	right: 0px;
 	text-align: center;
 	text-transform: capitalize;
 	position: absolute;
+	font-variant: all-petite-caps;
+	height: 60px;
+	line-height: 2rem;
 }
 
 
@@ -855,6 +856,7 @@ and (max-device-width: 720px)
 		&:hover{
 			border-bottom: 3px solid $hl-colour;
 			filter: brightness(1.1);
+			background-color: #00000008;
 		}
 }
 

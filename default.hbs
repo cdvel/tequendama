@@ -109,9 +109,9 @@
 				{{/get}}
 			</div>
 		{{/is}}
-		<div class="header-title">
-			{{@blog.title}}
-		</div>
+		<a href="/" style="cursor: pointer; display:inline-flex;"><div class="header-title">
+			<img src="{{@site.logo}}" alt="Blog Logo" /> {{@blog.title}}
+		</div></a>
 		{{navigation}}
 		{{{body}}}
 		<footer class="main-footer">
