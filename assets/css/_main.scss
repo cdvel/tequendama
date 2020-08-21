@@ -275,11 +275,14 @@ img.emoji {
 	margin: 20px 30px;
 	padding: 5px 40px 5px 15px;
 	text-align: left;
-	border-bottom: 3px solid $l-colour;
+
 }
 
 .header-title a{
 	color: var(--text-color);
+	border-bottom: 3px solid $l-colour;
+	padding: 0px 25px 0px 5px;
+	vertical-align: top;
 }
 
 @media only screen
