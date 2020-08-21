@@ -278,6 +278,10 @@ img.emoji {
 	border-bottom: 3px solid $l-colour;
 }
 
+.header-title a{
+	color: var(--text-color);
+}
+
 @media only screen
 and (max-device-width: 720px)
 {
