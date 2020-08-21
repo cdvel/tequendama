@@ -100,13 +100,15 @@
 			</div>
 
 		</header>
-		<div>
-			{{#get "posts" limit="1" include="authors"}}
-			{{#foreach posts}}
-			{{> author}}
-			{{/foreach}}
-			{{/get}}
-		</div>
+		{{#is "index"}}
+			<div>
+				{{#get "posts" limit="1" include="authors"}}
+				{{#foreach posts}}
+				{{> author}}
+				{{/foreach}}
+				{{/get}}
+			</div>
+		{{/is}}
 		<div class="header-title">
 			{{@blog.title}}
 		</div>
