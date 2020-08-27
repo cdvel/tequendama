@@ -23,8 +23,7 @@
 	$hl-colour: #3dbbd2; //link	
 
 	// Fonts
-	$h-font: 'Audiowide', sans-serif; // Heading Font
-	// $b-font: 'OpenSans', sans-serif; // Body Font
+	$h-font: 'Alata', sans-serif; // Heading Font
 	$b-font: 'Inter', sans-serif; // Body Font
 	$c-font: 'Fira Code', monospace; // Code Font
 
@@ -743,17 +742,12 @@ and (max-device-width: 720px)
 }
 
 .author div.name{
-	font-size: 2rem;
+	font-family: $h-font;
+	font-size: 1.8rem;
 	font-weight: 800;
 	margin: 0px;
 	color: var(--text-color);
 	letter-spacing: 1px;
-	line-height: 1.5em;
-}
-
-.author div.name{
-	font-size: 1.8rem;
-	line-height: 1.5em;
 }
 
 .author div.address{
