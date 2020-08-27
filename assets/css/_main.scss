@@ -18,7 +18,7 @@
 	$ln-colour: #ececec;
 	$bg-colour: #f5f5f5;
 	$dg-colour: #595959;
-	$f-colour: #ccc2;
+	$f-colour: #ccc4;
 	$l-colour: #3dbbd2; //link
 	$hl-colour: #3dbbd2; //link	
 
@@ -1140,6 +1140,7 @@ blockquote p{
     width: 100%;
 	position: relative;
 	margin-left: auto;
+	background-color: var(--bg);
 }
 
 .kg-bookmark-container {
