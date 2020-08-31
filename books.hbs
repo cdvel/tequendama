@@ -8,11 +8,17 @@
 		<div class="notes-grid">
                 {{#get "posts" limit='all' filter="tags:books"}}
                 {{#foreach posts}}
-                        <article class="{{post_class}} post">
-                            <h3><a href="{{url}}" title="{{title}}">{{title}}</a></h3>
-                            <div class="excerpt">{{excerpt characters="160"}}&hellip;<a class="read-more" href="{{url}}">▷ read more</a></div>
-                            </footer>
-                        </article>
+                <article class="{{post_class}}">
+                    <div class="post-excerpt">
+                      <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
+                      <div class="post-info">
+                        <div class="post-meta">
+                          {{tags from="2" separator=" " prefix=""}}
+                        </div>
+                      </div>
+                      <div class="excerpt">{{excerpt characters="260"}}&hellip;<a class="read-more" href="{{url}}">▷ read more</a></div>
+                    </div>
+                  </article>
                 {{/foreach}}
                 {{/get}}
          </div>
