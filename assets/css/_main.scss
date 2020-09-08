@@ -382,14 +382,13 @@ and (max-device-width: 720px)
 	}
 }
 
-.ctitle{
+.post-title{
 	font-size: 1.2rem;
 	margin: 0.6rem 0px !important;
 }
 
 .post-template h1{
 	font-size: 2rem;
-	// margin-bottom: 15px;
 }
 
 .post-template h2,
@@ -690,8 +689,10 @@ and (max-device-width: 720px)
 	margin: 30px 0px;
 }
 
-.is-active-link:before {
-	background-color: none !important;
+.is-active-link{
+	&:before {
+		background-color: none !important;
+	}
 }
 
 .is-active-link {
@@ -699,6 +700,8 @@ and (max-device-width: 720px)
 }
 
 .toc-list-item{
+	font-family: $b-font !important;
+	font-size: large;
 	a{
 		&:hover{
 			filter: none !important;
