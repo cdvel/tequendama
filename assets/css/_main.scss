@@ -318,13 +318,12 @@ and (max-device-width: 720px)
   -webkit-border-radius: 90%; 
   -moz-border-radius: 90%; 
   border-radius: 90%;
-//   box-shadow: 1px 1px 3px 3px #d7d7d7;
   border: 4px solid #ececec;
   width: 6.5rem;
   margin: auto;
   position: relative;
   float: none;
-
+  display: none;
 }
 
 .profile-social {
@@ -851,9 +850,7 @@ and (max-device-width: 720px)
 {
         .quicklinks{
 			font-size: 0.8rem;
-			margin: 5px;
-			right: 0px;
-			top: 5px;
+			margin: 0px;
 			width: 100%;
 			grid-template-columns: repeat(auto-fit, minmax(5px, 1fr));
 		}
