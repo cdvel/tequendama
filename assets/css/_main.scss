@@ -689,9 +689,10 @@ and (max-device-width: 720px)
 	margin: 30px 0px;
 }
 
-.is-active-link{
+.toc-link{
 	&:before {
-		background-color: none !important;
+		background-color: transparent !important;
+		width: 1px !important;
 	}
 }
 
@@ -700,7 +701,7 @@ and (max-device-width: 720px)
 }
 
 .toc-list-item{
-	font-family: $b-font !important;
+	font-family: $h-font !important;
 	font-size: large;
 	a{
 		&:hover{
