@@ -315,9 +315,10 @@ and (max-device-width: 720px)
 
 .reading-time{
 	font-size: small;
-	padding-left: 10px;
+	padding: 10px 15px;
 	color: var(--text-color);
 	filter: opacity(.6);
+	line-height: 3rem;
 }
 
 .profile-social, .profile-image{
