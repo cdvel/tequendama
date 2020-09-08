@@ -704,6 +704,9 @@ and (max-device-width: 720px)
 			filter: none !important;
 		}
 	}
+	&:marker{
+		color: transparent !important;ß
+	};
 }
 
 .author{
