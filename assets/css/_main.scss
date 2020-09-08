@@ -313,6 +313,12 @@ and (max-device-width: 720px)
 	margin: -74px 0 0 -89px;
 }
 
+.reading-time{
+	font-size: small;
+	padding-left: 10px;
+	color: var(--text-color);
+	filter: opacity(.6);
+}
 
 .profile-social, .profile-image{
   -webkit-border-radius: 90%; 
