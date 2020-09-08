@@ -80,6 +80,8 @@ a{
 	text-decoration: none !important;
 	color: $l-colour;
 	transition: all 0.3s ease;
+	border-bottom: 1px dashed #3dbbd2;
+	color: var(--text-color);
 	&:hover{
 		color: $hl-colour;
 		filter: brightness(1.1);
@@ -679,31 +681,13 @@ and (max-device-width: 720px)
 // -----------------------------------------------------------------------------
 
 // floating toc
-// .toc{
-// 	overflow-y: auto;
-// 	position: sticky;
-// 	top: 70px;
-// 	min-width: 260px;
-// 	line-height: 1.6em;
-// 	padding: 0 0.8em;
-// }
+
+.toc {
+	margin: 20px 0px;
+}
 
 .toc-list-item{
-	margin-bottom: 10px;
-	text-decoration: underline $l-colour 2px;
-
-	a{
-		font-weight: normal !important;
-		&:before{
-			background-color: $s-colour !important;
-		}
-	}
-
-	&:hover{
-		font-weight: bold !important;
-	}
-
-
+	border-bottom: 1px dashed #3dbbd2;
 }
 
 .author{
@@ -1254,7 +1238,6 @@ blockquote p{
     white-space: nowrap;
     text-overflow: ellipsis;
 	overflow: hidden;
-	display: none !important;
 }
 
 .kg-bookmark-publisher{
@@ -1338,6 +1321,7 @@ blockquote p{
 		text-shadow: none;
 		transition: all 0.3s ease;
 		color: $a-colour !important;
+		border-bottom: none !important;
 	}
 
 	.main-footer{
