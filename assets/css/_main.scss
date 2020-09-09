@@ -14,7 +14,7 @@
 	$h-colour: #ffffff; // Heading Colour
 	$a-colour: #FFF6E9; // Heading Colour
 	$b-colour: #222222; // Body Colour
-	$s-colour: #837e7f; // Secondary Colour
+	$s-colour: #837e7f; // Secondary Coƒlour
 	$ln-colour: #ececec;
 	$bg-colour: #f5f5f5;
 	$dg-colour: #595959;
@@ -185,6 +185,12 @@ hr{
 	font-variant: all-petite-caps;
 	display: inline-flex;
 	white-space: nowrap;
+
+	span{
+		font-size: x-small;
+		padding: 0px 5px;
+	}
+
 }
 
 .post ul li{
@@ -315,7 +321,7 @@ and (max-device-width: 720px)
 
 .reading-time{
 	font-size: small;
-	padding: 10px 15px;
+	padding: 5px 15px 0px;
 	color: var(--text-color);
 	filter: opacity(.6);
 	line-height: 3rem;

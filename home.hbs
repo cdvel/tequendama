@@ -1,7 +1,10 @@
 {{!< default}}
 <div class="container clearfix">
   <main role="main" class="content">
-    <h2 class="section-title">Latest writing</h2><a class="view-all" href="/writing">view all ▷</a>
+  {#get "posts" limit='all' include="tags" filter="tags:writing" include='tags, count.posts'}}
+    <h2 class="section-title">Latest writing</h2>
+    <a class="view-all" href="/writing">view all <span>{{count.posts}}</span>▷</a>
+  {/get}
     {{#foreach posts limit="5"}}
     <article class="{{post_class}}">
         <div class="post-excerpt">
