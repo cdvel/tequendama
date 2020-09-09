@@ -700,10 +700,15 @@ and (max-device-width: 720px)
 		background-color: transparent !important;
 		width: 1px !important;
 	}
+
 }
 
 .is-active-link {
 	font-weight: inherit !important;
+}
+
+.toc-list{
+	padding-top: 10px;
 }
 
 .toc-list-item{
@@ -717,6 +722,10 @@ and (max-device-width: 720px)
 	&:marker{
 		color: transparent !important;
 	};
+
+	.toc-list{
+		padding-left: 30px !important;
+	}
 }
 
 .author{
@@ -1167,7 +1176,6 @@ blockquote p{
 .kg-bookmark-container:hover {
 	text-decoration: none;
 	background-color: rgba($color: #fff, $alpha: 0.1);
-	// box-shadow: 8px 8px 0 $ln-colour;
 }
 
 .kg-bookmark-content {
@@ -1195,24 +1203,18 @@ blockquote p{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    grid-gap: 2px;
+	display: grid;
 }
 
 .kg-bookmark-metadata img {
-    // max-width: 100%;
-    // height: auto;
-    // vertical-align: bottom;
-    // object-fit: cover;
 
     max-width: 100% !important;
-	// height: auto !important;
 	display: table-cell !important;
 	float: none !important;	
-	// vertical-align: bottom;
-	// margin: inherit !important;
 	position: inherit !important;
 	object-fit: cover !important;
 	box-shadow: none !important;
-	// margin: 0 8px 0 0;
 	width: 20px;
 	height: 20px;
 	vertical-align: bottom;
