@@ -1203,22 +1203,22 @@ blockquote p{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    grid-gap: 2px;
-	display: grid;
+    grid-gap: 10px;
+	display: flex;
 }
 
 .kg-bookmark-metadata img {
 
     max-width: 100% !important;
-	display: table-cell !important;
-	float: none !important;	
+	display: inline !important;
+	float: none !important;
 	position: inherit !important;
 	object-fit: cover !important;
 	box-shadow: none !important;
 	width: 20px;
 	height: 20px;
 	vertical-align: bottom;
-	margin: 20px 10px auto 0px !important
+	margin: 0px !important
 }
 
 .kg-bookmark-description {
