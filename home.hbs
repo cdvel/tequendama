@@ -1,7 +1,7 @@
 {{!< default}}
 <div class="container clearfix">
   <main role="main" class="content">
-  {{#get "posts" limit='all' filter="tags:writing" include='count.posts'}}
+  {{#get "posts" limit='all' include="tags" filter="tags:writing" include='tags, count.posts'}}
     <h2 class="section-title">Latest writing</h2>
     <a class="view-all" href="/writing">view all <span>{{count.posts}}</span>▷</a>
   {{/get}}
