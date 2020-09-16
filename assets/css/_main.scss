@@ -321,6 +321,14 @@ and (max-device-width: 720px)
 	line-height: 3rem;
 }
 
+@media only screen
+and (max-device-width: 720px)
+{
+	.reading-time{
+		display: none;
+	}
+}
+
 .profile-social, .profile-image{
   -webkit-border-radius: 90%; 
   -moz-border-radius: 90%; 
@@ -1603,9 +1611,9 @@ body {
 }
 
 .notes-grid{
-	    /*display: grid;
-        grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
-		grid-gap: 1rem;*/
+	    display: grid;
+        grid-template-columns: repeat( auto-fill, minmax(100%, 1fr) );
+		grid-gap: 1rem;
 
 		.post{
 			box-shadow: none !important;
