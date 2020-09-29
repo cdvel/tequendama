@@ -3,6 +3,7 @@
   <main role="main" class="content">
     {{#post}}
     <h1><a href="{{url}}" title="{{title}}">{{title}}</a></h1>
+    <code>{{excerpt}}</code>
     {{!-- <footer class="post-info">Last updated on <span class="post-meta"><time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> {{tags separator=" " prefix="Tagged in "}}</span></footer> --}}
     <footer class="post-info no-index"><span class="post-meta">{{tags separator=" " prefix=""}}</span></footer>
     <aside class="toc"></aside>
