@@ -17,6 +17,7 @@
       {{/foreach}}
 
     <h2>Latest book notes</h2>
+    <div class="books-grid">
     {{#foreach posts limit="5" filter="tags:books"}}
     <article class="{{post_class}}">
         <div class="post-excerpt">
@@ -30,7 +31,7 @@
         </div>
       </article>
       {{/foreach}}
-
+    </div>
     <h2>Latest reference notes</h2>
     {{#foreach posts limit="5" filter="tags:notes"}}
     <article class="{{post_class}}">
