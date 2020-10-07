@@ -19,8 +19,8 @@
     <h2>Latest book notes</h2>
     <div class="books-grid">
     {{#foreach posts limit="5" filter="tags:books"}}
-    <article class="{{post_class}}">
-        <div class="post-excerpt">
+    <article class="{{post_class}}" style="display: table;">
+        <div class="post-excerpt" style="display:table-cell; vertical-align:middle;">
           <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
           <div class="post-info">
             <div class="post-meta">
