@@ -3,7 +3,7 @@
 	<main role="main" class="content">
 		<div class="tag-title">
 			<h1>🏷 {{tag.name}}</h1>
-			<p>{{tag.description}}</p>
+			<code>{{tag.description}}</code>
 		</div>
 
 		{{#get "tags" limit='all' include='count.posts' order='count.posts desc'}}
@@ -18,7 +18,7 @@
 		{{/foreach}}
 
 		{{/get}}
-
+		<hr/>
 		{{#foreach posts}}
 	    <article class="{{post_class}}">
 	        <div class="post-excerpt">
