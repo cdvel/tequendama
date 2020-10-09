@@ -429,6 +429,31 @@ and (max-device-width: 720px)
 	grid-gap: 1rem;
 }
 
+
+.article-book {
+	display: table !important;
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: inherit;
+}
+
+.excerpt-book {
+	display:table-cell !important;
+	vertical-align:middle !important;
+}
+
+.title-book{
+	font-size: 1rem !important;
+	width: 70% !important;
+	line-height: 1.6rem !important;
+	height: 3rem !important;
+}
+
+.info-book{
+	display: flex !important;
+}
+
 .notes-img{
 	height: auto !important;
 	width: 1.8rem !important;
