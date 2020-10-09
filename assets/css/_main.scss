@@ -432,10 +432,10 @@ and (max-device-width: 720px)
 
 .article-book {
 	display: table !important;
-	background-position: right;
+	background-position: right !important;
 	background-repeat: no-repeat;
-	background-size: contain;
-	width: inherit;
+	background-size: contain !important;
+	width: inherit !important;
 }
 
 .excerpt-book {
