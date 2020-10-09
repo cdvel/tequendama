@@ -8,11 +8,11 @@
 		<div class="books-grid">
       {{#get "posts" include="tags" limit='all' filter="tags:books"}}
       {{#foreach posts}}
-      <article class="{{post_class}}" style="display: table !important; background-image: url('https://cdv.im/{{slug}}-cover'); background-position: right;background-repeat: no-repeat;background-size: contain; width: inherit;">
-          <div class="post-excerpt" style="display:table-cell !important; vertical-align:middle !important;">
-            <h1 class="post-title" style="font-size: 1rem !important; width: 70% !important; line-height: 1.6rem !important; height: 3rem !important;"><a href="{{url}}">{{title}}</a></h1>
-            <div class="post-info" style="display: flex !important;">
-              <div class="post-meta">
+    <article class="{{post_class}} article-book" style='background-image: url("https://cdv.im/{{slug}}-cover");'>
+        <div class="post-excerpt excerpt-book">
+          <h1 class="post-title title-book"><a href="{{url}}">{{title}}</a></h1>
+          <div class="post-info info-book">
+            <div class="post-meta">
                 {{tags from="2" separator=" " prefix=""}}
               </div>
             </div>
