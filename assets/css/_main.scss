@@ -1582,8 +1582,11 @@ body {
 		}
 	/*// }*/
 
+		.notes-img{
+			filter: invert(.8);
+		}
 }
-  
+
 /*// user has selected dark */
 [data-user-color-scheme="dark"] {
 	--bg: var(--background-dark);
@@ -1622,7 +1625,6 @@ body {
 
 	.site-header div{
 		color: var(--text-color) !important;
-		// filter: invert(1);
 	}
 }
 
