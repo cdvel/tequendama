@@ -1583,7 +1583,7 @@ body {
 	/*// }*/
 
 		.notes-img{
-			filter: invert(.8);
+			filter: invert(.8) !important;
 		}
 }
 
@@ -1625,6 +1625,10 @@ body {
 
 	.site-header div{
 		color: var(--text-color) !important;
+	}
+
+	.notes-img{
+		filter: invert(.8) !important;
 	}
 }
 
