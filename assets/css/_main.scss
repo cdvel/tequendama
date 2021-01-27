@@ -1153,22 +1153,20 @@ code {
 	width: 100%;
 }
 
-blockquote::before{
-  content: "\201C"; /*Unicode for Left Double Quote*/
+/*blockquote::before{
+  content: "\201C";
 
-  /*Font*/
   font-family: Georgia, serif;
   font-size: 60px;
   color: #7b7b7b47;
   font-weight: bold;
 
-  /*Positioning*/
   position: relative;
   float: left;
   left: -8px;
   top: 10px;
   margin-bottom: -26px;
-}
+}*/
 
 blockquote::after{
   /*Reset to make sure*/
