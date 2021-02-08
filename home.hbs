@@ -17,7 +17,7 @@
       </article>
       {{/foreach}}
 
-    <h2 class="section-title">Latest book notes</h2><a class="view-all" href="/books">view all ▷</a>
+    <h2 class="section-title">Book notes</h2><a class="view-all" href="/books">view all ▷</a>
     <div class="books-grid">
     {{#get "posts" include="tags" limit='6' filter="tags:books"}}
     {{#foreach posts}}
@@ -35,7 +35,7 @@
       {{/foreach}}
     {{/get}}
     </div>
-    <h2 class="section-title">Latest reference</h2><a class="view-all" href="/notes">view all ▷</a>
+    <h2 class="section-title">Reference notes</h2><a class="view-all" href="/notes">view all ▷</a>
     <div class="reference-grid">
     {{#get "posts" include="tags" limit='6' filter="tags:notes"}}
     {{#foreach posts}}

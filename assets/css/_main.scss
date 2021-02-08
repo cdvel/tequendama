@@ -421,8 +421,7 @@ and (max-device-width: 720px)
 	margin: 2rem 1.5rem 1rem 0px;
 }
 
-/*reference-grid, */
-
+.reference-grid,
 .books-grid{
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
