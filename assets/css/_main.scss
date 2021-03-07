@@ -78,15 +78,14 @@ h1, h2, h3, h4, h5, h6{
 
 a{
 	text-decoration: none !important;
+	color: $l-colour;
 	transition: all 0.3s ease;
-	box-shadow: inset 0 -6px 0 $l-colour;
+	border-bottom: 1px dashed #3dbbd2;
 	color: var(--text-color);
 	&:hover{
 		color: $hl-colour;
 		filter: brightness(1.1);
 		transition: all 0.3s ease;
-		box-shadow: inset 0 -24px 0 $l-colour;
-
 	}
 }
 
