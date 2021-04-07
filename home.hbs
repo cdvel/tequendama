@@ -6,7 +6,7 @@
     <article class="{{post_class}}">
         <div class="post-excerpt">
           {{#tags.[1]}}<div><img class="notes-img" src="https://res.cloudinary.com/cdvel/image/upload/v1600263035/icons/{{name}}.svg"></div>{{/tags.[1]}}
-          <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
+          <h1 class="post-title"><a href="{{url}}">{{title}}</a><span>{{#if featured}}★{{/if}}</span></a></h1>
           <div class="post-info">
             <div class="post-meta">
               {{tags from="2" separator=" " prefix=""}}
@@ -35,7 +35,7 @@
       {{/foreach}}
     {{/get}}
     </div>
-    <h2 class="section-title">Reference notes</h2><a class="view-all" href="/notes">view all ▷</a>
+    <h2 class="section-title">Technical notes</h2><a class="view-all" href="/notes">view all ▷</a>
     <div class="reference-grid">
     {{#get "posts" include="tags" limit='6' filter="tags:notes"}}
     {{#foreach posts}}
