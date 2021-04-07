@@ -2,7 +2,7 @@
 <div class="container clearfix">
   <main role="main" class="content">
     {{#get "posts" include="tags" limit='all' filter="tags:writing"}}
-    <h2 class="section-title">Latest writing</h2><a class="view-all" href="/writing">view all {{posts.length}} ▷</a>
+    <h2 class="section-title">Latest writing</h2><a class="view-all" href="/writing">view all <span class="font-size: small">{{posts.length}}</span> ▷</a>
     {{#get "posts" include="tags" limit='8' filter="tags:writing"}}
     {{#foreach posts}}
     <article class="{{post_class}}">
@@ -20,9 +20,10 @@
       {{/foreach}}
     {{/get}}
     {{/get}}
-    {{#get "posts" include="tags" limit='6' filter="tags:books"}}
-    <h2 class="section-title">Book notes</h2><a class="view-all" href="/books">view all {{posts.length}} ▷</a>
+    {{#get "posts" include="tags" limit='all' filter="tags:books"}}
+    <h2 class="section-title">Book notes</h2><a class="view-all" href="/books">view all <span class="font-size: small">{{posts.length}}</span> ▷</a>
     <div class="books-grid">
+    {{#get "posts" include="tags" limit='6' filter="tags:books"}}
     {{#foreach posts}}
     <article class="{{post_class}} article-book" style='background-image: url("https://cdv.im/{{slug}}-cover");'>
         <div class="post-excerpt excerpt-book">
@@ -38,9 +39,11 @@
       {{/foreach}}
     </div>
     {{/get}}
-    {{#get "posts" include="tags" limit='6' filter="tags:notes"}}
-    <h2 class="section-title">Technical notes</h2><a class="view-all" href="/notes">view all {{posts.length}} ▷</a>
+    {{/get}}
+    {{#get "posts" include="tags" limit='all' filter="tags:notes"}}
+    <h2 class="section-title">Technical notes</h2><a class="view-all" href="/notes">view all <span class="font-size: small">{{posts.length}}</span> ▷</a>
     <div class="reference-grid">
+    {{#get "posts" include="tags" limit='6' filter="tags:notes"}}
     {{#foreach posts}}
     <article class="{{post_class}}">
         <div class="post-excerpt">
@@ -58,6 +61,7 @@
       </article>
       {{/foreach}}
     </div>
+    {{/get}}
     {{/get}}
     </main>
   </div>
