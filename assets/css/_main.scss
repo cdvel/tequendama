@@ -313,12 +313,18 @@ and (max-device-width: 770px)
 	margin: -74px 0 0 -89px;
 }
 
+.star{
+	color: $l-colour;
+	padding: 3px 0px;
+}
+
 .reading-time{
 	font-size: small;
 	padding: 5px 15px;
 	color: var(--text-color);
 	filter: opacity(.6);
 	line-height: 3rem;
+	whitespace: nowrap;
 }
 
 @media only screen
