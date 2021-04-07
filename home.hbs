@@ -1,7 +1,7 @@
 {{!< default}}
 <div class="container clearfix">
   <main role="main" class="content">
-    {{#get "posts" include="tags" limit='all' filter="tags:writings"}}
+    {{#get "posts" include="tags" limit='all' filter="tags:writing"}}
     <h2 class="section-title">Latest writing</h2><a class="view-all" href="/writing">view all {{posts.length}} ▷</a>
     {{#foreach posts}}
     <article class="{{post_class}}">
