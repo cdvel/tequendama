@@ -1337,13 +1337,32 @@ blockquote p{
 
 // gallery image
 
+
+.kg-width-full
+{
+    width: 90vw !important;
+    margin: 0px -25vw !important;
+}
+
+
+.kg-width-wide
+{
+    width: 120% !important;
+    margin: 0px -10% !important;
+}
+
 .kg-image{
     display: block;
     margin: 0;
     width: 100% !important;
 	height: auto !important;
 	box-shadow: none !important;
+
+	&:hover{
+		transform: scale(1.3);
+	}
 }
+
 
 .kg-gallery-container {
     display: flex;
@@ -1380,10 +1399,8 @@ blockquote p{
     margin: -1.0em 0 1.5em;
 }
 
-.figcaption {
+figcaption {
 	font-size: small;
-	line-height: 1.5rem;
-	padding: 1rem 0rem;
 	color: var(--text-color);
 	filter: opacity(0.6);
 	text-align: center;
