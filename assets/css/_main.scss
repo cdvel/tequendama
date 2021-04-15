@@ -1341,9 +1341,8 @@ blockquote p{
 {
     width: 90vw !important;
     margin: 25px -25vw !important;
-
-	&:hover{
-		transform: scale(1.3);
+    &:hover{
+		transform: scale(1) !important;
 	}
 }
 
@@ -1352,6 +1351,9 @@ blockquote p{
 {
     width: 120% !important;
     margin: 25px -10% !important;
+    &:hover{
+		transform: scale(1) !important;
+	}
 }
 
 .kg-image{
@@ -1360,6 +1362,9 @@ blockquote p{
     width: 100% !important;
 	height: auto !important;
 	box-shadow: none !important;
+	&:hover{
+		transform: scale(1.3);
+	}
 }
 
 
