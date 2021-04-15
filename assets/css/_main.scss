@@ -1346,8 +1346,6 @@ blockquote p{
 	}
 }
 
-.
-
 .kg-width-wide
 {
     width: 120% !important;
@@ -1364,7 +1362,7 @@ blockquote p{
 	height: auto !important;
 	box-shadow: none !important;
 	transition: all ease-in-out 0.3s;
-	
+
 	&:hover{
 		transform: scale(1.3);
 	}
