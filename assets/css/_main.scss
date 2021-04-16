@@ -1186,16 +1186,15 @@ blockquote::after{
 }
 
 blockquote{
-	line-height: 1.5rem;
+	line-height: 1.8rem;
 	margin: 0px;
 	display: -webkit-box;
 	color: inherit;
-	filter: opacity(0.8);
+	filter: opacity(0.6);
 	border-left: 0.3rem solid $l-colour;
 	padding: 1rem;
 	margin: 0 1rem;
 	font-style: italic;
-	text-align: justify;
 }
 
 blockquote p{
