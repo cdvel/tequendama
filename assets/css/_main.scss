@@ -264,9 +264,9 @@ img.emoji {
     position: relative;
     height: 60px !important;
     transition:all 0.3s ease;
-	filter: opacity(0.6);
+	// filter: opacity(0.6);
 	overflow: hidden;
-	background-color: $f-colour;
+	// background-color: $f-colour;
 }
 
 .header-title{
@@ -886,8 +886,8 @@ and (max-device-width: 770px)
 }
 
 .quicklinks {
-	margin: 0px auto 0px auto;
-	width: 600px;
+	margin: 15px auto 0px auto;
+	width: 500px;
 	list-style: none;
 	padding: 0px;
 	display: grid;
@@ -925,9 +925,9 @@ and (max-device-width: 770px)
 		border-bottom: 3px solid transparent;
 
 		&:hover{
-			border-bottom: 3px solid $hl-colour;
+			//border-bottom: 3px solid $hl-colour;
 			filter: brightness(1.1);
-			background-color: #00000008;
+			//background-color: #00000008;
 		}
 }
 
@@ -1705,7 +1705,7 @@ body {
 .notes-grid{
 	    display: grid;
         grid-template-columns: repeat( auto-fill, minmax(100%, 1fr) );
-		grid-gap: 1rem;
+		grid-gap: 0rem;
 
 		.post{
 			box-shadow: none !important;
