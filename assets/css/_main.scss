@@ -1714,3 +1714,26 @@ body {
 		}
 
 }
+
+.floating-controls{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 5rem;
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	cursor: pointer;
+	height: 2rem;
+	padding: 5px;
+	line-height: 2rem;
+	border-radius: 10px 0px 0px 0px;
+	background-color: #00000017;
+}
+
+.floating-controls span{
+	&:hover{
+		color: $hl-colour;
+		filter: brightness(1.1);
+		transition: all 0.3s ease;
+	}
+}
