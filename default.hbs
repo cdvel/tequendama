@@ -163,10 +163,9 @@
         container.style.flex = ratio + ' 1 0%';
     });
 
-    var toppy = document.querySelector('.to-top');
 	window.addEventListener('scroll', function() {
+	    var toppy = document.querySelector('.to-top');
 	    if(window.scrollY > 399) {
-	        var toppy = document.querySelector('.to-top');
 	        toppy.style.display = block;
 	    }else{
 			toppy.style.display = none;
