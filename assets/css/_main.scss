@@ -156,7 +156,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 }
 
 ol {
-	list-style:decimal-leading-zero;
+	list-style:decimal;
 }
 
 ul{
@@ -1153,22 +1153,20 @@ code {
 	width: 100%;
 }
 
-blockquote::before{
-  content: "\201C"; /*Unicode for Left Double Quote*/
+/*blockquote::before{
+  content: "\201C";
 
-  /*Font*/
   font-family: Georgia, serif;
   font-size: 60px;
   color: #7b7b7b47;
   font-weight: bold;
 
-  /*Positioning*/
   position: relative;
   float: left;
   left: -8px;
   top: 10px;
   margin-bottom: -26px;
-}
+}*/
 
 blockquote::after{
   /*Reset to make sure*/
@@ -1176,11 +1174,16 @@ blockquote::after{
 }
 
 blockquote{
-	line-height: 2rem;;
+	line-height: 1.5rem;
 	margin: 0px;
 	display: -webkit-box;
 	color: inherit;
-	filter: opacity(.6);
+	filter: opacity(0.8);
+	border-left: 0.3rem solid $l-colour;
+	padding: 1rem;
+	margin: 0 1rem;
+	font-style: italic;
+	text-align: justify;
 }
 
 blockquote p{
@@ -1363,6 +1366,15 @@ blockquote p{
 .kg-image-card figcaption,
 .kg-gallery-card figcaption {
     margin: -1.0em 0 1.5em;
+}
+
+.figcaption {
+	font-size: small;
+	line-height: 1.5rem;
+	padding: 1rem 0rem;
+	color: var(--text-color);
+	filter: opacity(0.6);
+	text-align: center;
 }
 
 
@@ -1577,6 +1589,11 @@ body {
 			// filter: invert(1);
 			color: var(--text-color) !important;
 		}
+
+		svg{
+			filter: invert(1);
+		}
+
 		.icon-top{
 			filter: invert(1);
 		}
@@ -1654,3 +1671,36 @@ body {
 		}
 
 }
+
+.floating-controls{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 5rem;
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	cursor: pointer;
+	height: 2rem;
+	padding: 5px;
+	line-height: 2rem;
+	border-radius: 10px 0px 0px 0px;
+	background-color: #00000017;
+}
+
+.floating-controls svg {
+	width: 1.5rem;
+	&:hover{
+		color: $hl-colour;
+		filter: brightness(1.1);
+		transition: all 0.3s ease;
+	}
+}
+
+.floating-controls div {
+    background-color: #00000017;
+}
+
+.to-top{
+	line-height: 2.8rem;
+}
+

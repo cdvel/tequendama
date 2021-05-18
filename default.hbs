@@ -1,12 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="en" data-user-color-scheme="light">
-	<head>
-		{{!-- Document Settings --}}
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		{{!-- dark-mode --}}
-		<script>
-		// =====================
+
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    {{!-- dark-mode --}}
+    <script>
+        // =====================
 		// https://hankchizljaw.com/wrote/create-a-user-controlled-dark-or-light-mode/
 		// =====================
 		var user_color_scheme = localStorage.getItem('user-color-scheme');
@@ -69,94 +70,99 @@
 		applySetting();
 		});
 		</script>
+    {{!-- Base Meta --}}
+    <title>{{meta_title}} | {{@blog.title}}</title>
+    {{^is "index"}}
+    <meta name="twitter:image" content="https://res.cloudinary.com/cdvel/image/upload/w_2000,c_fit,co_rgb:232129,l_text:lato_140_alignment_center:{{meta_title}}/v1614691738/media/w_banner.webp">
+    <meta name="og:image" content="https://res.cloudinary.com/cdvel/image/upload/w_2000,c_fit,co_rgb:232129,l_text:lato_140_alignment_center:{{meta_title}}/v1614691738/media/w_banner.webp">
+    {{/is}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{!-- Styles'n'Scripts --}}
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <link href="{{asset "css/typography.css"}}" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{asset "css/styles.css"}}">
+    {{ghost_head}}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/night-owl.min.css" crossorigin="anonymous">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" crossorigin="anonymous"></script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js" integrity="sha256-CfQUUe5nCr0s8VaB1dPISX25JmwUHVRabMji+YUFUS4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css" integrity="sha256-XUbSD3m+xLW27W/mp9kMn+fI9AU2MoBkiMMSVVYWI+o=" crossorigin="anonymous" />
+    <script type="text/javascript" crossorigin="anonymous">
+    window.heap = window.heap || [], heap.load = function(e, t) { window.heap.appid = e, window.heap.config = t = t || {}; var r = document.createElement("script");
+        r.type = "text/javascript", r.async = !0, r.src = "https://cdn.heapanalytics.com/js/heap-" + e + ".js"; var a = document.getElementsByTagName("script")[0];
+        a.parentNode.insertBefore(r, a); for (var n = function(e) { return function() { heap.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }, p = ["addEventProperties", "addUserProperties", "clearEventProperties", "identify", "resetIdentity", "removeEventProperty", "setEventProperties", "track", "unsetEventProperty"], o = 0; o < p.length; o++) heap[p[o]] = n(p[o]) };
+    heap.load("4131685351");
+    </script>
+</head>
 
-		{{!-- Base Meta --}}
-
-		<title>{{meta_title}} | {{@blog.title}}</title>
-		<meta name="twitter:image" content="https://res.cloudinary.com/cdvel/image/upload/w_760,c_fit,co_rgb:232129,g_south_west,x_500,y_254,l_text:lato_90:{{meta_title}}/v1592215845/social_card_new.webp">
-		<meta name="og:image" content="https://res.cloudinary.com/cdvel/image/upload/w_760,c_fit,co_rgb:232129,g_south_west,x_500,y_254,l_text:lato_90:{{meta_title}}/v1592215845/social_card_new.webp">
-		<meta name="HandheldFriendly" content="True" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		{{!-- Styles'n'Scripts --}}
-		<!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-		<link href="{{asset "css/typography.css"}}" rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="{{asset "css/styles.css"}}">
-		{{ghost_head}}
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/night-owl.min.css" crossorigin="anonymous">
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" crossorigin="anonymous"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js" integrity="sha256-CfQUUe5nCr0s8VaB1dPISX25JmwUHVRabMji+YUFUS4=" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css" integrity="sha256-XUbSD3m+xLW27W/mp9kMn+fI9AU2MoBkiMMSVVYWI+o=" crossorigin="anonymous" />
-	</head>
-	<body class="{{body_class}}">
-		<!--[if lt IE 8]>
+<body class="{{body_class}}">
+    <!--[if lt IE 8]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-		<header class="site-header">
-			<div>
-				<a class="quote-header ir" href="#" aria-label="quote header">
-					<div class="main-title"><label id="main-quote"></label></div>
-					<div class="main-title" style="font-size: 20px;"><label id="main-quote-author"></label></div>
-				</a>
-			</div>
+    <header class="site-header">
+        <div>
+            <a class="quote-header ir" href="#" aria-label="quote header">
+                <div class="main-title"><label id="main-quote"></label></div>
+                <div class="main-title" style="font-size: 20px;"><label id="main-quote-author"></label></div>
+            </a>
+        </div>
+    </header>
+    {{#is "index"}}
+    <div>
+        {{#get "posts" limit="1" include="authors"}}
+        {{#foreach posts}}
+        {{> author}}
+        {{/foreach}}
+        {{/get}}
+    </div>
+    {{/is}}
+    <div class="header-title">
+        <img style="height: 40px;" src="{{@site.logo}}" />
+        <a href="/"> {{@blog.title}}</a>
+    </div>
+    {{navigation}}
+    {{{body}}}
+    <footer class="main-footer">
+        <div class="container clearfix">
+            <a class="icon-rss" href="{{@blog.url}}/rss/" title="RSS Feed"></a>
+            <p>
+                <a href="{{@blog.url}}" title="{{@blog.title}}">
+                    {{@blog.title}}&copy; <script>
+                    document.write(new Date().getFullYear())
+                    </script>
+                </a>
+            </p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr);">
+                <div class="floating-controls">
+                    <div class="to-top" onclick="window.scrollTo(0, 0);">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M 25 13 L 4 35 L 46 35 Z"></path></svg>
+                    </div>
 
-		</header>
-		{{#is "index"}}
-			<div>
-				{{#get "posts" limit="1" include="authors"}}
-				{{#foreach posts}}
-				{{> author}}
-				{{/foreach}}
-				{{/get}}
-			</div>
-		{{/is}}
-			<div class="header-title">
-				<img style="height: 40px;" src="{{@site.logo}}" />
-				<a href="/"> {{@blog.title}}</a>
-			</div>
-		{{navigation}}
-		{{{body}}}
-		<footer class="main-footer">
-			<div class="container clearfix">
-				<a class="icon-rss" href="{{@blog.url}}/rss/" title="RSS Feed"></a>
-				<p>
-					<a href="{{@blog.url}}" title="{{@blog.title}}">
-						{{@blog.title}}&copy; <script>document.write(new Date().getFullYear())</script>
-					</a>
-				</p>
-			</div>
-			<div style="display: grid; grid-template-columns: repeat(2, 1fr);">
-			<div alt="toggle dark mode" style="text-align: left;">
-				<div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
-				<button class="[ toggle-button ] [ js-mode-toggle ]">
-				<span class="toggle-button__icon" aria-hidden="true" aria-label="toggle dark mode">
-					<svg viewBox="0 0 24 24" style="fill: var(--text-color);">
-					<path d="M12 23.5a.5.5 0 01-.5-.5v-4.521a6.497 6.497 0 01-3.726-1.546l-3.198 3.198a.5.5 0 11-.708-.707l3.198-3.198A6.497 6.497 0 015.52 12.5H1a.5.5 0 010-1h4.521a6.497 6.497 0 011.546-3.726L3.869 4.576a.5.5 0 01.708-.707l3.198 3.198a6.517 6.517 0 012.518-1.337l.017-.004a6.543 6.543 0 011.191-.205V1a.5.5 0 011 0v4.521a6.497 6.497 0 013.726 1.546l3.198-3.198a.5.5 0 11.708.707l-3.198 3.198a6.497 6.497 0 011.546 3.726H23a.5.5 0 010 1h-4.521a6.497 6.497 0 01-1.546 3.726l3.198 3.198a.5.5 0 01-.708.707l-3.198-3.198a6.497 6.497 0 01-3.726 1.546V23a.499.499 0 01-.499.5zM9.67 7.019A5.52 5.52 0 006.5 12c0 3.033 2.467 5.5 5.5 5.5a5.483 5.483 0 004.626-2.531 6.478 6.478 0 01-3.123-.465 6.46 6.46 0 01-3.514-3.522 6.498 6.498 0 01-.319-3.963zm1.163-.393a5.47 5.47 0 00.081 3.975 5.467 5.467 0 002.973 2.98 5.53 5.53 0 003.283.291c.219-.602.33-1.231.33-1.872a5.506 5.506 0 00-6.667-5.374z"></path>
-				</svg>
-			</span>
-			<span style="font-size: x-small;line-height: 2rem;padding-left: 5px;">Dark mode</span>
-			</button>
-			</div>
-			<div style="cursor: pointer; text-align: right; letter-spacing: 0px; font-size: 22px;" onclick="window.scrollTo(0, 0);">
-				<span style="font-size: x-small;line-height:2rem;display:inline-block;vertical-align:bottom; padding-right: 5px;">Back to top</span>△
-			</div>
-			<div>
-		</footer>
-		{{ghost_foot}}
-		<script src="{{asset "js/main.js"}}"></script>
-		<script type="text/javascript">
-		  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
-		  heap.load("4131685351");
-		</script>
-		<script>
-		var images = document.querySelectorAll('.kg-gallery-image img');
-		images.forEach(function (image) {
-		var container = image.closest('.kg-gallery-image');
-		var width = image.attributes.width.value;
-		var height = image.attributes.height.value;
-		var ratio = width / height;
-		container.style.flex = ratio + ' 1 0%';
-		})
-		</script>
-	</body>
+                    <div alt="toggle dark mode" style="text-align: center;">
+                        <div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
+                        <button class="[ toggle-button ] [ js-mode-toggle ]">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">    <path d="M 14.984375 0.98632812 A 1.0001 1.0001 0 0 0 14 2 L 14 5 A 1.0001 1.0001 0 1 0 16 5 L 16 2 A 1.0001 1.0001 0 0 0 14.984375 0.98632812 z M 5.796875 4.7988281 A 1.0001 1.0001 0 0 0 5.1015625 6.515625 L 7.2226562 8.6367188 A 1.0001 1.0001 0 1 0 8.6367188 7.2226562 L 6.515625 5.1015625 A 1.0001 1.0001 0 0 0 5.796875 4.7988281 z M 24.171875 4.7988281 A 1.0001 1.0001 0 0 0 23.484375 5.1015625 L 21.363281 7.2226562 A 1.0001 1.0001 0 1 0 22.777344 8.6367188 L 24.898438 6.515625 A 1.0001 1.0001 0 0 0 24.171875 4.7988281 z M 15 8 A 7 7 0 0 0 8 15 A 7 7 0 0 0 15 22 A 7 7 0 0 0 22 15 A 7 7 0 0 0 15 8 z M 2 14 A 1.0001 1.0001 0 1 0 2 16 L 5 16 A 1.0001 1.0001 0 1 0 5 14 L 2 14 z M 25 14 A 1.0001 1.0001 0 1 0 25 16 L 28 16 A 1.0001 1.0001 0 1 0 28 14 L 25 14 z M 7.9101562 21.060547 A 1.0001 1.0001 0 0 0 7.2226562 21.363281 L 5.1015625 23.484375 A 1.0001 1.0001 0 1 0 6.515625 24.898438 L 8.6367188 22.777344 A 1.0001 1.0001 0 0 0 7.9101562 21.060547 z M 22.060547 21.060547 A 1.0001 1.0001 0 0 0 21.363281 22.777344 L 23.484375 24.898438 A 1.0001 1.0001 0 1 0 24.898438 23.484375 L 22.777344 21.363281 A 1.0001 1.0001 0 0 0 22.060547 21.060547 z M 14.984375 23.986328 A 1.0001 1.0001 0 0 0 14 25 L 14 28 A 1.0001 1.0001 0 1 0 16 28 L 16 25 A 1.0001 1.0001 0 0 0 14.984375 23.986328 z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+          </div>
+    </footer>
+    {{ghost_foot}}
+    <script src="{{asset "js/main.js"}}"></script>
+    <script>
+    var images = document.querySelectorAll('.kg-gallery-image img');
+    images.forEach(function(image) {
+        var container = image.closest('.kg-gallery-image');
+        var width = image.attributes.width.value;
+        var height = image.attributes.height.value;
+        var ratio = width / height;
+        container.style.flex = ratio + ' 1 0%';
+    });
+    </script>
+</body>
+
 </html>
