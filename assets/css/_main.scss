@@ -1726,9 +1726,10 @@ body {
 	right: 0px;
 	bottom: 0px;
 	cursor: pointer;
-	height: 2.3rem;
+	height: 2.4rem;
 	padding: 5px;
 	line-height: 2rem;
+	padding: 0px;
 }
 
 .floating-controls svg {
@@ -1747,4 +1748,6 @@ body {
 
 .to-top{
 	line-height: 2.8rem;
+	transition: all 0.3s ease;
+	display: none;
 }

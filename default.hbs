@@ -162,6 +162,18 @@
         var ratio = width / height;
         container.style.flex = ratio + ' 1 0%';
     });
+
+
+	window.addEventListener('scroll', (event) => {
+	    var topIcon = document.querySelector('.to-top');
+		 if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+		    topIcon.style.display = "block";
+		  } else {
+		    topIcon.style.display = "none";
+		  }
+	});
+
+
     </script>
 </body>
 
