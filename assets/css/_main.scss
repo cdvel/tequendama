@@ -1187,27 +1187,15 @@ blockquote::after{
 }
 
 blockquote{
-<<<<<<< HEAD
 	line-height: 1.8rem;
 	margin: 0px;
 	display: -webkit-box;
 	color: inherit;
 	filter: opacity(0.6);
-=======
-	line-height: 1.5rem;
-	margin: 0px;
-	display: -webkit-box;
-	color: inherit;
-	filter: opacity(0.8);
->>>>>>> master
 	border-left: 0.3rem solid $l-colour;
 	padding: 1rem;
 	margin: 0 1rem;
 	font-style: italic;
-<<<<<<< HEAD
-=======
-	text-align: justify;
->>>>>>> master
 }
 
 blockquote p{
@@ -1421,15 +1409,11 @@ blockquote p{
     margin: -1.0em 0 1.5em;
 }
 
-<<<<<<< HEAD
-figcaption {
-	font-size: small;
-=======
+
 .figcaption {
 	font-size: small;
 	line-height: 1.5rem;
 	padding: 1rem 0rem;
->>>>>>> master
 	color: var(--text-color);
 	filter: opacity(0.6);
 	text-align: center;
