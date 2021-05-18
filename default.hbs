@@ -138,7 +138,7 @@
         </div>
         <div style="display: grid; grid-template-columns: repeat(2, 1fr);">
                 <div class="floating-controls">
-                    <div onclick="window.scrollTo(0, 0);">
+                    <div class="to-top" onclick="window.scrollTo(0, 0);">
                         <span>⌃</span>
                     </div>
 
@@ -161,7 +161,18 @@
         var height = image.attributes.height.value;
         var ratio = width / height;
         container.style.flex = ratio + ' 1 0%';
-    })
+    });
+
+    var toppy = document.querySelector('.to-top');
+	window.addEventListener('scroll', function() {
+	    if(window.scrollY > 399) {
+	        var toppy = document.querySelector('.to-top');
+	        toppy.style.display = block;
+	    }else{
+			toppy.style.display = none;
+	    }
+	});
+
     </script>
 </body>
 
