@@ -1726,11 +1726,11 @@ body {
 	height: 2rem;
 	padding: 5px;
 	line-height: 2rem;
-	border-radius: 10px 0px 0px 0px;
-	background-color: #00000017;
 }
 
 .floating-controls span{
+	background-color: #00000017;
+
 	&:hover{
 		color: $hl-colour;
 		filter: brightness(1.1);
@@ -1741,4 +1741,6 @@ body {
 .to-top{
 	display: none;
 	line-height: 2rem;
+	background-color: #00000000;
+	transition: all 0.3s ease;
 }
