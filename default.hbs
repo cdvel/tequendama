@@ -166,10 +166,13 @@
 
 	window.addEventListener('scroll', (event) => {
 	    var topIcon = document.querySelector('.to-top');
-		 if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+		 if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
 		    topIcon.style.opacity = 1;
+            topIcon.style.cursor = "pointer";
+
 		  } else {
 		    topIcon.style.opacity = 0;
+            topIcon.style.cursor = "none";
 		  }
 	});
 
