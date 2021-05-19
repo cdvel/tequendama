@@ -167,9 +167,9 @@
 	window.addEventListener('scroll', (event) => {
 	    var topIcon = document.querySelector('.to-top');
 		 if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-		    topIcon.style.display = "block";
+		    topIcon.style.opacity = 1;
 		  } else {
-		    topIcon.style.display = "none";
+		    topIcon.style.opacity = 0;
 		  }
 	});
 
