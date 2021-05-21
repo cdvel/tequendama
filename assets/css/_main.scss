@@ -819,7 +819,16 @@ and (max-device-width: 770px)
 
 .author div.address{
 	color: $s-colour;
-    width: 100%;
+    width: 80%;
+    font-size: 0.9rem;
+}
+
+@media only screen
+and (max-device-width: 770px)
+{
+	.author div.address{
+	    width: 100%;
+	}
 }
 
 .author div.location{
@@ -855,7 +864,7 @@ ul.social li{
 	font-size: x-large;
 }
 
-@media only screen 
+@media only screen
 and (max-device-width: 770px)
 {
 	.floating{
