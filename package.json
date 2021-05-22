@@ -10,5 +10,7 @@
   "config": {
     "posts_per_page": 20
   },
-  "dependencies": {}
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
 }
