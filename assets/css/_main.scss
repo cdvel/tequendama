@@ -1348,21 +1348,23 @@ blockquote p{
 // gallery image
 
 
+
+
+.kg-width-full
+{
+    width: 90vw !important;
+    margin: 25px -25vw;
+    &:hover{
+		transform: scale(1) !important;
+	}
+}
+
 @media only screen
 and (max-device-width: 770px)
 {
 	.kg-width-full
 	{
 		margin: 0px !important;
-	}
-}
-
-.kg-width-full
-{
-    width: 90vw !important;
-    margin: 25px -25vw !important;
-    &:hover{
-		transform: scale(1) !important;
 	}
 }
 
