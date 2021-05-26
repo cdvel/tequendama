@@ -1347,6 +1347,16 @@ blockquote p{
 
 // gallery image
 
+
+@media only screen
+and (max-device-width: 770px)
+{
+	.kg-width-full
+	{
+		margin: 0px !important;
+	}
+}
+
 .kg-width-full
 {
     width: 90vw !important;
