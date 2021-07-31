@@ -7,7 +7,7 @@
     {{#foreach posts}}
     <article class="{{post_class}}">
       <div class="post-excerpt">
-        {{#tags.[1]}}<div><img class="notes-img" src="https://res.cloudinary.com/cdvel/image/upload/v1621838328/icons/{{name}}.svg"></div>{{/tags.[1]}}
+        {{#tags.[1]}}<div><img class="notes-img" src="https://res.cloudinary.com/cdvel/image/upload/icons/{{name}}.svg"></div>{{/tags.[1]}}
         <h1 class="post-title"><a href="{{url}}">{{title}}</a><span class="star">{{#if featured}}✦{{/if}}</span></a></h1>
         <div class="post-info">
           <div class="post-meta">
@@ -28,7 +28,7 @@
       <article class="{{post_class}}">
         <div class="post-excerpt">
           <div>
-            <img class="notes-img" src="https://res.cloudinary.com/cdvel/image/upload/v1621838328/logos/{{slug}}.svg" onerror="this.src='https://res.cloudinary.com/cdvel/image/upload/v1621838328/logos/note.svg'">
+            <img class="notes-img" src="https://res.cloudinary.com/cdvel/image/upload/logos/{{slug}}.svg" onerror="this.src='https://res.cloudinary.com/cdvel/image/upload/logos/note.svg'">
           </div>
           <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
           <div class="post-info">
