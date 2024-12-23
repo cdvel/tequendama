@@ -92,10 +92,10 @@ jobs:
           echo "${{ secrets.KEY }}" > /tmp/id_rsa
           chmod 600 /tmp/id_rsa
           scp -i /tmp/id_rsa -P ${{ secrets.PORT }} \
-                    -o StrictHostKeyChecking=no \
-                    -o UserKnownHostsFile=/dev/null \
-                    -o ProxyCommand="ssh -W %h:%p -i ${{ secrets.PROXY_KEY }} -p ${{ secrets.PROXY_PORT }} ${{ secrets.PROXY_USERNAME }}@${{ secrets.PROXY_HOST }}" \
-                    -r package.json *.hbs partials static assets ${{ secrets.USERNAME }}@${{ secrets.HOST }}:$target
+              -o StrictHostKeyChecking=no \
+              -o UserKnownHostsFile=/dev/null \
+              -o ProxyCommand="ssh -W %h:%p -i ${{ secrets.PROXY_KEY }} -p ${{ secrets.PROXY_PORT }} ${{ secrets.PROXY_USERNAME }}@${{ secrets.PROXY_HOST }}" \
+              -r package.json *.hbs partials static assets ${{ secrets.USERNAME }}@${{ secrets.HOST }}:$target
 
       # - name: copy file via ssh password
       #   uses: appleboy/scp-action@master
