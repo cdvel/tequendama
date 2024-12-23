@@ -21,7 +21,7 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout source Git branch
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         ref: src-pages
         fetch-depth: 10
@@ -36,7 +36,7 @@ jobs:
         destination:  /tmp/assets/css/styles.css
 
     - name: Upload Complied CSS
-      uses: actions/upload-artifact@v1.0.0
+      uses: actions/upload-artifact@v4
       with:
         name: styles-artifact
         path: /tmp/assets/css/styles.css
@@ -47,7 +47,7 @@ jobs:
 
     steps:
     - name: Checkout destination Git branch
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         ref: pr-pages
         fetch-depth: 3
@@ -82,7 +82,7 @@ jobs:
 
     steps:
       - name: Checkout release Git branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: src-pages
       
@@ -108,7 +108,7 @@ jobs:
 
     steps:
       - name: Checkout release Git branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: pr-pages
       
