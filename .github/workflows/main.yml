@@ -86,19 +86,28 @@ jobs:
         with:
           ref: src-pages
       
-      - name: copy file via ssh password
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          source: "package.json, *.hbs, partials, static, assets"
-          rm: true
-          target: "/home/ghost-mgr/latest"
-          tar_tmp_path: "/tmp"
-          tar_exec: "/tmp"
-          overwrite: true
+      - name: Copy files via SCP
+        run: |
+          target="home/ghost-mgr/latest"
+          scp -i ${{ secrets.KEY }} -P ${{ secrets.PORT }} \
+                    -o StrictHostKeyChecking=no \
+                    -o UserKnownHostsFile=/dev/null \
+                    -o ProxyCommand="ssh -W %h:%p -i ${{ secrets.PROXY_KEY }} -p ${{ secrets.PROXY_PORT }} ${{ secrets.PROXY_USERNAME }}@${{ secrets.PROXY_HOST }}" \
+                    -r package.json *.hbs partials static assets ${{ secrets.USERNAME }}@${{ secrets.HOST }}:$target
+
+      # - name: copy file via ssh password
+      #   uses: appleboy/scp-action@master
+      #   with:
+      #     host: ${{ secrets.HOST }}
+      #     username: ${{ secrets.USERNAME }}
+      #     key: ${{ secrets.KEY }}
+      #     port: ${{ secrets.PORT }}
+      #     source: "package.json, *.hbs, partials, static, assets"
+      #     rm: true
+      #     target: "/home/ghost-mgr/latest"
+      #     tar_tmp_path: "/tmp"
+      #     tar_exec: "/tmp"
+      #     overwrite: true
 
   # todo: make pull request
 
