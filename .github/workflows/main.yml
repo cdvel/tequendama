@@ -84,9 +84,10 @@ jobs:
       - name: Deploy theme files
         run: |
           target="/home/ghost-mgr/latest"
-          rsync -av -e "ssh -p ${{ secrets.PORT }}" \
+          rsync -avz -e "ssh -p ${{ secrets.PORT }}" \
+            --exclude '.git/' \
             package.json *.hbs partials static assets \
-            ${{ secrets.USERNAME }}@${{ secrets.HOST }}:$target
+            "${{ secrets.USERNAME }}@${{ secrets.HOST }}:${target}"
 
       - name: Checkout CSS
         uses: actions/checkout@v3
@@ -95,9 +96,10 @@ jobs:
 
       - name: Deploy CSS files
         run: |
-          rsync -av -e "ssh -p ${{ secrets.PORT }}" \
-            assets/css/* \
-            ${{ secrets.USERNAME }}@${{ secrets.USERNAME }}:~/latest/assets/css/
+          target="/home/ghost-mgr/latest/assets/css"
+          rsync -avz -e "ssh -p ${{ secrets.PORT }}" \
+            assets/css/ \
+            "${{ secrets.USERNAME }}@${{ secrets.HOST }}:${target}"
 
       - name: Restart Ghost
         run: |
