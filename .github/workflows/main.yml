@@ -91,6 +91,9 @@ jobs:
           target="home/ghost-mgr/latest"
           echo "${{ secrets.KEY }}" > /tmp/id_rsa
           chmod 600 /tmp/id_rsa
+
+          ssh -i /tmp/id_rsa -P ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} 
+
           scp -i /tmp/id_rsa -P ${{ secrets.PORT }} \
               -o StrictHostKeyChecking=no \
               -o UserKnownHostsFile=/dev/null \
