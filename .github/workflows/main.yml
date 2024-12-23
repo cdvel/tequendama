@@ -87,7 +87,7 @@ jobs:
           ref: src-pages
       
       - name: copy file via ssh password
-        uses: appleboy/scp-action@v0.1.7
+        uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
@@ -97,6 +97,7 @@ jobs:
           rm: true
           target: "/home/ghost-mgr/latest"
           tar_tmp_path: "/tmp"
+          tar_exec: "/tmp"
           overwrite: true
 
   # todo: make pull request
