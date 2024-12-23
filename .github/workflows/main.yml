@@ -103,7 +103,11 @@ jobs:
 
       - name: Restart Ghost
         run: |
+          which node
+          echo $PATH
+          which nvm
+          systemctl status ghost
           ssh -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} '\
             source ~/.nvm/nvm.sh && \
             cd /home/ghost-mgr/ghost && \
-            ghost restart'
+            sudo systemctl restart ghost'
