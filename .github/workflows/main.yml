@@ -89,7 +89,9 @@ jobs:
       - name: Copy files via SCP
         run: |
           target="home/ghost-mgr/latest"
-          scp -i ${{ secrets.KEY }} -P ${{ secrets.PORT }} \
+          echo "${{ secrets.KEY }}" > /tmp/id_rsa
+          chmod 600 /tmp/id_rsa
+          scp -i /tmp/id_rsa -P ${{ secrets.PORT }} \
                     -o StrictHostKeyChecking=no \
                     -o UserKnownHostsFile=/dev/null \
                     -o ProxyCommand="ssh -W %h:%p -i ${{ secrets.PROXY_KEY }} -p ${{ secrets.PROXY_PORT }} ${{ secrets.PROXY_USERNAME }}@${{ secrets.PROXY_HOST }}" \
