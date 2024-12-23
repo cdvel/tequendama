@@ -755,12 +755,15 @@ and (max-device-width: 770px)
 }
 
 .toc-list{
-	padding-top: 10px;
+	border: 1px solid gray;
+	padding: 2rem;
+	background: #d3d3d33d
 }
 
 .toc-list-item{
 	font-family: $h-font !important;
-	font-size: large;
+	line-height: 0.5rem;
+	font-size: small;
 	a{
 		&:hover{
 			filter: none !important;
