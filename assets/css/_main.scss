@@ -761,8 +761,11 @@ and (max-device-width: 770px)
 }
 
 .toc-list{
-
+	li{
+		margin-bottom: 5px !important;
+	}
 }
+
 
 .toc-list-item{
 	font-family: $h-font !important;
@@ -776,10 +779,6 @@ and (max-device-width: 770px)
 	&:marker{
 		color: transparent !important;
 	};
-
-	li{
-		margin-bottom: 5px !important;
-	}
 
 	.toc-list{
 		padding-left: 30px !important;
