@@ -20,7 +20,8 @@
 	$dg-colour: #595959;
 	$f-colour: #ccc4;
 	$l-colour: #3dbbd2; //link
-	$hl-colour: #3dbbd2; //link	
+	$hl-colour: #3dbbd2; //link
+	$toc-colour: #d3d3d33d
 
 	// Fonts
 	$h-font: 'Alata', sans-serif; // Heading Font
@@ -741,8 +742,8 @@ and (max-device-width: 770px)
 .toc {
 	margin: 30px 0px;
 	border: 1px solid gray;
-	padding: 2rem;
-	background: #d3d3d33d;
+	padding: 1.5rem;
+	background: $toc-colour;
 	font-size: small;
 	line-height: normal;
 }
@@ -778,6 +779,11 @@ and (max-device-width: 770px)
 
 	.toc-list{
 		padding-left: 30px !important;
+		padding-top: 10px !importanth
+
+		li{
+			margin-bottom: 5px !important
+		};
 	}
 }
 
