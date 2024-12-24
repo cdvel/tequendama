@@ -102,12 +102,7 @@ jobs:
             "${{ secrets.USERNAME }}@${{ secrets.HOST }}:${target}"
 
       - name: Restart Ghost
+        if: false
         run: |
-          which node
-          echo $PATH
-          which nvm
-          systemctl status ghost
-          ssh -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} '\
-            source ~/.nvm/nvm.sh && \
-            cd /home/ghost-mgr/ghost && \
-            sudo systemctl restart ghost'
+          # deprecated: ghost manager will reload
+          # ssh -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} ' sudo systemctl restart ghost'
