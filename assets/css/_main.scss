@@ -748,6 +748,15 @@ and (max-device-width: 770px)
 	line-height: normal;
 }
 
+.toc:before{
+    content: "Contents";
+    display: block;
+    text-align: ;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
 .toc-link{
 	&:before {
 		background-color: transparent !important;
