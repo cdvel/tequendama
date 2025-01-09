@@ -746,16 +746,18 @@ and (max-device-width: 770px)
 	background: $toc-colour;
 	font-size: small;
 	line-height: normal;
+
+	&:before{
+	    content: "Contents";
+	    display: block;
+	    text-align: left;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	    margin-bottom: 1rem;
+	}
 }
 
-.toc::before{
-    content: "Contents";
-    display: block;
-    text-align: left;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
+
 
 .toc-link{
 	&:before {
