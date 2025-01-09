@@ -748,7 +748,7 @@ and (max-device-width: 770px)
 	line-height: normal;
 }
 
-.toc:before{
+.toc::before{
     content: "Contents";
     display: block;
     text-align: left;
