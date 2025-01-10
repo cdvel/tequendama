@@ -1,0 +1,43 @@
+<div class="floating">
+    <ul class="social">
+        {{!-- Twitter/X Share --}}
+        <li>
+            <a href="https://twitter.com/intent/tweet?text={{encode title}}&url={{url absolute="true"}}"
+                class="fab fa-twitter"
+                rel="external"
+                target="_blank"
+                title="Share on Twitter">
+            </a>
+        </li>
+
+        {{!-- LinkedIn Share --}}
+        <li>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&title={{encode title}}"
+                class="fab fa-linkedin-in"
+                rel="external"
+                target="_blank"
+                title="Share on LinkedIn">
+            </a>
+        </li>
+
+        {{!-- Facebook Share --}}
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                class="fab fa-facebook"
+                rel="external"
+                target="_blank"
+                title="Share on Facebook">
+            </a>
+        </li>
+
+        {{!-- Email Share --}}
+        <li>
+            <a href="mailto:?subject={{encode title}}&body={{url absolute="true"}}"
+                class="far fa-envelope"
+                rel="external"
+                target="_blank"
+                title="Share via Email">
+            </a>
+        </li>
+    </ul>
+</div>

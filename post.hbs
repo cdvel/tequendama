@@ -12,13 +12,9 @@
       {{content}}
     </div>
     </article>
+
+    {{> share-post}}
   {{/post}}
-  <div>
-      {{#get "posts" limit="1" include="authors"}}
-      {{#foreach posts}}
-        {{> author-footer}}
-      {{/foreach}}
-      {{/get}}
   </div>
 </main>
 </div>
