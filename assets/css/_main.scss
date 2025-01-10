@@ -254,12 +254,12 @@ img.emoji {
 
 
 .site-header{
-	// background: $h-colour url(../img/header-bg.jpg) no-repeat center center; 
+	// background: $h-colour url(../img/header-bg.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: initial !important;
-    background-repeat: repeat !important; 
+    background-repeat: repeat !important;
     color: #fff;
     text-align: center;
     position: relative;
@@ -343,8 +343,8 @@ and (max-device-width: 770px)
 }
 
 .profile-social, .profile-image{
-  -webkit-border-radius: 90%; 
-  -moz-border-radius: 90%; 
+  -webkit-border-radius: 90%;
+  -moz-border-radius: 90%;
   border-radius: 90%;
   border: 4px solid #ececec;
   width: 8.5rem;
@@ -401,7 +401,7 @@ and (max-device-width: 770px)
 	padding: 0px;
 }
 
-@media only screen 
+@media only screen
 and (max-device-width: 770px)
 {
 	.post h2 a{
@@ -509,7 +509,7 @@ and (max-device-width: 770px)
 .post img{
 	height: 4.5em;
 	width: 6.5em;
-	display: block; 
+	display: block;
 	float: right;
 	margin: 20px 10px 20px 0px;
 	position: relative;
@@ -583,13 +583,13 @@ and (max-device-width: 770px)
 }
 
 .feature-image{
-	width: 90% !important; 
-	display: block; 
-	margin-left: auto; 
-	margin-right: auto; 
-	height: auto !important; 
-	box-shadow: 8px 8px 0 $ln-colour; 
-	padding: 0px 0px 0px 0px; 
+	width: 90% !important;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto !important;
+	box-shadow: 8px 8px 0 $ln-colour;
+	padding: 0px 0px 0px 0px;
 	margin: 20px 10% !important;
 }
 
@@ -610,7 +610,7 @@ and (max-device-width: 770px)
 	font-weight: $light;
 	font-size: 13px;
 	color: $s-colour;
-	margin-right: 4px; 
+	margin-right: 4px;
 }
 
 .share-buttons li a{
@@ -670,9 +670,9 @@ and (max-device-width: 770px)
   width: 150px;
   height: 35px;
   display: block;
-  -webkit-border-radius: 3px; 
-  -moz-border-radius: 3px; 
-  border-radius: 3px; 
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   text-align: center;
   font-family: $h-font;
   font-weight: $light;
@@ -686,13 +686,13 @@ and (max-device-width: 770px)
   	// border-color: $h-colour;
 	  color: $hl-colour;
 	  border-color: var(--text-color);
-  } 
+  }
 }
 
 
 .post .btn{
 	width: 140px;
-	
+
 }
 
 
@@ -935,9 +935,8 @@ and (max-device-width: 770px)
 	top: 0px;
 	right: 0px;
 	text-align: center;
-	text-transform: capitalize;
 	position: absolute;
-	font-variant: all-petite-caps;
+	font-variant: uppercase;
 	height: 60px;
 	line-height: 2rem;
 	font-weight: bold;
@@ -1055,7 +1054,7 @@ body.post-template > .site-header{
 body.post-template .site-header .quote-header{
 
 	top: 14vw;
-	
+
 	@media only screen and (max-width: 719px) {
 		top: 26vw !important;
 	}
@@ -1506,22 +1505,22 @@ blockquote p{
 	body {
 	  scroll-behavior: auto;
 	}
-  
+
 	* {
 	  -webkit-animation: none !important;
 	  animation: none !important;
 	  transition: none !important;
 	}
   }
-  
-  
+
+
   /* If there’s no JS, there’s no need for the user toggle component to show */
   .no-js .user-toggle {
 	display: none;
   }
-  
+
   .user-toggle {
-	text-align: center;	
+	text-align: center;
 	position: sticky;
 	bottom: 60px;
 	left: 20px;
@@ -1532,7 +1531,7 @@ blockquote p{
 	font-size: x-small;
 	color: var(--text-color);
   }
-  
+
   .toggle-button {
 	display: inline-flex;
 	// background: var(--button-background);
@@ -1546,10 +1545,10 @@ blockquote p{
 	// var(--button-background);
 	border: none;
 	}
-  
+
   .toggle-button__icon {
 	// background: var(--icon-mode);
-	width: 1.9rem; 
+	width: 1.9rem;
 	height: 1.9rem;
 	margin: 0.1rem 0;
 	color: var(--text-color);
@@ -1559,13 +1558,13 @@ blockquote p{
 	// transform: translateY(1px); /* Optical adjustment */
 	transition: transform 500ms ease-in-out;
   }
-  
+
   .toggle-button:focus {
 	outline: 1px solid var(--button-background);
 	outline-offset: 0.5rem;
   }
 
-  .visually-hidden { 
+  .visually-hidden {
 	display: block;
 	height: 1px;
 	width: 1px;
@@ -1600,7 +1599,7 @@ blockquote p{
 	--bg: var(--background-light);
 
 	// background: $h-colour url(../img/header-bg.jpg) no-repeat center center;
-	 
+
 }
 
 body {
@@ -1646,7 +1645,7 @@ body {
 // 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 // 		/*	background-clip: border-box;
 // 			-webkit-text-fill-color: $a-colour;
-// 			-webkit-background-clip: text;		  
+// 			-webkit-background-clip: text;
 // 			box-decoration-break: clone;
 // 			// background: -webkit-gradient(linear,left top,right top,from($b-colour),to($b-colour));
 // 			// background: linear-gradient(90deg,$b-colour,$b-colour);
@@ -1699,9 +1698,9 @@ body {
 	--button-background: var(--color-dark);
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-	/*	background-clip: border-box;		  
+	/*	background-clip: border-box;
 		-webkit-text-fill-color: $a-colour;
-		-webkit-background-clip: text;		  
+		-webkit-background-clip: text;
 		box-decoration-break: clone;
 		// background: -webkit-gradient(linear,left top,right top,from($b-colour),to($b-colour));
 		// background: linear-gradient(90deg,$b-colour,$b-colour);
@@ -1738,8 +1737,8 @@ body {
 
 .icon-top{
 	color: var(--text-color);
-	font-size: 1.5rem; 
-	float: right; 
+	font-size: 1.5rem;
+	float: right;
 	bottom: 60px;
 	right: 20px;
 	cursor: pointer;
