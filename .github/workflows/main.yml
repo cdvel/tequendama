@@ -97,7 +97,7 @@ jobs:
       - name: Deploy CSS files
         run: |
           target="/home/ghost-mgr/latest/assets/css"
-          rsync -avz -e "ssh -p ${{ secrets.PORT }}" \
+          rsync -avvz -e "ssh -p ${{ secrets.PORT }}" \
             assets/css/ \
             "${{ secrets.USERNAME }}@${{ secrets.HOST }}:${target}"
 
