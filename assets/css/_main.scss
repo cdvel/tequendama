@@ -872,6 +872,22 @@ ul.social{
 	display: flex;
 	gap: 1rem;
 	padding: 0;
+}
+
+ul.social li{
+	 margin: 10px 0.3rem;
+
+	 a {
+	 	border-bottom: none !important;
+	 }
+
+}
+
+ul.social-share{
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+	padding: 0;
 	
 	margin: 30px 0px;
     	border: 1px solid gray;
@@ -880,7 +896,7 @@ ul.social{
     	line-height: normal;
 }
 
-ul.social li{
+ul.social-share li{
 	 margin: 10px 0.3rem;
 
 	 a {
