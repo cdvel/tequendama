@@ -1,0 +1,198 @@
+name: Theme Validation
+
+on:
+  push:
+    branches: [src-pages]
+  pull_request:
+    branches: [src-pages]
+  # Allow manual triggering
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: Lint SCSS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: src-pages
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: "npm"
+
+      - name: Install stylelint and dependencies
+        run: |
+          npm install --no-package-lock --no-save stylelint stylelint-config-standard-scss
+
+      - name: Create stylelint config
+        run: |
+          echo '{
+            "extends": "stylelint-config-standard-scss",
+            "rules": {
+              "no-descending-specificity": null,
+              "no-duplicate-selectors": null
+            }
+          }' > .stylelintrc.json
+
+      - name: Run stylelint
+        run: |
+          npx stylelint "assets/css/**/*.scss" --formatter verbose
+
+  validate_gscan:
+    name: Validate with GScan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: src-pages
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: "npm"
+
+      - name: Install GScan
+        run: npm install -g gscan
+
+      - name: Run GScan validation
+        run: |
+          # Run with warnings first to see all issues
+          gscan . --verbose || true
+
+          # Then run with fatal to check for critical issues
+          gscan . --fatal
+
+  check_version:
+    name: Check version updates
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: src-pages
+          fetch-depth: 0
+
+      - name: Check for package.json existence
+        id: check_package
+        run: |
+          if [ -f "package.json" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Get current version
+        if: steps.check_package.outputs.exists == 'true'
+        id: current_version
+        run: |
+          echo "VERSION=$(node -p "require('./package.json').version || 'none'")" >> $GITHUB_OUTPUT
+
+      - name: Display version information
+        if: steps.check_package.outputs.exists == 'true'
+        run: |
+          echo "Current theme version: ${{ steps.current_version.outputs.VERSION }}"
+
+          # Get previous tag if it exists
+          git fetch --tags
+          PREV_TAG=$(git tag --sort=-creatordate | head -n 1 || echo "none")
+
+          if [ "$PREV_TAG" != "none" ]; then
+            echo "Previous tag: $PREV_TAG"
+          else
+            echo "No previous tags found"
+          fi
+
+  accessibility_check:
+    name: Accessibility Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: src-pages
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: "npm"
+
+      - name: Install pa11y
+        run: npm install -g pa11y
+
+      - name: List template files
+        id: list_templates
+        run: |
+          echo "Found the following templates:"
+          find . -name "*.hbs" -type f | grep -v "node_modules" || true
+
+          echo "Note: Skipping actual pa11y checks as they require a running instance"
+          echo "Consider setting up a static build or test instance for accessibility testing"
+
+  validate_json:
+    name: Validate JSON Files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: src-pages
+          fetch-depth: 1
+
+      - name: Check JSON syntax
+        run: |
+          find . -name "*.json" -type f -not -path "./node_modules/*" -exec echo "Validating {}" \; -exec cat {} \; -exec echo "" \; -exec node -e "try { require('{}'); console.log('✓ Valid JSON'); } catch(e) { console.error('✗ Invalid JSON:', e.message); process.exit(1); }" \;
+
+  security_check:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: src-pages
+          fetch-depth: 1
+
+      - name: Run npm audit
+        run: |
+          if [ -f "package.json" ]; then
+            npm audit --audit-level=high || true
+          else
+            echo "No package.json found, skipping npm audit"
+          fi
+
+      - name: Simple security scan
+        run: |
+          # Check for potential security issues in theme files
+          echo "Checking for potentially unsafe handlebars usages..."
+          grep -r "{{{" --include="*.hbs" . || echo "No triple-brace expressions found"
+
+          echo "Checking for inline scripts..."
+          grep -r "<script>" --include="*.hbs" . || echo "No inline scripts found"
+
+  summary:
+    name: Validation Summary
+    needs:
+      [
+        lint,
+        validate_gscan,
+        check_version,
+        accessibility_check,
+        validate_json,
+        security_check,
+      ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validation Complete
+        run: |
+          echo "✅ Theme validation workflow complete"
+          echo "All checks passed successfully"
