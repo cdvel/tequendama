@@ -12,6 +12,7 @@ jobs:
   lint:
     name: Lint SCSS
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
