@@ -3,6 +3,8 @@
 ![Sass Build](https://github.com/cdvel/tequendama/workflows/Sass%20Build/badge.svg)
 ![Ghost v4.x Compatible](https://img.shields.io/badge/Ghost%20v4.x-Compatible-brightgreen.svg)
 
+--- 
+
 A Ghost theme for my personal blog
 
 ## Development
