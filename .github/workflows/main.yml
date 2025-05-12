@@ -33,6 +33,7 @@ jobs:
   release_css:
     needs: [build_css]
     runs-on: ubuntu-latest
+    if: github.head_ref == ''
     steps:
       - name: Checkout destination Git branch
         uses: actions/checkout@v3
