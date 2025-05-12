@@ -13,8 +13,7 @@ jobs:
       - name: Checkout source Git branch
         uses: actions/checkout@v3
         with:
-          ref: src-pages
-          fetch-depth: 10
+          fetch-depth: 3
 
       - name: Make destination directory for compiled CSS
         run: mkdir -vp /tmp/assets/css
@@ -34,11 +33,11 @@ jobs:
   release_css:
     needs: [build_css]
     runs-on: ubuntu-latest
+    if: github.head_ref == ''
     steps:
       - name: Checkout destination Git branch
         uses: actions/checkout@v3
         with:
-          ref: pr-pages
           fetch-depth: 3
 
       - name: Download Compiled CSS
@@ -72,7 +71,7 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v3
         with:
-          ref: src-pages
+          fetch-depth: 3
 
       - name: Setup SSH
         run: |
@@ -92,7 +91,7 @@ jobs:
       - name: Checkout CSS
         uses: actions/checkout@v3
         with:
-          ref: pr-pages
+          fetch-depth: 3
 
       - name: Deploy CSS files
         run: |
