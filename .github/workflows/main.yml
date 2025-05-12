@@ -38,7 +38,7 @@ jobs:
       - name: Checkout destination Git branch
         uses: actions/checkout@v3
         with:
-          ref: pr-pages
+          ref: ${{ github.event.pull_request.id }}
           fetch-depth: 3
 
       - name: Download Compiled CSS
