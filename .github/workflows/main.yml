@@ -63,6 +63,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: pr-pages
+          force: true
 
   deploy:
     needs: [release_css]
