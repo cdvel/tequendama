@@ -557,9 +557,9 @@ img.emoji {
     font-weight: normal;
     border-radius: 0.4rem;
     font-variant: none;
-    background-color: rgba($l-colour, 0.35);
-    border-radius: 4px;
-    opacity: 0.7;
+    background-color: $l-colour;
+    border-bottom: 0px !important;
+    opacity: 0.9;
 
     &:hover {
         filter: brightness(1.1);
