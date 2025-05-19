@@ -553,13 +553,13 @@ img.emoji {
 
 .post-meta a {
     color: var(--text-color);
-    border-bottom: 3px solid $l-colour;
-    padding: 0.1rem 0.3rem;
+    padding: .2rem .5rem;
     font-weight: normal;
-    border-radius: 0.1rem;
+    border-radius: 0.4rem;
     font-variant: none;
     background-color: rgba($l-colour, 0.35);
     border-radius: 4px;
+    opacity: 0.7;
 
     &:hover {
         filter: brightness(1.1);
